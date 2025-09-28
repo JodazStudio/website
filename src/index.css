@@ -8,33 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* JODAZ DEV Brand Colors */
+    --background: 30 14% 93%; /* #edeceb */
+    --foreground: 217 57% 13%; /* #161B24 */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 217 57% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 217 57% 13%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 221 91% 50%; /* #0b5ef3 bright blue */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 218 67% 35%; /* #1C4C96 medium blue */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 228 57% 91%; /* #d6dff8 very light blue */
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 57% 13%; /* #161B24 dark navy */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 228 57% 91%;
+    --input: 0 0% 100%;
+    --ring: 221 91% 50%;
+
+    /* Custom JODAZ brand tokens */
+    --brand-dark: 217 57% 13%; /* #161B24 */
+    --brand-medium: 218 67% 35%; /* #1C4C96 */
+    --brand-bright: 221 91% 50%; /* #0b5ef3 */
+    --brand-light-gray: 0 0% 80%; /* #ccc */
+    --brand-off-white: 30 14% 93%; /* #edeceb */
+    --brand-light-blue: 228 57% 91%; /* #d6dff8 */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-bright)), hsl(var(--brand-medium)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-dark)), hsl(var(--brand-medium)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(var(--brand-light-blue)));
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--brand-medium) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--brand-bright) / 0.4);
+    --shadow-card: 0 4px 20px -2px hsl(var(--brand-dark) / 0.1);
 
     --radius: 0.5rem;
 
@@ -56,33 +75,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 217 57% 13%;
+    --foreground: 30 14% 93%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 218 67% 25%;
+    --card-foreground: 30 14% 93%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 218 67% 25%;
+    --popover-foreground: 30 14% 93%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 221 91% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 218 67% 35%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 218 67% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 221 91% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 218 67% 25%;
+    --input: 218 67% 25%;
+    --ring: 221 91% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
