@@ -20,11 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src={jodazLogo} 
-              alt="JODAZ DEV" 
-              className="h-10 w-auto"
-            />
+            <img src={jodazLogo} alt="JODAZ DEV" className="h-10 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
@@ -50,21 +46,18 @@ const Header = () => {
           </nav>
 
           {/* Contact Button */}
-          <div className="hidden md:block">
-            <Button 
-              variant="hero" 
+          {/* <div className="hidden md:block">
+            <Button
+              variant="hero"
               size="lg"
               onClick={() => scrollToSection('contact')}
             >
               Get Started
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -91,14 +84,14 @@ const Header = () => {
               >
                 Contact
               </button>
-              <Button 
-                variant="hero" 
-                size="lg" 
+              {/* <Button
+                variant="hero"
+                size="lg"
                 className="w-full mt-4"
                 onClick={() => scrollToSection('contact')}
               >
                 Get Started
-              </Button>
+              </Button> */}
             </div>
           </nav>
         )}
