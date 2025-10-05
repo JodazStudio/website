@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
-import jodazLogo from '@/assets/jodaz.png';
+import jodazLogo from '@/assets/jodaz_isotipo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,35 +33,33 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 ${
-        isOpaque || isMenuOpen
-          ? 'bg-background/95 backdrop-blur-sm text-blue-600'
-          : 'bg-transparent'
+        isOpaque || isMenuOpen ? 'bg-gray-900 backdrop-blur-sm text-blue-600' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 pt-3 pb-0">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src={jodazLogo} alt="JODAZ DEV" className="h-10 w-auto" />
+            <img src={jodazLogo} alt="JODAZ DEV" className="h-12 lg:h-16 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('services')}
-              className="text-blue-100 hover:text-primary transition-colors font-medium"
+              className={`text-blue-100 hover:text-primary transition-colors font-semibold`}
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('portfolio')}
-              className="text-blue-100 hover:text-primary transition-colors font-medium"
+              className={`text-blue-100 hover:text-primary transition-colors font-semibold`}
             >
               Portfolio
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-blue-100 hover:text-primary transition-colors font-medium"
+              className={`text-blue-100 hover:text-primary transition-colors font-semibold`}
             >
               Contact
             </button>
@@ -89,26 +87,26 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <nav
-          className={`md:hidden mt-4 pb-1 border-t border-border  transition-all duration-300 ${
+          className={`md:hidden py-1 transition-all duration-300 ${
             isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
           <div className="space-y-4 pt-4">
             <button
               onClick={() => scrollToSection('services')}
-              className="py-2 block text-blue-900 hover:text-primary transition-colors font-medium"
+              className="py-2 block text-blue-100 hover:text-primary transition-colors font-medium"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('portfolio')}
-              className="py-2 block text-blue-900 hover:text-primary transition-colors font-medium"
+              className="py-2 block text-blue-100 hover:text-primary transition-colors font-medium"
             >
               Portfolio
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="py-2 block text-blue-900 hover:text-primary transition-colors font-medium"
+              className="py-2 block text-blue-100 hover:text-primary transition-colors font-medium"
             >
               Contact
             </button>
