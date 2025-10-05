@@ -1,8 +1,8 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+// import { Card, CardContent } from '@/components/ui/card';
+// import { Button } from '@/components/ui/button';
+// import { Input } from '@/components/ui/input';
+// import { Textarea } from '@/components/ui/textarea';
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,7 +19,8 @@ const Contact = () => {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ready to transform your digital presence?
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ready to transform your digital presence?
           </p>
         </div>
 
@@ -27,9 +28,13 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-up">
             <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">Let's Start a Conversation</h3>
+              <h3 className="text-3xl font-bold text-foreground mb-6">
+                Let's Start a Conversation
+              </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                esse cillum.
               </p>
             </div>
 
@@ -67,7 +72,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-gradient-card border-border/50 shadow-card animate-scale-in">
+          {/* <Card className="bg-gradient-card border-border/50 shadow-card animate-scale-in">
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -75,7 +80,7 @@ const Contact = () => {
                     <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
                       First Name
                     </label>
-                    <Input 
+                    <Input
                       id="firstName"
                       placeholder="John"
                       className="bg-background border-border"
@@ -86,7 +91,7 @@ const Contact = () => {
                     <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
                       Last Name
                     </label>
-                    <Input 
+                    <Input
                       id="lastName"
                       placeholder="Doe"
                       className="bg-background border-border"
@@ -99,7 +104,7 @@ const Contact = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                     Email
                   </label>
-                  <Input 
+                  <Input
                     id="email"
                     type="email"
                     placeholder="john@example.com"
@@ -112,7 +117,7 @@ const Contact = () => {
                   <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                     Subject
                   </label>
-                  <Input 
+                  <Input
                     id="subject"
                     placeholder="Project Inquiry"
                     className="bg-background border-border"
@@ -124,7 +129,7 @@ const Contact = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Message
                   </label>
-                  <Textarea 
+                  <Textarea
                     id="message"
                     placeholder="Tell us about your project..."
                     rows={5}
@@ -139,7 +144,7 @@ const Contact = () => {
                 </Button>
               </form>
             </CardContent>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </section>

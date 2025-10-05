@@ -1,4 +1,5 @@
-import { Globe, Mail, Phone } from 'lucide-react';
+import { Globe, Mail } from 'lucide-react';
+import { FOOTER_LINKS, FOOTER_CREDITS_LINK } from '@/lib/links';
 import jodazLogo from '@/assets/jodaz.png';
 
 const Footer = () => {
@@ -14,115 +15,78 @@ const Footer = () => {
               <img src={jodazLogo} alt="JODAZ DEV" className="h-10 w-auto brightness-0 invert" />
             </div>
             <p className="text-accent-foreground/80 leading-relaxed mb-6 max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation.
+              JODAZ DEV crafts innovative digital products, custom websites, and applications that
+              elevate your brand and deliver unique experiences. We help businesses stand out and
+              succeed in the digital world through creativity, technology, and personalized
+              solutions.
             </p>
-            {/* <div className="space-y-2">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-primary" />
-                <span>hello@jodaz.dev</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary" />
-                <span>+58 (412) 131-5110</span>
-              </div>
-            </div> */}
           </div>
 
-          {/* Services */}
-          {/* <div>
-            <h4 className="font-bold text-accent-foreground mb-4">Services</h4>
-            <ul className="space-y-2 text-accent-foreground/80">
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Website Development
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  SEO Optimization
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  CRM Solutions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Web Applications
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Automation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Digital Marketing
-                </a>
-              </li>
-            </ul>
-          </div> */}
-
-          {/* Quick Links */}
+          {/* Contact & Social Links */}
           <div>
-            <h4 className="font-bold text-accent-foreground mb-4">Quick Links</h4>
+            <h4 className="font-bold text-accent-foreground mb-4">Contact & Links</h4>
             <ul className="space-y-2 text-accent-foreground/80">
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" className="hover:text-primary transition-colors">
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-primary transition-colors">
-                  Contact
-                </a>
-              </li>
-              {/* <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Blog
-                </a>
-              </li> */}
-              {/* <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition-colors">
-                  Terms of Service
-                </a>
-              </li> */}
+              {FOOTER_LINKS.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    target={link.href.startsWith('http') ? '_blank' : undefined}
+                    rel={link.href.startsWith('http') ? 'noopener' : undefined}
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    {link.icon ? <link.icon className="w-5 h-5" /> : null}
+                    {link.label === 'Instagram' ? (
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-5 h-5"
+                      >
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+                      </svg>
+                    ) : null}
+                    {link.label === 'GitHub' ? (
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-5 h-5"
+                      >
+                        <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.17-1.1-1.48-1.1-1.48-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.18 9.18 0 0 1 2.5-.34c.85 0 1.71.11 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z" />
+                      </svg>
+                    ) : null}
+                    {/* {link.label === 'Email' ? <Mail className="w-5 h-5" /> : null} */}
+                    <span>{link.label === 'Email' ? 'hello@jodaz.dev' : link.label}</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="border-t border-accent-foreground/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-accent-foreground/60 mb-4 md:mb-0">
-              © {currentYear} JODAZ DEV. All rights reserved.
+          <div className="flex flex-col items-center">
+            <p className="text-accent-foreground/60 text-center mb-2">
+              © {currentYear}{' '}
+              <a
+                className="hover:text-primary underline transition-colors"
+                href={FOOTER_CREDITS_LINK.href}
+              >
+                JODAZ DEV
+              </a>
+              . All rights reserved.
             </p>
-            <div className="flex items-center space-x-6">
-              <a
-                href="#"
-                className="text-accent-foreground/60 hover:text-primary transition-colors"
-              >
-                <Globe className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-accent-foreground/60 hover:text-primary transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
           </div>
         </div>
       </div>
