@@ -15,11 +15,11 @@ const Hero = () => {
       <Video />
       <div className="absolute z-2 inset-0 bg-black opacity-25 w-full h-full"></div>
 
-      <div className="absolute container mx-auto px-4 z-10 py-20 lg:py-48">
+      <div className="absolute container lg:ml-36 px-4 z-10 py-24 lg:py-48">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-8 animate-fade-in">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight  bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
                 Transform Your
                 <span className="block">Digital Presence</span>
               </h1>

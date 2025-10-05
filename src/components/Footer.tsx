@@ -1,6 +1,5 @@
-import { Globe, Mail } from 'lucide-react';
 import { FOOTER_LINKS, FOOTER_CREDITS_LINK } from '@/lib/links';
-import jodazLogo from '@/assets/jodaz.png';
+import jodazLogo from '@/assets/jodaz_isotipo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-5">
             <div className="flex items-center space-x-3 mb-6">
-              <img src={jodazLogo} alt="JODAZ DEV" className="h-10 w-auto brightness-0 invert" />
+              <img src={jodazLogo} alt="JODAZ DEV" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-accent-foreground/80 leading-relaxed mb-6 max-w-md">
               JODAZ DEV crafts innovative digital products, custom websites, and applications that
