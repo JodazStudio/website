@@ -8,16 +8,16 @@ import { IProject } from '@/models';
 
 const Portfolio = () => {
   const projects: IProject[] = [
-    {
-      title: 'E-Commerce Platform',
-      description:
-        'Scalable storefront with real‑time inventory, secure checkout, and personalized merchandising—optimized for conversion and rapid iteration.',
-      image: portfolioEcommerce,
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      category: 'Web Application',
-      code: 'https://github.com/jodaz-dev/ecommerce-platform',
-      website: 'https://ecommerce.example.com',
-    },
+    // {
+    //   title: 'E-Commerce Platform',
+    //   description:
+    //     'Scalable storefront with real‑time inventory, secure checkout, and personalized merchandising—optimized for conversion and rapid iteration.',
+    //   image: portfolioEcommerce,
+    //   technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    //   category: 'Web Application',
+    //   code: 'https://github.com/jodaz-dev/ecommerce-platform',
+    //   website: 'https://ecommerce.example.com',
+    // },
     {
       title: 'Corporate Website',
       description:
@@ -53,7 +53,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project: IProject, index) => (
             <Card
               key={index}

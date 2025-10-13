@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 import jodazLogo from '@/assets/jodaz_isotipo.png';
@@ -6,6 +7,11 @@ import jodazLogo from '@/assets/jodaz_isotipo.png';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpaque, setIsOpaque] = useState(false);
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    void i18n.changeLanguage(lng);
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -49,20 +55,45 @@ const Header = () => {
               onClick={() => scrollToSection('services')}
               className={`text-lg text-blue-100 hover:text-primary transition-colors font-semibold`}
             >
-              Services
+              {t('nav.services')}
             </button>
             <button
               onClick={() => scrollToSection('portfolio')}
               className={`text-lg text-blue-100 hover:text-primary transition-colors font-semibold`}
             >
-              Portfolio
+              {t('nav.portfolio')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className={`text-lg text-blue-100 hover:text-primary transition-colors font-semibold`}
             >
-              Contact
+              {t('nav.contact')}
             </button>
+            {/* Language switcher (desktop) */}
+            <div className="flex items-center space-x-2 ml-4">
+              <button
+                onClick={() => changeLanguage('en')}
+                className={`text-sm px-2 py-1 rounded ${
+                  i18n.language === 'en'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-blue-100 hover:text-primary'
+                }`}
+                aria-label="Switch to English"
+              >
+                EN
+              </button>
+              <button
+                onClick={() => changeLanguage('es')}
+                className={`text-sm px-2 py-1 rounded ${
+                  i18n.language === 'es'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-blue-100 hover:text-primary'
+                }`}
+                aria-label="Switch to Spanish"
+              >
+                ES
+              </button>
+            </div>
           </nav>
 
           {/* Contact Button */}
@@ -96,19 +127,19 @@ const Header = () => {
               onClick={() => scrollToSection('services')}
               className="py-2 block text-blue-100 hover:text-primary transition-colors font-medium"
             >
-              Services
+              {t('nav.services')}
             </button>
             <button
               onClick={() => scrollToSection('portfolio')}
               className="py-2 block text-blue-100 hover:text-primary transition-colors font-medium"
             >
-              Portfolio
+              {t('nav.portfolio')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="py-2 block text-blue-100 hover:text-primary transition-colors font-medium"
             >
-              Contact
+              {t('nav.contact')}
             </button>
             {/* <Button
               variant="hero"
@@ -118,6 +149,31 @@ const Header = () => {
             >
               Get Started
             </Button> */}
+          </div>
+          {/* Language switcher (mobile) - placed at bottom of menu */}
+          <div className="md:hidden mt-4 border-t border-white/10 pt-4 flex items-center justify-center gap-4">
+            <button
+              onClick={() => changeLanguage('en')}
+              className={`text-sm px-3 py-2 rounded ${
+                i18n.language === 'en'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-blue-100 hover:text-primary'
+              }`}
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+            <button
+              onClick={() => changeLanguage('es')}
+              className={`text-sm px-3 py-2 rounded ${
+                i18n.language === 'es'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-blue-100 hover:text-primary'
+              }`}
+              aria-label="Switch to Spanish"
+            >
+              ES
+            </button>
           </div>
         </nav>
       </div>
