@@ -19,8 +19,8 @@ const Contact = () => {
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ready to transform your digital presence?
+            We craft clear, high‑impact digital experiences—fast, secure, and accessible. Ready to
+            transform your digital presence?
           </p>
         </div>
 
@@ -32,9 +32,8 @@ const Contact = () => {
                 Let's Start a Conversation
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                esse cillum.
+                Tell us about your goals and constraints—we’ll reply with a clear plan, timeline,
+                and budget. No fluff, just pragmatic steps to launch and grow.
               </p>
             </div>
 
@@ -65,7 +64,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Location</h4>
-                  <p className="text-muted-foreground">Lorem ipsum, dolor sit amet</p>
+                  <p className="text-muted-foreground">Remote • Worldwide</p>
                 </div>
               </div>
             </div>

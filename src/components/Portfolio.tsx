@@ -10,7 +10,7 @@ const Portfolio = () => {
     {
       title: 'E-Commerce Platform',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+        'Scalable storefront with real‑time inventory, secure checkout, and personalized merchandising—optimized for conversion and rapid iteration.',
       image: portfolioEcommerce,
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       category: 'Web Application',
@@ -18,7 +18,7 @@ const Portfolio = () => {
     {
       title: 'Corporate Website',
       description:
-        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+        'Modern corporate site with a headless CMS, blazing performance, and SEO best practices—easy to manage and tailored for brand storytelling.',
       image: portfolioCorporate,
       technologies: ['Next.js', 'TypeScript', 'Tailwind', 'CMS'],
       category: 'Website',
@@ -26,7 +26,7 @@ const Portfolio = () => {
     {
       title: 'Restaurant Management',
       description:
-        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias.',
+        'End‑to‑end system for menus, orders, and reservations with analytics and payments—streamlining operations across devices.',
       image: portfolioRestaurant,
       technologies: ['Vue.js', 'Firebase', 'Payment API', 'Analytics'],
       category: 'Web App',
@@ -41,8 +41,8 @@ const Portfolio = () => {
             Our <span className="text-primary">Portfolio</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+            Explore selected projects that blend performance, accessibility, and thoughtful UX—built
+            to scale and deliver measurable impact.
           </p>
         </div>
 
