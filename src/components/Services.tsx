@@ -5,40 +5,46 @@ const Services = () => {
   const services = [
     {
       icon: Globe,
-      title: "Website Development",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      features: ["Responsive Design", "Custom Development", "CMS Integration"]
+      title: 'Website Development',
+      description:
+        'We build fast, accessible websites tailored to your brand—SEO‑ready, easy to update, and designed to convert on every device.',
+      features: ['Responsive Design', 'Custom Development', 'CMS Integration'],
     },
     {
       icon: Search,
-      title: "SEO Optimization",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.",
-      features: ["Keyword Research", "On-page SEO", "Technical SEO"]
+      title: 'SEO Optimization',
+      description:
+        'Increase organic traffic with data‑backed SEO: research, technical fixes, and content that ranks and drives qualified leads.',
+      features: ['Keyword Research', 'On-page SEO', 'Technical SEO'],
     },
-    {
-      icon: Database,
-      title: "CRM Solutions",
-      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis.",
-      features: ["Lead Management", "Automation", "Analytics"]
-    },
+    // {
+    //   icon: Database,
+    //   title: 'CRM Solutions',
+    //   description:
+    //     'Implement a CRM that fits your sales flow—centralized leads, automated touchpoints, and dashboards that surface what matters.',
+    //   features: ['Lead Management', 'Automation', 'Analytics'],
+    // },
     {
       icon: Smartphone,
-      title: "Web Applications",
-      description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.",
-      features: ["Custom Apps", "API Integration", "User Experience"]
+      title: 'Web Applications',
+      description:
+        'Custom web apps that scale—clean APIs, secure auth, and intuitive UX that turns complex workflows into one click.',
+      features: ['Custom Apps', 'API Integration', 'User Experience'],
     },
     {
       icon: Zap,
-      title: "Automation",
-      description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
-      features: ["Workflow Automation", "Process Optimization", "Integration"]
+      title: 'Automation',
+      description:
+        'Automate repetitive tasks across your stack to save hours—connect tools, orchestrate data, and keep teams in sync.',
+      features: ['Workflow Automation', 'Process Optimization', 'Integration'],
     },
-    {
-      icon: TrendingUp,
-      title: "Digital Marketing",
-      description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem.",
-      features: ["Social Media", "Content Strategy", "Campaign Management"]
-    }
+    // {
+    //   icon: TrendingUp,
+    //   title: 'Digital Marketing',
+    //   description:
+    //     'Full‑funnel campaigns that blend content, social, and analytics to grow awareness and convert visitors into customers.',
+    //   features: ['Social Media', 'Content Strategy', 'Campaign Management'],
+    // },
   ];
 
   return (
@@ -49,14 +55,15 @@ const Services = () => {
             What We <span className="text-primary">Offer</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+            From websites and apps to SEO and automation, we deliver end‑to‑end digital solutions
+            that ship fast, scale smoothly, and drive results.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-border/50 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -70,7 +77,7 @@ const Services = () => {
                     {service.description}
                   </p>
                 </div>
-                
+
                 <div className="space-y-2">
                   {service.features.map((feature, i) => (
                     <div key={i} className="flex items-center text-sm text-foreground">
