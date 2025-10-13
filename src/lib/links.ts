@@ -3,7 +3,7 @@ import { Globe, Mail } from 'lucide-react';
 export const FOOTER_LINKS = [
   {
     label: 'Email',
-    href: 'mailto:hello@jodaz.dev',
+    href: 'mailto:contact@jodaz.dev',
     icon: Mail,
   },
   {

@@ -4,9 +4,10 @@ import { Button } from '@/components/ui/button';
 import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
 import portfolioCorporate from '@/assets/portfolio-corporate.jpg';
 import portfolioRestaurant from '@/assets/portfolio-restaurant.jpg';
+import { IProject } from '@/models';
 
 const Portfolio = () => {
-  const projects = [
+  const projects: IProject[] = [
     {
       title: 'E-Commerce Platform',
       description:
@@ -14,6 +15,8 @@ const Portfolio = () => {
       image: portfolioEcommerce,
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       category: 'Web Application',
+      code: 'https://github.com/jodaz-dev/ecommerce-platform',
+      website: 'https://ecommerce.example.com',
     },
     {
       title: 'Corporate Website',
@@ -22,6 +25,8 @@ const Portfolio = () => {
       image: portfolioCorporate,
       technologies: ['Next.js', 'TypeScript', 'Tailwind', 'CMS'],
       category: 'Website',
+      code: 'https://github.com/jodaz-dev/corporate-website',
+      website: 'https://corporate.example.com',
     },
     {
       title: 'Restaurant Management',
@@ -30,6 +35,8 @@ const Portfolio = () => {
       image: portfolioRestaurant,
       technologies: ['Vue.js', 'Firebase', 'Payment API', 'Analytics'],
       category: 'Web App',
+      code: 'https://github.com/jodaz-dev/restaurant-management',
+      website: 'https://restaurant.example.com',
     },
   ];
 
@@ -47,7 +54,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project: IProject, index) => (
             <Card
               key={index}
               className="group overflow-hidden hover:shadow-card transition-all duration-500 hover:-translate-y-2 bg-card animate-slide-up"
@@ -61,22 +68,32 @@ const Portfolio = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-foreground"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      View
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-foreground"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </Button>
+                    {project.website && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-foreground"
+                        asChild
+                      >
+                        <a href={project.website} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4" />
+                          Website
+                        </a>
+                      </Button>
+                    )}
+                    {project.code && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-foreground"
+                        asChild
+                      >
+                        <a href={project.code} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
                 <div className="absolute top-4 left-4">
