@@ -4,14 +4,103 @@
     "portfolio": "Portfolio",
     "contact": "Contact"
   },
-  "portfolio": {
-    "our": "Our",
-    "portfolio": "Portfolio"
-  },
   "buttons": {
     "website": "Website",
     "code": "Code",
     "getStarted": "Get Started",
     "viewAll": "View All Projects"
+  },
+  "contact": {
+    "title": "Get In",
+    "titleAccent": "Touch",
+    "description": "We craft clear, high‑impact digital experiences—fast, secure, and accessible. Ready to transform your digital presence?",
+    "headline": "Let's Start a Conversation",
+    "subhead": "Tell us about your goals and constraints—we’ll reply with a clear plan, timeline, and budget. No fluff, just pragmatic steps to launch and grow.",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Remote • Worldwide"
+  },
+  "footer": {
+    "contactLinks": "Social",
+    "companyName": "JODAZ DEV",
+    "description": "JODAZ DEV crafts innovative digital products, custom websites, and applications that elevate your brand and deliver unique experiences. We help businesses stand out and succeed in the digital world through creativity, technology, and personalized solutions.",
+    "allRights": "All rights reserved.",
+    "links": {
+      "email": "Email",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    }
+  },
+  "hero": {
+    "line1": "Transform Your",
+    "line2": "Digital Presence",
+    "description": "We create innovative and cutting-edge digital products, developing personalized solutions, websites, and extraordinary applications that offer unique experiences and maximize success in the market.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Learn More"
+  },
+  "services": {
+    "title": "What We",
+    "titleAccent": "Offer",
+    "description": "From websites and apps to SEO and automation, we deliver end‑to‑end digital solutions that ship fast, scale smoothly, and drive results.",
+    "items": {
+      "0": {
+        "title": "Website Development",
+        "description": "We build fast, accessible websites tailored to your brand—SEO‑ready, easy to update, and designed to convert on every device.",
+        "features": {
+          "0": "Responsive Design",
+          "1": "Custom Development",
+          "2": "CMS Integration"
+        }
+      },
+      "1": {
+        "title": "SEO Optimization",
+        "description": "Increase organic traffic with data‑backed SEO: research, technical fixes, and content that ranks and drives qualified leads.",
+        "features": {
+          "0": "Keyword Research",
+          "1": "On-page SEO",
+          "2": "Technical SEO"
+        }
+      },
+      "2": {
+        "title": "Web Applications",
+        "description": "Custom web apps that scale—clean APIs, secure auth, and intuitive UX that turns complex workflows into one click.",
+        "features": {
+          "0": "Custom Apps",
+          "1": "API Integration",
+          "2": "User Experience"
+        }
+      },
+      "3": {
+        "title": "Automation",
+        "description": "Automate repetitive tasks across your stack to save hours—connect tools, orchestrate data, and keep teams in sync.",
+        "features": {
+          "0": "Workflow Automation",
+          "1": "Process Optimization",
+          "2": "Integration"
+        }
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our",
+    "titleAccent": "Portfolio",
+    "description": "Explore selected projects that blend performance, accessibility, and thoughtful UX—built to scale and deliver measurable impact.",
+    "website": "Website",
+    "code": "Code",
+    "projects": {
+      "corporate": {
+        "title": "Corporate Website",
+        "description": "Modern corporate site with a headless CMS, blazing performance, and SEO best practices—easy to manage and tailored for brand storytelling.",
+        "category": "Website",
+        "technologies": ["Next.js", "TypeScript", "Tailwind", "CMS"]
+      },
+      "restaurant": {
+        "title": "Restaurant Management",
+        "description": "End‑to‑end system for menus, orders, and reservations with analytics and payments—streamlining operations across devices.",
+        "category": "Web App",
+        "technologies": ["Vue.js", "Firebase", "Payment API", "Analytics"]
+      }
+    }
   }
 }
