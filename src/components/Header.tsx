@@ -25,7 +25,6 @@ const Header = () => {
         const supported = ['en', 'es'];
         const target = supported.includes(normalized) ? normalized : 'en';
 
-        alert(target);
         if (i18n.language !== target) {
           void i18n.changeLanguage(target);
         }
