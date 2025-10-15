@@ -67,7 +67,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">{t('contact.email')}</h4>
-                  <p className="text-muted-foreground">hello@jodazdev.com</p>
+                  <p className="text-muted-foreground">contact@jodaz.xyz</p>
                 </div>
               </div>
 
@@ -77,11 +77,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">{t('contact.phone')}</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+58 (412) 131-5110</p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
+              {/* <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                     {t('contact.locationValue', 'Remote • Worldwide')}
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
