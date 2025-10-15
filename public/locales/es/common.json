@@ -5,26 +5,26 @@
     "contact": "Contacto"
   },
   "buttons": {
-    "website": "Sitio",
+    "website": "Sitio Web",
     "code": "Código",
-    "getStarted": "Comenzar",
+    "getStarted": "Empezar",
     "viewAll": "Ver Todos los Proyectos"
   },
   "contact": {
-    "title": "Ponte en",
-    "titleAccent": "Contacto",
-    "description": "Creamos experiencias digitales claras y de alto impacto—rápidas, seguras y accesibles. ¿Listo para transformar tu presencia digital?",
+    "title": "¿Listo para elevar tu ",
+    "titleAccent": "presencia digital?",
+    "description": "Me asocio contigo para crear experiencias digitales claras y de alto impacto: rápidas, seguras y accesibles. Comencemos a construir tu futuro digital.",
     "headline": "Comencemos una Conversación",
-    "subhead": "Cuéntanos sobre tus objetivos y restricciones—responderemos con un plan claro, cronograma y presupuesto. Sin rodeos, solo pasos pragmáticos para lanzar y crecer.",
-    "email": "Correo",
+    "subhead": "Háblame de tu visión y de cualquier desafío que enfrentes; te proporcionaré un plan, cronograma y presupuesto claros. Pasos pragmáticos para lanzar y hacer crecer tu negocio.",
+    "email": "Correo Electrónico",
     "phone": "Teléfono",
     "location": "Ubicación",
-    "locationValue": "Remoto • En todo el mundo"
+    "locationValue": "Remoto • Mundial"
   },
   "footer": {
     "contactLinks": "Social",
     "companyName": "JODAZ DEV",
-    "description": "JODAZ DEV crea productos digitales innovadores, sitios web personalizados y aplicaciones que elevan tu marca y entregan experiencias únicas. Ayudamos a las empresas a destacar y triunfar en el mundo digital mediante creatividad, tecnología y soluciones personalizadas.",
+    "description": "Trabajo con empresas para crear productos digitales innovadores, sitios web personalizados y aplicaciones. Mi objetivo es elevar tu marca y asegurar tu éxito en el mundo digital a través de estrategia, tecnología y soluciones personalizadas.",
     "allRights": "Todos los derechos reservados.",
     "links": {
       "email": "Correo",
@@ -34,28 +34,28 @@
   },
   "hero": {
     "line1": "Transforma tu",
-    "line2": "Presencia Digital",
-    "description": "Creamos productos digitales innovadores y de vanguardia, desarrollando soluciones personalizadas, sitios web y aplicaciones extraordinarias que ofrecen experiencias únicas y maximizan el éxito en el mercado.",
-    "ctaPrimary": "Inicia tu Proyecto",
-    "ctaSecondary": "Aprende Más"
+    "line2": "presencia Digital",
+    "description": "Creo productos digitales innovadores y de vanguardia, desarrollando soluciones personalizadas, sitios web y aplicaciones extraordinarias que ofrecen experiencias únicas y maximizan el éxito en el mercado.",
+    "ctaPrimary": "Comenzar tu Proyecto",
+    "ctaSecondary": "Saber Más"
   },
   "services": {
-    "title": "Qué",
-    "titleAccent": "Ofrecemos",
-    "description": "Desde sitios web y aplicaciones hasta SEO y automatización, ofrecemos soluciones digitales de extremo a extremo que se entregan rápido, escalan sin problemas y generan resultados.",
+    "title": "Cómo Puedo",
+    "titleAccent": "Apoyarte",
+    "description": "Desde sitios web y aplicaciones hasta SEO y automatización, ofrezco soluciones digitales integrales diseñadas para ser lanzadas rápido, escalar sin problemas e impulsar resultados medibles para ti.",
     "items": {
       "0": {
         "title": "Desarrollo de Sitios Web",
-        "description": "Construimos sitios web rápidos y accesibles a la medida de tu marca—listos para SEO, fáciles de actualizar y diseñados para convertir en cada dispositivo.",
+        "description": "Construyo sitios web rápidos y accesibles optimizados para tu marca; están listos para SEO, son fáciles de actualizar y están diseñados para convertir visitantes en cada dispositivo.",
         "features": {
           "0": "Diseño Responsivo",
-          "1": "Desarrollo Personalizado",
-          "2": "Integración CMS"
+          "1": "Desarrollo a Medida",
+          "2": "Integración de CMS"
         }
       },
       "1": {
         "title": "Optimización SEO",
-        "description": "Aumenta el tráfico orgánico con SEO basado en datos: investigación, correcciones técnicas y contenido que posiciona y atrae leads cualificados.",
+        "description": "Te ayudo a aumentar el tráfico orgánico con SEO basado en datos: yo manejo la investigación, las correcciones técnicas y la estrategia de contenido para que tu negocio se posicione y atraiga clientes potenciales cualificados.",
         "features": {
           "0": "Investigación de Palabras Clave",
           "1": "SEO On-page",
@@ -64,18 +64,18 @@
       },
       "2": {
         "title": "Aplicaciones Web",
-        "description": "Aplicaciones web personalizadas que escalan—APIs limpias, autenticación segura y UX intuitiva que convierte flujos complejos en un clic.",
+        "description": "Desarrollo aplicaciones web personalizadas que escalan con tu negocio, con APIs limpias, autenticación segura y UX intuitiva para simplificar flujos de trabajo complejos.",
         "features": {
           "0": "Aplicaciones Personalizadas",
-          "1": "Integración de APIs",
+          "1": "Integración de API",
           "2": "Experiencia de Usuario"
         }
       },
       "3": {
         "title": "Automatización",
-        "description": "Automatiza tareas repetitivas en tu stack para ahorrar horas—conecta herramientas, orquesta datos y mantiene equipos sincronizados.",
+        "description": "Automatizo tareas repetitivas en tu stack para ahorrarte horas: conectando herramientas, orquestando datos y asegurando que tus sistemas se mantengan sincronizados.",
         "features": {
-          "0": "Automatización de Flujos",
+          "0": "Automatización de Flujos de Trabajo",
           "1": "Optimización de Procesos",
           "2": "Integración"
         }
@@ -83,23 +83,23 @@
     }
   },
   "portfolio": {
-    "title": "Nuestro",
-    "titleAccent": "Portafolio",
-    "description": "Explora proyectos seleccionados que combinan rendimiento, accesibilidad y UX cuidadosa—construidos para escalar y ofrecer impacto medible.",
-    "website": "Sitio",
+    "title": "Porta",
+    "titleAccent": "folio",
+    "description": "Explora proyectos seleccionados que demuestran rendimiento, accesibilidad y una UX bien pensada; soluciones construidas para escalar y ofrecer un impacto medible para los clientes.",
+    "website": "Sitio Web",
     "code": "Código",
     "projects": {
       "corporate": {
-        "title": "Sitio Corporativo",
-        "description": "Sitio corporativo moderno con un CMS headless, rendimiento sobresaliente y buenas prácticas de SEO—fácil de administrar y diseñado para contar la historia de la marca.",
-        "category": "Sitio",
+        "title": "Sitio Web Corporativo",
+        "description": "Sitio corporativo moderno con un CMS 'headless', rendimiento asombroso y mejores prácticas de SEO; fácil de administrar para el cliente y perfectamente adaptado para la narrativa de marca.",
+        "category": "Sitio Web",
         "technologies": ["Next.js", "TypeScript", "Tailwind", "CMS"]
       },
       "restaurant": {
         "title": "Gestión de Restaurantes",
-        "description": "Sistema integral para menús, pedidos y reservas con analíticas y pagos—optimizando operaciones en todos los dispositivos.",
+        "description": "Un sistema integral para menús, pedidos y reservas con análisis y pagos, agilizando las operaciones del cliente en todos los dispositivos.",
         "category": "Aplicación Web",
-        "technologies": ["Vue.js", "Firebase", "API de Pagos", "Analíticas"]
+        "technologies": ["Vue.js", "Firebase", "Payment API", "Analytics"]
       }
     }
   }
