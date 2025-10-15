@@ -1,14 +1,14 @@
 import Contact from '@/components/Contact';
-import Hero from '@/components/Hero';
 import AboutView from '@/components/views/About';
+import ExperienceView from '@/components/views/Experience';
 import { useTranslation } from 'react-i18next';
 
 const About = () => {
   const { t } = useTranslation();
   return (
     <>
-      <Hero />
       <AboutView />
+      <ExperienceView />
       <Contact />
     </>
   );

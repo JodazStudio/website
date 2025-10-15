@@ -105,6 +105,11 @@
     }
   },
   "about": {
+    "line1": "Jesus",
+    "line2": "Ordosgoitty",
+    "description": "Frontend Developer, Full Stack Engineer, and passionate about software engineering.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Learn More",
     "intro": "Hi, I'm Jodaz. I design and build fast, accessible, and scalable digital products. This page is coming soon."
   }
 }

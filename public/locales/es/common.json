@@ -105,6 +105,11 @@
     }
   },
   "about": {
+    "line1": "Jesús",
+    "line2": "Ordosgoitty",
+    "description": "Desarrollador Frontend, Ingeniero Full Stack y apasionado por la ingeniería de software.",
+    "ctaPrimary": "Comenzar tu Proyecto",
+    "ctaSecondary": "Saber Más",
     "intro": "Hola, soy Jodaz. Diseño y desarrollo productos digitales rápidos, accesibles y escalables. Esta página estará disponible pronto."
   }
 }
