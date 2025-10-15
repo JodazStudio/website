@@ -2,7 +2,8 @@
   "nav": {
     "services": "Servicios",
     "portfolio": "Portafolio",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "about": "Sobre mí"
   },
   "buttons": {
     "website": "Sitio Web",
@@ -102,5 +103,8 @@
         "technologies": ["Vue.js", "Firebase", "Payment API", "Analytics"]
       }
     }
+  },
+  "about": {
+    "intro": "Hola, soy Jodaz. Diseño y desarrollo productos digitales rápidos, accesibles y escalables. Esta página estará disponible pronto."
   }
 }

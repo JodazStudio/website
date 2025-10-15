@@ -2,7 +2,8 @@
   "nav": {
     "services": "Services",
     "portfolio": "Portfolio",
-    "contact": "Contact"
+    "contact": "Contact",
+    "about": "About me"
   },
   "buttons": {
     "website": "Website",
@@ -102,5 +103,8 @@
         "technologies": ["Vue.js", "Firebase", "Payment API", "Analytics"]
       }
     }
+  },
+  "about": {
+    "intro": "Hi, I'm Jodaz. I design and build fast, accessible, and scalable digital products. This page is coming soon."
   }
 }
