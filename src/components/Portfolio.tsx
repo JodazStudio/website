@@ -29,8 +29,6 @@ const Portfolio = () => {
     },
   ];
   const { t } = useTranslation();
-  console.log(t('portfolio.title'));
-  return <></>;
 
   return (
     <section id="portfolio" className="py-20 bg-muted/30">
