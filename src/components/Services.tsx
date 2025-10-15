@@ -1,7 +1,10 @@
 import { Globe, Search, Database, Smartphone, Zap, TrendingUp } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+  const { t } = useTranslation();
+
   const services = [
     {
       icon: Globe,
@@ -52,11 +55,14 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            What We <span className="text-primary">Offer</span>
+            {t('services.title', 'What We')}{' '}
+            <span className="text-primary">{t('services.titleAccent', 'Offer')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            From websites and apps to SEO and automation, we deliver end‑to‑end digital solutions
-            that ship fast, scale smoothly, and drive results.
+            {t(
+              'services.description',
+              'From websites and apps to SEO and automation, we deliver end‑to‑end digital solutions that ship fast, scale smoothly, and drive results.'
+            )}
           </p>
         </div>
 
@@ -72,9 +78,11 @@ const Services = () => {
                   <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-3">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                    {t(`services.items.${index}.title`, service.title)}
+                  </h3>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    {service.description}
+                    {t(`services.items.${index}.description`, service.description)}
                   </p>
                 </div>
 
@@ -82,7 +90,7 @@ const Services = () => {
                   {service.features.map((feature, i) => (
                     <div key={i} className="flex items-center text-sm text-foreground">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                      {feature}
+                      {t(`services.items.${index}.features.${i}`, feature)}
                     </div>
                   ))}
                 </div>

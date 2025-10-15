@@ -1,7 +1,9 @@
 import { FOOTER_LINKS, FOOTER_CREDITS_LINK } from '@/lib/links';
 import jodazLogo from '@/assets/jodaz_isotipo.png';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,16 +16,18 @@ const Footer = () => {
               <img src={jodazLogo} alt="JODAZ DEV" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-accent-foreground/80 leading-relaxed mb-6 max-w-md">
-              JODAZ DEV crafts innovative digital products, custom websites, and applications that
-              elevate your brand and deliver unique experiences. We help businesses stand out and
-              succeed in the digital world through creativity, technology, and personalized
-              solutions.
+              {t(
+                'footer.description',
+                'JODAZ DEV crafts innovative digital products, custom websites, and applications that elevate your brand and deliver unique experiences. We help businesses stand out and succeed in the digital world through creativity, technology, and personalized solutions.'
+              )}
             </p>
           </div>
 
           {/* Contact & Social Links */}
           <div>
-            <h4 className="font-bold text-accent-foreground mb-4">Contact & Links</h4>
+            <h4 className="font-bold text-accent-foreground mb-4">
+              {t('footer.contactLinks', 'Contact & Links')}
+            </h4>
             <ul className="space-y-2 text-accent-foreground/80">
               {FOOTER_LINKS.map((link) => (
                 <li key={link.label}>
@@ -67,7 +71,11 @@ const Footer = () => {
                       </svg>
                     ) : null}
                     {/* {link.label === 'Email' ? <Mail className="w-5 h-5" /> : null} */}
-                    <span>{link.label === 'Email' ? 'hello@jodaz.dev' : link.label}</span>
+                    <span>
+                      {link.label === 'Email'
+                        ? 'hello@jodaz.dev'
+                        : t(`footer.links.${link.label.toLowerCase()}`, link.label)}
+                    </span>
                   </a>
                 </li>
               ))}
@@ -82,9 +90,9 @@ const Footer = () => {
                 className="hover:text-primary underline transition-colors"
                 href={FOOTER_CREDITS_LINK.href}
               >
-                JODAZ DEV
+                {t('footer.companyName', 'JODAZ DEV')}
               </a>
-              . All rights reserved.
+              . {t('footer.allRights', 'All rights reserved.')}
             </p>
           </div>
         </div>

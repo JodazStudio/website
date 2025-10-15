@@ -1,8 +1,11 @@
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Video from './Video';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -20,14 +23,15 @@ const Hero = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-8 animate-fade-in">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
-                Transform Your
-                <span className="block">Digital Presence</span>
+                {t('hero.line1', 'Transform Your')}
+                <span className="block">{t('hero.line2', 'Digital Presence')}</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
-                We create innovative and cutting-edge digital products, developing personalized
-                solutions, websites, and extraordinary applications that offer unique experiences
-                and maximize success in the market.
+                {t(
+                  'hero.description',
+                  'We create innovative and cutting-edge digital products, developing personalized solutions, websites, and extraordinary applications that offer unique experiences and maximize success in the market.'
+                )}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -37,7 +41,7 @@ const Hero = () => {
                   onClick={() => scrollToSection('contact')}
                   className="group"
                 >
-                  Start Your Project
+                  {t('hero.ctaPrimary', 'Start Your Project')}
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Button>
 
@@ -46,7 +50,7 @@ const Hero = () => {
                   size="xl"
                   onClick={() => scrollToSection('services')}
                 >
-                  Learn More
+                  {t('hero.ctaSecondary', 'Learn More')}
                 </Button>
               </div>
             </div>

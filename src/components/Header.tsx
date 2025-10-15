@@ -13,6 +13,33 @@ const Header = () => {
     void i18n.changeLanguage(lng);
   };
 
+  // Detect browser locale on mount and set supported language (en | es)
+  useEffect(() => {
+    try {
+      const navLang =
+        typeof navigator !== 'undefined'
+          ? navigator.language || (navigator.languages && navigator.languages[0])
+          : null;
+      if (navLang) {
+        const normalized = navLang.split('-')[0]; // e.g. 'en-US' -> 'en'
+        const supported = ['en', 'es'];
+        const target = supported.includes(normalized) ? normalized : 'en';
+
+        if (i18n.language !== target) {
+          void i18n.changeLanguage(target);
+        }
+        // keep document lang in sync for accessibility
+        if (typeof document !== 'undefined' && document.documentElement.lang !== target) {
+          document.documentElement.lang = target;
+        }
+      }
+    } catch (e) {
+      // silent fallback to default i18n language
+    }
+    // run only on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {

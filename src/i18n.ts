@@ -8,6 +8,7 @@ void i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init<HttpBackendOptions>({
+    supportedLngs: ['en', 'es'],
     lng: 'en',
     fallbackLng: 'en',
     backend: {
