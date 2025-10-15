@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
@@ -9,6 +9,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpaque, setIsOpaque] = useState(false);
   const { i18n, t } = useTranslation();
+  const navigate = useNavigate();
+  // const location = useLocation();
 
   const changeLanguage = (lng: string) => {
     void i18n.changeLanguage(lng);
@@ -46,12 +48,17 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
+    } else {
+      // Navigate to home page and scroll after navigation
+      navigate('/', { state: { scrollTo: sectionId } });
+      setIsMenuOpen(false);
     }
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const servicesSection = document.getElementById('services');
+      const servicesSection =
+        document.getElementById('services') || document.getElementById('about');
       if (servicesSection) {
         const servicesTop = servicesSection.offsetTop;
         setIsOpaque(window.scrollY >= servicesTop - 100); // Adjust offset as needed
