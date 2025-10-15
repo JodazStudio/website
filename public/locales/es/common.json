@@ -89,20 +89,26 @@
     "description": "Explora proyectos seleccionados que demuestran rendimiento, accesibilidad y una UX bien pensada; soluciones construidas para escalar y ofrecer un impacto medible para los clientes.",
     "website": "Sitio Web",
     "code": "Código",
-    "projects": {
-      "corporate": {
-        "title": "Sitio Web Corporativo",
+    "projects": [
+      {
+        "id": "corporate",
+        "title": "Santa Rosa 10K Landing",
         "description": "Sitio corporativo moderno con un CMS 'headless', rendimiento asombroso y mejores prácticas de SEO; fácil de administrar para el cliente y perfectamente adaptado para la narrativa de marca.",
         "category": "Sitio Web",
-        "technologies": ["Next.js", "TypeScript", "Tailwind", "CMS"]
+        "technologies": ["Next.js", "TypeScript", "Tailwind", "S3 Storage"],
+        "image": "portfolio-corporate.jpg",
+        "website": "https://www.santarosa10k.com"
       },
-      "restaurant": {
-        "title": "Gestión de Restaurantes",
-        "description": "Un sistema integral para menús, pedidos y reservas con análisis y pagos, agilizando las operaciones del cliente en todos los dispositivos.",
-        "category": "Aplicación Web",
-        "technologies": ["Vue.js", "Firebase", "Payment API", "Analytics"]
+      {
+        "id": "cms",
+        "title": "Fruga",
+        "description": "Plataforma integral de reembolso que integra APIs de comercio afiliado para recompensar a los usuarios con reembolsos, compensando las primas de seguro.",
+        "category": "B2C",
+        "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
+        "image": "portfolio-restaurant.jpg",
+        "website": "https://fruga.co.uk"
       }
-    }
+    ]
   },
   "about": {
     "line1": "Jesús",

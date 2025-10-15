@@ -5,30 +5,25 @@ import { useTranslation } from 'react-i18next';
 import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
 import portfolioCorporate from '@/assets/portfolio-corporate.jpg';
 import portfolioRestaurant from '@/assets/portfolio-restaurant.jpg';
-import { IProject } from '@/models';
 
 const Portfolio = () => {
-  const projects: Array<{ id: string; image: string; code?: string; website?: string }> = [
-    // {
-    //   id: 'ecommerce',
-    //   image: portfolioEcommerce,
-    //   code: 'https://github.com/jodaz-dev/ecommerce-platform',
-    //   website: 'https://ecommerce.example.com',
-    // },
-    {
-      id: 'corporate',
-      image: portfolioCorporate,
-      code: 'https://github.com/jodaz-dev/corporate-website',
-      website: 'https://corporate.example.com',
-    },
-    {
-      id: 'restaurant',
-      image: portfolioRestaurant,
-      code: 'https://github.com/jodaz-dev/restaurant-management',
-      website: 'https://restaurant.example.com',
-    },
-  ];
   const { t } = useTranslation();
+
+  const imageMap: Record<string, string> = {
+    'portfolio-corporate.jpg': portfolioCorporate,
+    'portfolio-restaurant.jpg': portfolioRestaurant,
+  };
+
+  const projects = t('portfolio.projects', { returnObjects: true }) as Array<{
+    id: string;
+    title: string;
+    description: string;
+    category: string;
+    technologies: string[];
+    image: string;
+    code?: string;
+    website?: string;
+  }>;
 
   return (
     <section id="portfolio" className="py-20 bg-muted/30">
@@ -48,23 +43,18 @@ const Portfolio = () => {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => {
-            const title = t(`portfolio.projects.${project.id}.title`);
-            const description = t(`portfolio.projects.${project.id}.description`);
-            const category = t(`portfolio.projects.${project.id}.category`);
-            const technologies = t(`portfolio.projects.${project.id}.technologies`, {
-              returnObjects: true,
-            }) as string[];
+            const image = imageMap[project.image];
 
             return (
               <Card
-                key={index}
+                key={project.id}
                 className="group overflow-hidden hover:shadow-card transition-all duration-500 hover:-translate-y-2 bg-card animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={project.image}
-                    alt={title}
+                    src={image}
+                    alt={project.title}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -99,18 +89,20 @@ const Portfolio = () => {
                   </div>
                   <div className="absolute top-4 left-4">
                     <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                      {category}
+                      {project.category}
                     </span>
                   </div>
                 </div>
 
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-3">{title}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">{description}</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">{project.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {project.description}
+                  </p>
 
                   <div className="flex flex-wrap gap-2">
-                    {technologies &&
-                      technologies.map((tech, i) => (
+                    {project.technologies &&
+                      project.technologies.map((tech, i) => (
                         <span
                           key={i}
                           className="bg-muted text-muted-foreground px-3 py-1 rounded-full text-sm font-medium"

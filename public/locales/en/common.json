@@ -89,20 +89,26 @@
     "description": "Explore selected projects that demonstrate performance, accessibility, and thoughtful UX—solutions built to scale and deliver measurable impact for clients.",
     "website": "Website",
     "code": "Code",
-    "projects": {
-      "corporate": {
-        "title": "Corporate Website",
+    "projects": [
+      {
+        "id": "corporate",
+        "title": "Santa Rosa 10K Landing",
         "description": "Modern corporate site featuring a headless CMS, blazing performance, and SEO best practices—easy for the client to manage and perfectly tailored for brand storytelling.",
         "category": "Website",
-        "technologies": ["Next.js", "TypeScript", "Tailwind", "CMS"]
+        "technologies": ["Next.js", "TypeScript", "Tailwind", "S3 Storage"],
+        "image": "portfolio-corporate.jpg",
+        "website": "https://www.santarosa10k.com"
       },
-      "restaurant": {
-        "title": "Restaurant Management",
-        "description": "An end‑to‑end system for menus, orders, and reservations with analytics and payments—streamlining the client's operations across all devices.",
-        "category": "Web App",
-        "technologies": ["Vue.js", "Firebase", "Payment API", "Analytics"]
+      {
+        "id": "b2c",
+        "title": "Fruga",
+        "description": "Comprehensive cashback platform integrating affiliate retail APIs to reward users with rebates, offsetting insurance premiums.",
+        "category": "B2C",
+        "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
+        "image": "portfolio-restaurant.jpg",
+        "website": "https://fruga.co.uk"
       }
-    }
+    ]
   },
   "about": {
     "line1": "Jesus",
