@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import founder from '@/assets/images/founder.png';
 // import { Card, CardContent } from '@/components/ui/card';
 // import { Button } from '@/components/ui/button';
 // import { Input } from '@/components/ui/input';
@@ -14,6 +15,18 @@ const Contact = () => {
     console.log('Form submitted');
   };
 
+  const renderPicture = () => (
+    <div className="flex items-start justify-center lg:justify-end lg:order-2 order-3">
+      <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 bg-muted relative rounded-2xl overflow-hidden shadow-lg transform transition-transform will-change-transform animate-slide-up-delayed">
+        <img
+          src={founder}
+          alt={t('contact.portraitAlt', 'Portrait')}
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  );
+
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -22,17 +35,18 @@ const Contact = () => {
             {t('contact.title', 'Get In')}{' '}
             <span className="text-primary">{t('contact.titleAccent', 'Touch')}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          {/* <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             {t(
               'contact.description',
               'We craft clear, high‑impact digital experiences—fast, secure, and accessible. Ready to transform your digital presence?'
             )}
-          </p>
+          </p> */}
+          <br className="hidden md:block" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-end">
           {/* Contact Information */}
-          <div className="space-y-8 animate-slide-up">
+          <div className="space-y-8 animate-slide-up lg:order-1 order-2">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-6">
                 {t('contact.headline', "Let's Start a Conversation")}
@@ -44,6 +58,7 @@ const Contact = () => {
                 )}
               </p>
             </div>
+            <div className="flex justify-center md:hidden">{renderPicture()}</div>
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
@@ -79,6 +94,9 @@ const Contact = () => {
               </div>
             </div>
           </div>
+
+          {/* Portrait / Image */}
+          <div className="hidden md:flex justify-center">{renderPicture()}</div>
 
           {/* Contact Form */}
           {/* <Card className="bg-gradient-card border-border/50 shadow-card animate-scale-in">
