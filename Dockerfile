@@ -1,5 +1,5 @@
-# Multi-stage build for Vite + pnpm project
-FROM node:18-alpine AS builder
+FROM node:lts-alpine AS build
+
 WORKDIR /app
 
 # Enable corepack and pnpm
@@ -9,23 +9,23 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 COPY package.json pnpm-lock.yaml ./
 
 # Install deps
-RUN pnpm install --frozen-lockfile --prod=false
+RUN pnpm install --frozen-lockfile
 
 # Copy source and build
-COPY . .
+COPY . ./
+
 RUN pnpm run build
 
-FROM node:18-alpine AS runner
+# Use a minimal Node image to serve static files with 'serve'
+FROM node:lts-alpine
 
 # Use a minimal Node image to serve static files with 'serve'
 WORKDIR /app
 
-# Install 'serve' to serve built files
-RUN corepack enable && corepack prepare pnpm@latest --activate && \
-	pnpm add -g serve
+RUN npm install -g serve
 
 # Copy built assets from builder
-COPY --from=builder /app/dist ./dist
+COPY --from=build /app/dist ./dist
 
 EXPOSE 8080
 CMD ["serve", "-s", "dist", "-l", "8080"]
