@@ -1,9 +1,7 @@
 node_modules
-dist
 .env
 .env.*
 .git
-pnpm-lock.yaml
 *.log
 .vscode
 coverage

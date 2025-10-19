@@ -2,7 +2,8 @@
   "nav": {
     "services": "Services",
     "portfolio": "Portfolio",
-    "contact": "Contact"
+    "contact": "Contact",
+    "about": "About me"
   },
   "buttons": {
     "website": "Website",
@@ -11,11 +12,11 @@
     "viewAll": "View All Projects"
   },
   "contact": {
-    "title": "Ready to transform your ",
+    "title": "Ready to elevate your ",
     "titleAccent": "digital presence?",
-    "description": "We craft clear, high‑impact digital experiences—fast, secure, and accessible. Ready to transform your digital presence?",
+    "description": "I partner with you to craft clear, high‑impact digital experiences—fast, secure, and accessible. Let's start building your digital future.",
     "headline": "Let's Start a Conversation",
-    "subhead": "Tell us about your goals and constraints—we’ll reply with a clear plan, timeline, and budget. No fluff, just pragmatic steps to launch and grow.",
+    "subhead": "Tell me about your vision and any challenges you face—I’ll provide a clear plan, timeline, and budget. Just pragmatic steps to launch and grow your business.",
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
@@ -24,7 +25,7 @@
   "footer": {
     "contactLinks": "Social",
     "companyName": "JODAZ DEV",
-    "description": "JODAZ DEV crafts innovative digital products, custom websites, and applications that elevate your brand and deliver unique experiences. We help businesses stand out and succeed in the digital world through creativity, technology, and personalized solutions.",
+    "description": "I work with businesses to craft innovative digital products, custom websites, and applications. My goal is to elevate your brand and ensure you succeed in the digital world through thoughtful strategy, technology, and personalized solutions.",
     "allRights": "All rights reserved.",
     "links": {
       "email": "Email",
@@ -35,18 +36,18 @@
   "hero": {
     "line1": "Transform Your",
     "line2": "Digital Presence",
-    "description": "We create innovative and cutting-edge digital products, developing personalized solutions, websites, and extraordinary applications that offer unique experiences and maximize success in the market.",
+    "description": "I create innovative and cutting-edge digital products, developing personalized solutions, websites, and extraordinary applications that offer unique experiences and maximize success in the market.",
     "ctaPrimary": "Start Your Project",
     "ctaSecondary": "Learn More"
   },
   "services": {
-    "title": "What We",
-    "titleAccent": "Offer",
-    "description": "From websites and apps to SEO and automation, we deliver end‑to‑end digital solutions that ship fast, scale smoothly, and drive results.",
+    "title": "How I Can",
+    "titleAccent": "Support You",
+    "description": "From websites and apps to SEO and automation, I offer end‑to‑end digital solutions designed to ship fast, scale smoothly, and drive measurable results for you.",
     "items": {
       "0": {
         "title": "Website Development",
-        "description": "We build fast, accessible websites tailored to your brand—SEO‑ready, easy to update, and designed to convert on every device.",
+        "description": "I build fast, accessible websites optimized for your brand—they're SEO‑ready, easy for you to update, and designed to convert visitors on every device.",
         "features": {
           "0": "Responsive Design",
           "1": "Custom Development",
@@ -55,7 +56,7 @@
       },
       "1": {
         "title": "SEO Optimization",
-        "description": "Increase organic traffic with data‑backed SEO: research, technical fixes, and content that ranks and drives qualified leads.",
+        "description": "I help you increase organic traffic with data‑backed SEO: I handle the research, technical fixes, and content strategy so your business ranks and attracts qualified leads.",
         "features": {
           "0": "Keyword Research",
           "1": "On-page SEO",
@@ -64,7 +65,7 @@
       },
       "2": {
         "title": "Web Applications",
-        "description": "Custom web apps that scale—clean APIs, secure auth, and intuitive UX that turns complex workflows into one click.",
+        "description": "I develop custom web applications that scale with your business—with clean APIs, secure authentication, and intuitive UX to simplify complex workflows.",
         "features": {
           "0": "Custom Apps",
           "1": "API Integration",
@@ -73,7 +74,7 @@
       },
       "3": {
         "title": "Automation",
-        "description": "Automate repetitive tasks across your stack to save hours—connect tools, orchestrate data, and keep teams in sync.",
+        "description": "I automate repetitive tasks across your stack to save you hours—connecting tools, orchestrating data, and ensuring your systems stay in sync.",
         "features": {
           "0": "Workflow Automation",
           "1": "Process Optimization",
@@ -83,24 +84,38 @@
     }
   },
   "portfolio": {
-    "title": "Our",
-    "titleAccent": "Portfolio",
-    "description": "Explore selected projects that blend performance, accessibility, and thoughtful UX—built to scale and deliver measurable impact.",
+    "title": "Port",
+    "titleAccent": "folio",
+    "description": "Explore selected projects that demonstrate performance, accessibility, and thoughtful UX—solutions built to scale and deliver measurable impact for clients.",
     "website": "Website",
     "code": "Code",
-    "projects": {
-      "corporate": {
-        "title": "Corporate Website",
-        "description": "Modern corporate site with a headless CMS, blazing performance, and SEO best practices—easy to manage and tailored for brand storytelling.",
+    "projects": [
+      {
+        "id": "corporate",
+        "title": "Santa Rosa 10K Landing",
+        "description": "Modern corporate site featuring a headless CMS, blazing performance, and SEO best practices—easy for the client to manage and perfectly tailored for brand storytelling.",
         "category": "Website",
-        "technologies": ["Next.js", "TypeScript", "Tailwind", "CMS"]
+        "technologies": ["Next.js", "TypeScript", "Tailwind", "S3 Storage"],
+        "image": "portfolio-corporate.jpg",
+        "website": "https://www.santarosa10k.com"
       },
-      "restaurant": {
-        "title": "Restaurant Management",
-        "description": "End‑to‑end system for menus, orders, and reservations with analytics and payments—streamlining operations across devices.",
-        "category": "Web App",
-        "technologies": ["Vue.js", "Firebase", "Payment API", "Analytics"]
+      {
+        "id": "b2c",
+        "title": "Fruga",
+        "description": "Comprehensive cashback platform integrating affiliate retail APIs to reward users with rebates, offsetting insurance premiums.",
+        "category": "B2C",
+        "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
+        "image": "portfolio-restaurant.jpg",
+        "website": "https://fruga.co.uk"
       }
-    }
+    ]
+  },
+  "about": {
+    "line1": "Jesus",
+    "line2": "Ordosgoitty",
+    "description": "Frontend Developer, Full Stack Engineer, and passionate about software engineering.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Learn More",
+    "intro": "Hi, I'm Jodaz. I design and build fast, accessible, and scalable digital products. This page is coming soon."
   }
 }
