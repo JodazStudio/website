@@ -1,73 +1,125 @@
-# Welcome to your Lovable project
+# Jesus Ordosgoitty - Portfolio Website
 
-## Project info
+A modern, responsive portfolio website showcasing my work as a Frontend Developer and Full Stack Engineer. Built with React, TypeScript, and Tailwind CSS, featuring internationalization support for English and Spanish.
 
-**URL**: https://lovable.dev/projects/500696ef-1d19-408f-9ad6-18bfebe05908
+## 🚀 Features
 
-## How can I edit this code?
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Internationalization**: Full i18n support with English and Spanish translations
+- **Modern UI**: Built with shadcn/ui components and Tailwind CSS
+- **Portfolio Showcase**: Highlighting key projects with live demos and code links
+- **About Section**: Personal introduction and professional background
+- **Contact Integration**: Easy ways to get in touch
+- **Performance Optimized**: Fast loading with Vite build system
+- **Docker Support**: Containerized deployment ready
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Internationalization**: react-i18next
+- **Build Tool**: Vite
+- **Package Manager**: pnpm
+- **Deployment**: Docker, Lovable
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/500696ef-1d19-408f-9ad6-18bfebe05908) and start prompting.
+## 📦 Installation & Development
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js (LTS version)
+- pnpm (or npm/yarn)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Local Development
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone the repository**
 
-Follow these steps:
+   ```bash
+   git clone <YOUR_GIT_URL>
+   cd website
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **Install dependencies**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   ```bash
+   pnpm install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Start development server**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+   ```bash
+   pnpm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
+
+### Build for Production
+
+```bash
+pnpm run build
 ```
 
-**Edit a file directly in GitHub**
+### Preview Production Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+pnpm run preview
+```
 
-**Use GitHub Codespaces**
+## 🐳 Docker Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Build and Run with Docker
 
-## What technologies are used for this project?
+1. **Build the Docker image**
 
-This project is built with:
+   ```bash
+   docker build -t jodaz-portfolio .
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. **Run the container**
 
-## How can I deploy this project?
+   ```bash
+   docker run -p 8080:8080 jodaz-portfolio
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/500696ef-1d19-408f-9ad6-18bfebe05908) and click on Share -> Publish.
+3. **Access the application**
+   Open `http://localhost:8080` in your browser
 
-## Can I connect a custom domain to my Lovable project?
+The Dockerfile uses a multi-stage build for optimal image size and includes all necessary dependencies.
 
-Yes, you can!
+## 🌐 Internationalization
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The site supports two languages:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- English (`/public/locales/en/common.json`)
+- Spanish (`/public/locales/es/common.json`)
+
+To add new languages or modify translations, edit the JSON files in `/public/locales/`.
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   └── views/          # Page-specific components
+├── assets/             # Images and media files
+├── hooks/              # Custom React hooks
+├── lib/                # Utilities and configurations
+├── pages/              # Page components
+└── models.ts           # TypeScript interfaces
+```
+
+## 🚀 Deployment
+
+### Docker Deployment
+
+Use the provided Dockerfile for containerized deployment on any platform supporting Docker.
+
+## 📞 Contact
+
+- [LinkedIn](https://www.linkedin.com/in/jodaz/)
+- [Github](https://github.com/jodaz)
+
+---
+
+Built with ❤️ by Jesus Ordosgoitty
