@@ -73,7 +73,7 @@ const Footer = () => {
                     {/* {link.label === 'Email' ? <Mail className="w-5 h-5" /> : null} */}
                     <span>
                       {link.label === 'Email'
-                        ? 'contact@jodaz.xyz'
+                        ? 'jodaz.business@gmail.com'
                         : t(`footer.links.${link.label.toLowerCase()}`, link.label)}
                     </span>
                   </a>
