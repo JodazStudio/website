@@ -117,5 +117,55 @@
     "ctaPrimary": "Comenzar tu Proyecto",
     "ctaSecondary": "Saber Más",
     "intro": "Hola, soy Jodaz. Diseño y desarrollo productos digitales rápidos, accesibles y escalables. Esta página estará disponible pronto."
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "description": "Todas mis experiencias profesionales como ingeniero de software",
+    "items": [
+      {
+        "company": "Noriega Development",
+        "roles": [
+          {
+            "title": "Desarrollador Full‑Stack Freelance",
+            "period": "Abr. 2024 — Actualidad"
+          }
+        ]
+      },
+      {
+        "company": "Stampfeet Ltd.",
+        "roles": [
+          {
+            "title": "Desarrollador Frontend",
+            "period": "Sept. 2023 — Actualidad"
+          }
+        ]
+      },
+      {
+        "company": "Alaxatech, Agencia Digital",
+        "roles": [
+          {
+            "title": "Desarrollador Frontend",
+            "period": "Oct. 2022 — Jul. 2023"
+          },
+          {
+            "title": "Desarrollador FullStack",
+            "period": "Ene. 2021 — Jul. 2023"
+          }
+        ]
+      },
+      {
+        "company": "Alcaldía del Municipio Bermúdez",
+        "roles": [
+          {
+            "title": "Desarrollador y Soporte de TI",
+            "period": "Sept. 2019 — Oct. 2022"
+          },
+          {
+            "title": "Jefe de Desarrollo Web y Marketing Digital",
+            "period": "Nov. 2020 — Nov. 2021"
+          }
+        ]
+      }
+    ]
   }
 }

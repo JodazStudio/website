@@ -7,3 +7,13 @@ export interface IProject {
   code?: string;
   website?: string;
 }
+
+export interface IExperienceRole {
+  title: string;
+  period: string;
+}
+
+export interface IExperienceItem {
+  company: string;
+  roles: IExperienceRole[];
+}
