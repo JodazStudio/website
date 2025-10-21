@@ -1,25 +1,25 @@
-import { Globe, Mail } from 'lucide-react';
+import { Globe, Mail, Github, Instagram, Linkedin } from 'lucide-react';
 
 export const FOOTER_LINKS = [
   {
-    label: 'Email',
-    href: 'mailto:contact@jodaz.dev',
-    icon: Mail,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/jodaz/',
+    icon: Linkedin,
   },
   {
     label: 'Instagram',
     href: 'https://www.instagram.com/jodaz.dev',
-    icon: null, // Use custom SVG or lucide-react Instagram icon if available
+    icon: Instagram, // Use custom SVG or lucide-react Instagram icon if available
   },
   {
-    label: 'GitHub',
-    href: 'https://github.com/JodazDev',
-    icon: null, // Use custom SVG or lucide-react GitHub icon if available
+    label: 'Github',
+    href: 'https://github.com/jodaz-dev',
+    icon: Github, // Use custom SVG or lucide-react GitHub icon if available
   },
 ];
 
 export const FOOTER_CREDITS_LINK = {
   label: 'jodaz.dev',
-  href: 'https://jodaz.dev',
+  href: 'https://jodaz.xyz',
   icon: Globe,
 };
