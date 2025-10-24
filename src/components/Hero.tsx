@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-[600px] h-[100vh] overflow-hidden relative">
+    <section className="min-h-[600px] h-[100vh] bg-slate-900 overflow-hidden relative">
       <Video />
       <div className="absolute inset-0 bg-black opacity-25 w-full h-full z-0"></div>
 

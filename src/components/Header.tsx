@@ -75,8 +75,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 bg-gray-900 backdrop-blur-sm text-blue-600`}
     >
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 py-1">
+        <div className="flex items-center justify-between h-full w-full">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src={jodazLogo} alt="JODAZ DEV" className="h-12 lg:h-16 w-auto" />
