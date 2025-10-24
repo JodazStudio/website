@@ -92,12 +92,12 @@
     "projects": [
       {
         "id": "corporate",
-        "title": "Santa Rosa 10K Landing",
+        "title": "Horsy.AI",
         "description": "Sitio corporativo moderno con un CMS 'headless', rendimiento asombroso y mejores prácticas de SEO; fácil de administrar para el cliente y perfectamente adaptado para la narrativa de marca.",
         "category": "Sitio Web",
         "technologies": ["Next.js", "TypeScript", "Tailwind", "S3 Storage"],
-        "image": "portfolio-corporate.jpg",
-        "website": "https://www.santarosa10k.com"
+        "image": "horsy.png",
+        "website": "https://horsy.ai"
       },
       {
         "id": "cms",
@@ -105,8 +105,8 @@
         "description": "Plataforma integral de reembolso que integra APIs de comercio afiliado para recompensar a los usuarios con reembolsos, compensando las primas de seguro.",
         "category": "B2C",
         "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
-        "image": "portfolio-restaurant.jpg",
-        "website": "https://fruga.co.uk"
+        "image": "fruga.png",
+        "website": "https://dev.fruga.co.uk"
       }
     ]
   },

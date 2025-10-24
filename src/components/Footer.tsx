@@ -1,7 +1,7 @@
 import { FOOTER_LINKS, FOOTER_CREDITS_LINK } from '@/lib/links';
 import jodazLogo from '@/assets/jodaz_isotipo.png';
 import { useTranslation } from 'react-i18next';
-import { Mail } from 'lucide-react';
+// removed unused Mail icon import
 
 const Footer = () => {
   const { t } = useTranslation();

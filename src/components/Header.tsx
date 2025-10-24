@@ -55,27 +55,25 @@ const Header = () => {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const servicesSection =
-        document.getElementById('services') || document.getElementById('about');
-      if (servicesSection) {
-        const servicesTop = servicesSection.offsetTop;
-        setIsOpaque(window.scrollY >= servicesTop - 100); // Adjust offset as needed
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const servicesSection =
+  //       document.getElementById('services') || document.getElementById('about');
+  //     if (servicesSection) {
+  //       const servicesTop = servicesSection.offsetTop;
+  //       setIsOpaque(window.scrollY >= servicesTop - 100); // Adjust offset as needed
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check on mount
+  //   window.addEventListener('scroll', handleScroll);
+  //   handleScroll(); // Check on mount
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 ${
-        isOpaque || isMenuOpen ? 'bg-gray-900 backdrop-blur-sm text-blue-600' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 bg-gray-900 backdrop-blur-sm text-blue-600`}
     >
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">

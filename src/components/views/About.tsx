@@ -2,6 +2,7 @@ import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
 import founder from '@/assets/images/pic.jpg';
+import Hero from '@/assets/hero.jpeg';
 
 const AboutView = () => {
   const { t } = useTranslation();
@@ -14,14 +15,17 @@ const AboutView = () => {
   };
 
   return (
-    <section className="min-h-screen h-full overflow-hidden bg-slate-900">
-      <div className="absolute z-2 inset-0 bg-black opacity-25 w-full h-full"></div>
+    <section
+      className="relative min-h-screen h-full overflow-hidden bg-slate-900 bg-cover bg-center "
+      style={{ backgroundImage: `url(${Hero})` }}
+    >
+      <div className="absolute z-2 inset-0 bg-black opacity-50 w-full h-full"></div>
 
       <div className="absolute container lg:ml-36 px-4 z-10 py-24 lg:py-48">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white space-y-8 animate-fade-in">
-              <h1 className="text-2xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
                 {t('about.line1')}
                 <span className="block">{t('about.line2')}</span>
               </h1>
