@@ -1,4 +1,4 @@
-import { Globe, Mail, Github, Instagram, Linkedin } from 'lucide-react';
+import { Globe, Mail, Github, Instagram, Linkedin, Briefcase } from 'lucide-react';
 
 export const FOOTER_LINKS = [
   {
@@ -15,6 +15,11 @@ export const FOOTER_LINKS = [
     label: 'Github',
     href: 'https://github.com/jodaz-dev',
     icon: Github, // Use custom SVG or lucide-react GitHub icon if available
+  },
+  {
+    label: 'Upwork',
+    href: 'https://upwork.com/freelancers/jesusordosgoitty4',
+    icon: Briefcase,
   },
 ];
 
