@@ -16,7 +16,7 @@ const AboutView = () => {
 
   return (
     <section
-      className="relative min-h-screen h-full overflow-hidden bg-slate-900 bg-cover bg-center "
+      className="relative min-h-[800px] h-screen overflow-hidden bg-slate-900 bg-cover bg-center "
       style={{ backgroundImage: `url(${Hero})` }}
     >
       <div className="absolute z-2 inset-0 bg-black opacity-50 w-full h-full"></div>
