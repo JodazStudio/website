@@ -2,16 +2,15 @@ import { ExternalLink, Github } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
-import portfolioEcommerce from '@/assets/portfolio-ecommerce.jpg';
-import portfolioCorporate from '@/assets/portfolio-corporate.jpg';
-import portfolioRestaurant from '@/assets/portfolio-restaurant.jpg';
+import portfolioRestaurant from '@/assets/fruga.png';
 
 const Portfolio = () => {
   const { t } = useTranslation();
 
   const imageMap: Record<string, string> = {
-    'portfolio-corporate.jpg': portfolioCorporate,
-    'portfolio-restaurant.jpg': portfolioRestaurant,
+    'horsy.png':
+      'https://res.cloudinary.com/jodaz/image/upload/v1727464583/images/projects/horsy.png',
+    'fruga.png': portfolioRestaurant,
   };
 
   const projects = t('portfolio.projects', { returnObjects: true }) as Array<{
