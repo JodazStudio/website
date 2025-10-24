@@ -123,6 +123,15 @@
     "description": "All my professional experiences as a software engineer",
     "items": [
       {
+        "company": "Jodaz Developments",
+        "roles": [
+          {
+            "title": "Freelance Web Developer",
+            "period": "Sept. 2023 — Current"
+          }
+        ]
+      },
+      {
         "company": "Noriega Development",
         "roles": [
           {
@@ -166,6 +175,35 @@
           }
         ]
       }
-    ]
+    ],
+    "skills": {
+      "title": "Skills",
+      "items": [
+        "React",
+        "JavaScript",
+        "Node",
+        "MongoDB",
+        "PostgreSQL",
+        "AWS",
+        "CSS",
+        "Linux",
+        "System Administration"
+      ]
+    },
+    "studies": {
+      "title": "Studies",
+      "items": [
+        {
+          "period": "2016",
+          "title": "Bachelor's in Computer Science",
+          "institution": "Universidad de Oriente"
+        },
+        {
+          "period": "2018",
+          "title": "Full Stack Development",
+          "institution": "freeCodeCamp"
+        }
+      ]
+    }
   }
 }
