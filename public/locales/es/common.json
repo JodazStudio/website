@@ -123,6 +123,15 @@
     "description": "Todas mis experiencias profesionales como ingeniero de software",
     "items": [
       {
+        "company": "Jodaz Developments",
+        "roles": [
+          {
+            "title": "Desarrollador Web Freelance",
+            "period": "Sept. 2023 — Actualidad"
+          }
+        ]
+      },
+      {
         "company": "Noriega Development",
         "roles": [
           {
@@ -166,6 +175,35 @@
           }
         ]
       }
-    ]
+    ],
+    "skills": {
+      "title": "Habilidades",
+      "items": [
+        "React",
+        "JavaScript",
+        "Node",
+        "MongoDB",
+        "PostgreSQL",
+        "AWS",
+        "CSS",
+        "Linux",
+        "Administración de Sistemas"
+      ]
+    },
+    "studies": {
+      "title": "Estudios",
+      "items": [
+        {
+          "period": "2016",
+          "title": "Licenciatura en Informática",
+          "institution": "Universidad de Oriente"
+        },
+        {
+          "period": "2018",
+          "title": "Desarrollo Full Stack",
+          "institution": "freeCodeCamp"
+        }
+      ]
+    }
   }
 }
