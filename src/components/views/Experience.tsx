@@ -10,9 +10,10 @@ const ExperienceView = () => {
   const studies = t('experience.studies.items', {
     returnObjects: true,
   }) as Array<{ period: string; title: string; institution?: string }> | undefined;
+
   return (
     <section className="py-20 bg-background" id="experience">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4" id="scroll">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
           {t('experience.title', 'Work Experience')}
         </h2>
