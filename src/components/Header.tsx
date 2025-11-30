@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
@@ -7,7 +7,7 @@ import jodazLogo from '@/assets/jodaz_isotipo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isOpaque, setIsOpaque] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { i18n, t } = useTranslation();
   const navigate = useNavigate();
   // const location = useLocation();
@@ -15,6 +15,24 @@ const Header = () => {
   const changeLanguage = (lng: string) => {
     void i18n.changeLanguage(lng);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollElement = document.getElementById('scroll');
+      if (scrollElement) {
+        setIsScrolled(window.scrollY >= scrollElement.offsetTop);
+      } else {
+        setIsScrolled(window.scrollY > 0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Detect browser locale on mount and set supported language (en | es)
   useEffect(() => {
@@ -55,25 +73,11 @@ const Header = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const servicesSection =
-  //       document.getElementById('services') || document.getElementById('about');
-  //     if (servicesSection) {
-  //       const servicesTop = servicesSection.offsetTop;
-  //       setIsOpaque(window.scrollY >= servicesTop - 100); // Adjust offset as needed
-  //     }
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-  //   handleScroll(); // Check on mount
-
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-gray-900 backdrop-blur-sm text-blue-600`}
+      className={`fixed top-0 left-0 right-0 z-50 text-blue-600 transition-colors duration-300 ${
+        isScrolled ? 'bg-gray-900 backdrop-blur-sm' : 'bg-transparent'
+      }`}
     >
       <div className="container mx-auto px-4 py-1">
         <div className="flex items-center justify-between h-full w-full">

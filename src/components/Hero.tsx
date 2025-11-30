@@ -1,6 +1,5 @@
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Video from './Video';
 import { useTranslation } from 'react-i18next';
 import ColorBends from './ColorBends';
 
@@ -19,35 +18,37 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black opacity-50 w-full h-full z-0">
         <ColorBends colors={["#4833e6"]} noise={0.15} />
       </div>
-      <div className="flex z-10 lg:ml-36 px-4 py-24 lg:py-48 w-full h-full relative">
-        <div className="flex items-start w-full">
-          <div className="text-white space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
-              {t('hero.line1', 'Transform Your')}
-              <span className="block">{t('hero.line2', 'Digital Presence')}</span>
-            </h1>
+      <div className='container mx-auto px-4 h-full'>
+        <div className="flex z-10 py-24 lg:py-48 w-full h-full relative ">
+          <div className="flex items-start w-full">
+            <div className="flex flex-col justify-center text-white space-y-8 animate-fade-in h-full">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
+                {t('hero.line1', 'Transform Your')}
+                <span className="block">{t('hero.line2', 'Digital Presence')}</span>
+              </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
-              {t(
-                'hero.description',
-                'We create innovative and cutting-edge digital products, developing personalized solutions, websites, and extraordinary applications that offer unique experiences and maximize success in the market.'
-              )}
-            </p>
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
+                {t(
+                  'hero.description',
+                  'We create innovative and cutting-edge digital products, developing personalized solutions, websites, and extraordinary applications that offer unique experiences and maximize success in the market.'
+                )}
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                variant="hero"
-                size="xl"
-                onClick={() => scrollToSection('contact')}
-                className="group"
-              >
-                {t('hero.ctaPrimary', 'Start Your Project')}
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button
+                  variant="hero"
+                  size="xl"
+                  onClick={() => scrollToSection('contact')}
+                  className="group"
+                >
+                  {t('hero.ctaPrimary', 'Start Your Project')}
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </Button>
 
-              <Button variant="outline-hero" size="xl" onClick={() => scrollToSection('services')}>
-                {t('hero.ctaSecondary', 'Learn More')}
-              </Button>
+                <Button variant="outline-hero" size="xl" onClick={() => scrollToSection('services')}>
+                  {t('hero.ctaSecondary', 'Learn More')}
+                </Button>
+              </div>
             </div>
           </div>
         </div>
