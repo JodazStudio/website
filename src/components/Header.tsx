@@ -76,7 +76,11 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 text-blue-600 transition-colors duration-300 ${
-        isScrolled ? 'bg-gray-900 backdrop-blur-sm' : 'bg-transparent'
+        isMenuOpen
+          ? 'bg-gray-900'
+          : isScrolled
+            ? 'bg-gray-900 backdrop-blur-sm'
+            : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-1">
@@ -162,7 +166,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         <nav
           className={`md:hidden py-1 transition-all duration-300 ${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+            isMenuOpen ? 'max-h-96 opacity-100 bg-gray-900 backdrop-blur-sm' : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
           <div className="space-y-4 pt-4">
