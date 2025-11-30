@@ -2,6 +2,7 @@ import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Video from './Video';
 import { useTranslation } from 'react-i18next';
+import ColorBends from './ColorBends';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -15,9 +16,9 @@ const Hero = () => {
 
   return (
     <section className="min-h-[600px] h-[100vh] bg-slate-900 overflow-hidden relative">
-      <Video />
-      <div className="absolute inset-0 bg-black opacity-25 w-full h-full z-0"></div>
-
+      <div className="absolute inset-0 bg-black opacity-50 w-full h-full z-0">
+        <ColorBends colors={["#4833e6"]} noise={0.15} />
+      </div>
       <div className="flex z-10 lg:ml-36 px-4 py-24 lg:py-48 w-full h-full relative">
         <div className="flex items-start w-full">
           <div className="text-white space-y-8 animate-fade-in">
