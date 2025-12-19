@@ -49,11 +49,11 @@ const Portfolio = () => {
   }));
 
   return (
-    <section id="portfolio" className="min-h-[600px] h-[100vh] lg:h-[75vh] bg-slate-900 relative">
-      <LightRays className='' raysColor='#4833e6' />
+    <section id="portfolio" className="min-h-[100vh] lg:min-h-[600px] lg:h-[75vh] bg-slate-900 relative">
+      <LightRays className='' raysColor='#4833e6' rayLength={600} pulsating />
+      <div className="container flex flex-col lg:flex-row h-full items-center justify-center overflow-hidden lg:space-x-20 ">
 
-      <div className="container flex flex-col lg:flex-row h-full items-center justify-center overflow-hidden space-x-20">
-        <div className="flex flex-col text-center lg:text-left lg:items-start mb-8 animate-fade-in z-[3] relative py-4">
+        <div className="flex flex-col text-center lg:text-left lg:items-start animate-fade-in z-[3]  py-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('portfolio.title', 'Our')}
             <span className="text-primary">{t('portfolio.titleAccent', 'Portfolio')}</span>
@@ -66,10 +66,8 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          <div className="lg:col-span-2 flex justify-center">
-            <Carousel items={projects} autoplay loop baseWidth={carouselWidth} pauseOnHover autoplayDelay={4500} />
-          </div>
+        <div className="flex justify-center align-items-center pb-14">
+          <Carousel items={projects} autoplay loop baseWidth={carouselWidth} pauseOnHover autoplayDelay={4500} />
         </div>
         {/*
         <div className="text-center mt-12">
