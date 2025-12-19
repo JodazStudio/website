@@ -77,7 +77,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">{t('contact.phone')}</h4>
-                  <p className="text-muted-foreground">+58 (424) 827-0139</p>
+                  <p className="text-muted-foreground">+58 (412) 131-5110</p>
                 </div>
               </div>
 
