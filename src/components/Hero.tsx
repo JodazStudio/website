@@ -21,7 +21,7 @@ const Hero = () => {
       <div className='container mx-auto px-4 h-full'>
         <div className="flex z-10 py-24 lg:py-48 w-full h-full relative ">
           <div className="flex items-start w-full">
-            <div className="flex flex-col justify-center text-white space-y-8 animate-fade-in h-full">
+            <div className="flex flex-col justify-center text-white space-y-8 animate-fade-in h-full" id='scroll'>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
                 {t('hero.line1', 'Transform Your')}
                 <span className="block">{t('hero.line2', 'Digital Presence')}</span>
