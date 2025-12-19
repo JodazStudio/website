@@ -42,7 +42,7 @@
   },
   "services": {
     "title": "How I Can",
-    "titleAccent": "Support You",
+    "titleAccent": "Support You?",
     "description": "From websites and apps to SEO and automation, I offer end‑to‑end digital solutions designed to ship fast, scale smoothly, and drive measurable results for you.",
     "items": {
       "0": {
@@ -86,7 +86,7 @@
   "portfolio": {
     "title": "Port",
     "titleAccent": "folio",
-    "description": "Explore selected projects that demonstrate performance, accessibility, and thoughtful UX—solutions built to scale and deliver measurable impact for clients.",
+    "description": "Explore selected projects that demonstrate my focus on performance, accessibility, and thoughtful UX—solutions I build to scale and deliver measurable impact for my clients.",
     "website": "Website",
     "code": "Code",
     "projects": [

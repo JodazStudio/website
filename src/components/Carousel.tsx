@@ -105,7 +105,7 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
           className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="absolute bottom-4 left-4 right-4 flex gap-2">
+          <div className="absolute bottom-4 left-6 lg:left-12 right-4 flex gap-2">
             {item.website && (
               <Button
                 size="sm"
@@ -134,7 +134,7 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
             )}
           </div>
         </div>
-        <div className="absolute top-4 left-4">
+        <div className="absolute top-4 left-6 lg:left-12">
           <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
             {item.category}
           </span>
@@ -142,13 +142,13 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       </div>
 
       {/* Content Section */}
-      <div className="p-3 lg:p-6 flex-1 flex flex-col">
+      <div className="p-3 lg:p-6 lg:px-12 flex-1 flex flex-col">
         <h3 className="text-2xl font-bold text-foreground mb-3">{item.title}</h3>
         <p className="text-muted-foreground leading-relaxed mb-4 flex-1">
           {item.description}
         </p>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 ">
           {item.technologies &&
             item.technologies.map((tech, i) => (
               <span

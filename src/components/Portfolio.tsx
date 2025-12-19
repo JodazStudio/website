@@ -49,10 +49,10 @@ const Portfolio = () => {
   }));
 
   return (
-    <section id="portfolio" className="min-h-[600px] h-[100vh] bg-slate-900 relative">
+    <section id="portfolio" className="min-h-[600px] h-[100vh] lg:h-[75vh] bg-slate-900 relative">
       <LightRays className='' raysColor='#4833e6' />
 
-      <div className="container flex flex-col lg:flex-row h-full items-center justify-center overflow-hidden">
+      <div className="container flex flex-col lg:flex-row h-full items-center justify-center overflow-hidden space-x-20">
         <div className="flex flex-col text-center lg:text-left lg:items-start mb-8 animate-fade-in z-[3] relative py-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('portfolio.title', 'Our')}
