@@ -12,19 +12,46 @@ interface Props {
 const { lang = 'en' } = Astro.props;
 const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
+
+const base = lang === 'es' ? '/es' : '';
+const quickLinks = [
+  { label: t('footer.home'), href: lang === 'es' ? '/es/' : '/' },
+  { label: t('nav.services'), href: `${base}/#services` },
+  { label: t('nav.portfolio'), href: `${base}/#portfolio` },
+  { label: t('nav.about'), href: lang === 'es' ? '/es/about' : '/about' },
+];
 ---
 
 <footer class="bg-accent text-accent-foreground py-16">
   <div class="container mx-auto px-4">
-    <div class="grid md:grid-cols-6 gap-10 mb-12">
+    <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Company Info -->
-      <div class="md:col-span-5">
+      <div class="md:col-span-2">
         <div class="flex items-center space-x-3 mb-6">
           <img src={jodazLogo.src} alt="JODAZ DEV" class="h-12 w-auto brightness-0 invert" />
         </div>
-        <p class="text-accent-foreground/80 leading-relaxed mb-6 max-w-md">
+        <p class="text-accent-foreground/80 leading-relaxed max-w-md">
           {t('footer.description')}
         </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-bold text-accent-foreground mb-4">
+          {t('footer.quickLinks')}
+        </h4>
+        <ul class="space-y-2 text-accent-foreground/80">
+          {quickLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <!-- Contact & Social Links -->

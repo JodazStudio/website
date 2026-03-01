@@ -12,10 +12,12 @@ interface Props {
 const { lang = 'en' } = Astro.props;
 const t = useTranslations(lang);
 
+const base = lang === 'es' ? '/es' : '';
 const navItems = [
-  { key: 'services', label: t('nav.services'), href: '#services', isSection: true },
-  { key: 'portfolio', label: t('nav.portfolio'), href: '#portfolio', isSection: true },
-  { key: 'contact', label: t('nav.contact'), href: '#contact', isSection: true },
+  { key: 'home', label: t('footer.home'), href: lang === 'es' ? '/es/' : '/', isSection: false },
+  { key: 'services', label: t('nav.services'), href: `${base}/#services`, isSection: true },
+  { key: 'portfolio', label: t('nav.portfolio'), href: `${base}/#portfolio`, isSection: true },
+  { key: 'contact', label: t('nav.contact'), href: `${base}/#contact`, isSection: true },
   { key: 'about', label: t('nav.about'), href: lang === 'es' ? '/es/about' : '/about', isSection: false },
 ];
 

@@ -41,6 +41,8 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
         setIsMenuOpen(false);
+      } else {
+        window.location.href = item.href;
       }
     } else {
       window.location.href = item.href;
