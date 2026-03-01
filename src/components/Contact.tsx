@@ -1,10 +1,6 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import founder from '@/assets/images/founder.png';
-// import { Card, CardContent } from '@/components/ui/card';
-// import { Button } from '@/components/ui/button';
-// import { Input } from '@/components/ui/input';
-// import { Textarea } from '@/components/ui/textarea';
 
 const Contact = () => {
   const { t } = useTranslation();
