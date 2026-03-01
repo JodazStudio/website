@@ -1,0 +1,54 @@
+---
+// src/pages/index.astro — Home page (English – default locale, no /en/ prefix)
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { useTranslations } from '@/lib/i18n';
+import HeroIsland from '@/components/islands/HeroIsland';
+import ServicesSection from '@/components/ServicesSection.astro';
+import PortfolioIsland from '@/components/islands/PortfolioIsland';
+import ContactSection from '@/components/ContactSection.astro';
+import en from '../../public/locales/en/common.json';
+
+const lang = 'en' as const;
+const t = useTranslations(lang);
+
+const heroProps = {
+  line1: t('hero.line1'),
+  line2: t('hero.line2'),
+  description: t('hero.description'),
+  ctaPrimary: t('hero.ctaPrimary'),
+  ctaSecondary: t('hero.ctaSecondary'),
+};
+
+const projects = en.portfolio.projects;
+const portfolioStrings = {
+  title: t('portfolio.title'),
+  titleAccent: t('portfolio.titleAccent'),
+  description: t('portfolio.description'),
+  websiteLabel: t('portfolio.website'),
+};
+
+const contactStrings = {
+  title: t('contact.title'),
+  titleAccent: t('contact.titleAccent'),
+  headline: t('contact.headline'),
+  subhead: t('contact.subhead'),
+  email: t('contact.email'),
+  phone: t('contact.phone'),
+  portraitAlt: 'Portrait',
+};
+---
+
+<BaseLayout
+  title="JODAZ DEV — Transform Your Digital Presence"
+  description={t('hero.description')}
+  lang={lang}
+>
+  <HeroIsland {...heroProps} client:load />
+  <ServicesSection lang={lang} />
+  <PortfolioIsland
+    projects={projects}
+    strings={portfolioStrings}
+    client:visible
+  />
+  <ContactSection strings={contactStrings} />
+</BaseLayout>

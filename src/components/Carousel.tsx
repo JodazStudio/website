@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { motion, PanInfo, useMotionValue, useTransform } from 'motion/react';
-import React, { JSX } from 'react';
+import { motion, useMotionValue, useTransform } from 'motion/react';
+import type { PanInfo } from 'motion/react';
+import React from 'react';
+import type { JSX } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 

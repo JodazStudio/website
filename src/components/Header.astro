@@ -1,0 +1,31 @@
+---
+// src/components/Header.astro
+import { useTranslations } from '@/lib/i18n';
+import type { Lang } from '@/lib/i18n';
+import jodazLogo from '@/assets/jodaz_isotipo.png';
+import HeaderInteractive from '@/components/HeaderInteractive';
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang);
+
+const navItems = [
+  { key: 'services', label: t('nav.services'), href: '#services', isSection: true },
+  { key: 'portfolio', label: t('nav.portfolio'), href: '#portfolio', isSection: true },
+  { key: 'contact', label: t('nav.contact'), href: '#contact', isSection: true },
+  { key: 'about', label: t('nav.about'), href: lang === 'es' ? '/es/about' : '/about', isSection: false },
+];
+
+const altLangHref = lang === 'es' ? Astro.url.pathname.replace('/es', '') || '/' : `/es${Astro.url.pathname}`;
+---
+
+<HeaderInteractive
+  navItems={navItems}
+  logoSrc={jodazLogo.src}
+  lang={lang}
+  altLangHref={altLangHref}
+  client:load
+/>

@@ -1,0 +1,34 @@
+---
+// src/pages/es/about.astro — About page (Spanish)
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { useTranslations } from '@/lib/i18n';
+import AboutView from '@/components/views/About';
+import ExperienceView from '@/components/views/Experience';
+import es from '../../../public/locales/es/common.json';
+
+const lang = 'es' as const;
+const t = useTranslations(lang);
+
+const aboutStrings = {
+  line1: t('about.line1'),
+  line2: t('about.line2'),
+  description: t('about.description'),
+};
+
+const experienceStrings = {
+  title: t('experience.title'),
+  description: t('experience.description'),
+  items: es.experience.items,
+  skills: es.experience.skills,
+  studies: es.experience.studies,
+};
+---
+
+<BaseLayout
+  title={`${t('about.line1')} ${t('about.line2')} — JODAZ DEV`}
+  description={t('about.description')}
+  lang={lang}
+>
+  <AboutView strings={aboutStrings} client:load />
+  <ExperienceView strings={experienceStrings} client:visible />
+</BaseLayout>

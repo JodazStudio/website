@@ -1,5 +1,5 @@
 import { Briefcase } from 'lucide-react';
-import { IExperienceItem } from '@/models';
+import type { IExperienceItem } from '@/models';
 
 interface ExperienceItemProps extends IExperienceItem {}
 
