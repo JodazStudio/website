@@ -11,6 +11,7 @@ const projects = defineCollection({
     isFeatured: z.boolean().default(false),
     githubUrl: z.string().url().optional(),
     liveUrl: z.string().url().optional(),
+    lang: z.enum(['en', 'es']).default('en'),
   }),
 });
 

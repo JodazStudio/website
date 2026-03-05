@@ -109,6 +109,15 @@
         "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
         "image": "fruga.png",
         "website": "https://dev.fruga.co.uk"
+      },
+      {
+        "id": "santarosa10k",
+        "title": "Santa Rosa 10K",
+        "description": "High-performance landing page for a sports event with real-time registration via Google Spreadsheet integration.",
+        "category": "Event Landing",
+        "technologies": ["Next.js", "GSAP", "Tailwind", "Google Sheets"],
+        "image": "santarosa.png",
+        "website": "https://santarosa10k.com"
       }
     ]
   },

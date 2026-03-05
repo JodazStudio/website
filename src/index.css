@@ -49,6 +49,7 @@ All colors MUST be HSL.
     --brand-light-gray: 0 0% 80%; /* #ccc */
     --brand-off-white: 30 14% 93%; /* #edeceb */
     --brand-light-blue: 228 57% 91%; /* #d6dff8 */
+    --brand-green: 142 100% 50%; /* #00FF38 radiant green */
 
     /* Gradients */
     --gradient-primary: linear-gradient(
@@ -158,5 +159,48 @@ All colors MUST be HSL.
       transform: translateY(0);
       opacity: 1;
     }
+  }
+
+  /* Custom Prose Styling for Projects */
+  .prose-project {
+    @apply prose prose-lg dark:prose-invert max-w-none;
+  }
+
+  .prose-project h1,
+  .prose-project h2,
+  .prose-project h3 {
+    @apply font-mono text-primary font-bold tracking-tight mb-6 mt-12;
+  }
+
+  .prose-project h2 {
+    @apply text-3xl border-b-2 pb-2 relative;
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  /* Decorative line for h2 like in the image */
+  .prose-project h2::after {
+    content: '';
+    @apply absolute bottom-[-2px] left-0 w-16 h-1 bg-primary;
+  }
+
+  .prose-project p {
+    @apply mb-6 leading-relaxed text-foreground/90;
+  }
+
+  .prose-project ol,
+  .prose-project ul {
+    @apply my-8 space-y-4;
+  }
+
+  .prose-project li {
+    @apply pl-2 leading-relaxed;
+  }
+
+  .prose-project ol > li::marker {
+    @apply font-mono text-primary font-bold;
+  }
+
+  .prose-project ul > li::marker {
+    @apply text-primary;
   }
 }

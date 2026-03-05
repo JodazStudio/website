@@ -48,6 +48,14 @@
           "type": "string",
           "format": "uri"
         },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "es"
+          ],
+          "default": "en"
+        },
         "$schema": {
           "type": "string"
         }
