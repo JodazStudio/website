@@ -2,8 +2,8 @@
 // src/components/Header.astro
 import { useTranslations } from '@/lib/i18n';
 import type { Lang } from '@/lib/i18n';
-import jodazLogo from '@/assets/jodaz_isotipo.png';
-import HeaderInteractive from '@/components/HeaderInteractive';
+import brandLogo from '@/assets/jodaz_isotipo.png';
+import HeaderInteractive from '@/components/HeaderInteractive.tsx';
 
 interface Props {
   lang?: Lang;
@@ -26,7 +26,7 @@ const altLangHref = lang === 'es' ? Astro.url.pathname.replace('/es', '') || '/'
 
 <HeaderInteractive
   navItems={navItems}
-  logoSrc={jodazLogo.src}
+  logoSrc={brandLogo.src}
   lang={lang}
   altLangHref={altLangHref}
   client:load

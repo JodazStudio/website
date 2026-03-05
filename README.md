@@ -1,6 +1,6 @@
-# JODAZ DEV Website
+# Jesus Ordosgoitty Website
 
-Welcome to the official repository for **JODAZ DEV**, a premium digital presence and software development platform. This project is built with a focus on performance, modern aesthetics, and a seamless multi-language experience.
+Welcome to the official repository for **Jesus Ordosgoitty**, a premium digital presence and software development platform. This project is built with a focus on performance, modern aesthetics, and a seamless multi-language experience.
 
 ## 🚀 Technology Stack
 
@@ -70,11 +70,11 @@ This project leverages cutting-edge web technologies:
 
 ## 🌐 Branding & Design
 
-This project follows the **JODAZ DEV** brand guidelines:
+This project follows the **Jesus Ordosgoitty** brand guidelines:
 - **Background**: Stone (`color-1`)
 - **Accents**: Blue / Navy
 - **Typography**: Modern, premium sans-serif fonts.
 
 ---
 
-Built with ❤️ by [JODAZ DEV](https://jodaz.xyz)
+Built with ❤️ by [Jesus Ordosgoitty](https://jodaz.xyz)

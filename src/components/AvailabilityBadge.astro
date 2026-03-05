@@ -1,0 +1,29 @@
+---
+const isAvailable = import.meta.env.PUBLIC_IS_AVAILABLE === 'true';
+const { lang = 'en' } = Astro.props;
+
+const labels = {
+  en: {
+    available: "Available for new projects",
+    unavailable: "Focusing on current work"
+  },
+  es: {
+    available: "Disponible para nuevos proyectos",
+    unavailable: "Enfocado en proyectos actuales"
+  }
+};
+
+const currentLabels = lang === 'es' ? labels.es : labels.en;
+---
+
+<div class="flex items-center gap-2 px-3 py-1.5 bg-background/50 backdrop-blur-sm border border-border rounded-full w-fit animate-fade-in shadow-sm">
+  <span class={`relative flex h-2.5 w-2.5`}>
+    {isAvailable && (
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+    )}
+    <span class={`relative inline-flex rounded-full h-2.5 w-2.5 ${isAvailable ? 'bg-green-500' : 'bg-gray-400'}`}></span>
+  </span>
+  <span class="text-xs font-medium text-foreground/80">
+    {isAvailable ? currentLabels.available : currentLabels.unavailable}
+  </span>
+</div>

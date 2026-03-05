@@ -23,12 +23,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollElement = document.getElementById('scroll');
-      if (scrollElement) {
-        setIsScrolled(window.scrollY >= scrollElement.offsetTop);
-      } else {
-        setIsScrolled(window.scrollY > 0);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     handleScroll();
@@ -55,9 +50,9 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 text-blue-600 transition-colors duration-300 ${
         isMenuOpen
-          ? 'bg-gray-900'
+          ? 'bg-accent'
           : isScrolled
-            ? 'bg-gray-900 backdrop-blur-sm'
+            ? 'bg-accent/90 backdrop-blur-md shadow-elegant'
             : 'bg-transparent'
       }`}
     >
@@ -65,7 +60,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
         <div className="flex items-center justify-between h-full w-full">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src={logoSrc} alt="JODAZ DEV" className="h-12 lg:h-16 w-auto" />
+            <img src={logoSrc} alt="Jesus Ordosgoitty" className="h-12 lg:h-16 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
@@ -112,7 +107,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
         {/* Mobile Navigation */}
         <nav
           className={`md:hidden py-1 transition-all duration-300 ${
-            isMenuOpen ? 'max-h-96 opacity-100 bg-gray-900 backdrop-blur-sm' : 'max-h-0 opacity-0 overflow-hidden'
+            isMenuOpen ? 'max-h-96 opacity-100 bg-accent backdrop-blur-md' : 'max-h-0 opacity-0 overflow-hidden'
           }`}
         >
           <div className="space-y-4 pt-4">
