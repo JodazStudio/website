@@ -5,6 +5,7 @@ import { useTranslations } from '@/lib/i18n';
 import HeroIsland from '@/components/islands/HeroIsland';
 import ServicesSection from '@/components/ServicesSection.astro';
 import PortfolioIsland from '@/components/islands/PortfolioIsland';
+import ProjectList from '@/components/ProjectList.astro';
 import ContactSection from '@/components/ContactSection.astro';
 import es from '../../../public/locales/es/common.json';
 
@@ -39,7 +40,7 @@ const contactStrings = {
 ---
 
 <BaseLayout
-  title="JODAZ DEV — Transforma Tu Presencia Digital"
+  title="Jesús Ordosgoitty — Transforma Tu Presencia Digital"
   description={t('hero.description')}
   lang={lang}
 >
@@ -50,5 +51,6 @@ const contactStrings = {
     strings={portfolioStrings}
     client:visible
   />
-  <ContactSection strings={contactStrings} />
+  <ProjectList lang={lang} />
+  <ContactSection strings={contactStrings} lang={lang} />
 </BaseLayout>

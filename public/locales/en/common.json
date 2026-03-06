@@ -26,7 +26,7 @@
     "quickLinks": "Quick Links",
     "home": "Home",
     "contactLinks": "Social",
-    "companyName": "JODAZ DEV",
+    "companyName": "Jesus Ordosgoitty",
     "description": "I work with businesses to craft innovative digital products, custom websites, and applications. My goal is to elevate your brand and ensure you succeed in the digital world through thoughtful strategy, technology, and personalized solutions.",
     "allRights": "All rights reserved.",
     "links": {
@@ -109,6 +109,15 @@
         "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
         "image": "fruga.png",
         "website": "https://dev.fruga.co.uk"
+      },
+      {
+        "id": "santarosa10k",
+        "title": "Santa Rosa 10K",
+        "description": "High-performance landing page for a sports event with real-time registration via Google Spreadsheet integration.",
+        "category": "Event Landing",
+        "technologies": ["Next.js", "GSAP", "Tailwind", "Google Sheets"],
+        "image": "santarosa.png",
+        "website": "https://santarosa10k.com"
       }
     ]
   },
@@ -118,14 +127,14 @@
     "description": "Frontend Developer, Full Stack Engineer, and passionate about software engineering.",
     "ctaPrimary": "Start Your Project",
     "ctaSecondary": "Learn More",
-    "intro": "Hi, I'm Jodaz. I design and build fast, accessible, and scalable digital products. This page is coming soon."
+    "intro": "Hi, I'm Jesus Ordosgoitty. I design and build fast, accessible, and scalable digital products. This page is coming soon."
   },
   "experience": {
     "title": "Work Experience",
     "description": "All my professional experiences as a software engineer",
     "items": [
       {
-        "company": "Jodaz Developments",
+        "company": "Jesus Ordosgoitty (Freelance)",
         "roles": [
           {
             "title": "Freelance Web Developer",

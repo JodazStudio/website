@@ -3,7 +3,7 @@
 import { useTranslations } from '@/lib/i18n';
 import type { Lang } from '@/lib/i18n';
 import { FOOTER_LINKS, FOOTER_CREDITS_LINK } from '@/lib/links';
-import jodazLogo from '@/assets/jodaz_isotipo.png';
+import brandLogo from '@/assets/jodaz_isotipo.png';
 
 interface Props {
   lang?: Lang;
@@ -28,7 +28,7 @@ const quickLinks = [
       <!-- Company Info -->
       <div class="md:col-span-2">
         <div class="flex items-center space-x-3 mb-6">
-          <img src={jodazLogo.src} alt="JODAZ DEV" class="h-12 w-auto brightness-0 invert" />
+          <img src={brandLogo.src} alt="Jesus Ordosgoitty" class="h-12 w-auto brightness-0 invert" />
         </div>
         <p class="text-accent-foreground/80 leading-relaxed max-w-md">
           {t('footer.description')}

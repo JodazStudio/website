@@ -59,6 +59,10 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        'brand-green': 'hsl(var(--brand-green))',
+      },
+      fontFamily: {
+        sans: ['Fira Code', 'monospace', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -135,5 +139,8 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+  ],
 } satisfies Config;

@@ -9,12 +9,12 @@ export const FOOTER_LINKS = [
   {
     label: 'Instagram',
     href: 'https://www.instagram.com/jodaz.dev',
-    icon: Instagram, // Use custom SVG or lucide-react Instagram icon if available
+    icon: Instagram, 
   },
   {
     label: 'Github',
     href: 'https://github.com/jodaz-dev',
-    icon: Github, // Use custom SVG or lucide-react GitHub icon if available
+    icon: Github, 
   },
   {
     label: 'Upwork',

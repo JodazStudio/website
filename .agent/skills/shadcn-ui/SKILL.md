@@ -1,6 +1,6 @@
 ---
 name: shadcn-ui
-description: Guides the implementation, customization, and usage of shadcn/ui components within an Astro + React environment. Ensures accessible and consistent UI primitives aligned with JODAZ DEV branding.
+description: Guides the implementation, customization, and usage of shadcn/ui components within an Astro + React environment. Ensures accessible and consistent UI primitives aligned with Jesus Ordosgoitty branding.
 ---
 
 # shadcn/ui Integration & Usage
@@ -21,7 +21,7 @@ You are an expert in using **shadcn/ui** to build high-quality, accessible, and 
 
 1) **Check for Existence**: Verify if the component already exists in `src/components/ui/`.
 2) **Install/Add**: If missing, use the shadcn CLI: `npx shadcn-ui@latest add <component-name>`.
-3) **Refine & Style**: Apply JODAZ DEV brand styles.
+3) **Refine & Style**: Apply Jesus Ordosgoitty brand styles.
 4) **Integration (The Island Rule)**: When using shadcn components in `.astro` files, you **MUST** ensure they are wrapped in a React component and use the appropriate `client:` directive (e.g., `client:load` for dropdowns, `client:visible` for dialogs).
 
 ## Instructions
@@ -32,7 +32,7 @@ You are an expert in using **shadcn/ui** to build high-quality, accessible, and 
 
 ### 2. Styling Standards
 - **Source of Truth**: The component file itself.
-- **Theme Alignment**: Ensure components default to the **JODAZ DEV** aesthetic:
+- **Theme Alignment**: Ensure components default to the **Jesus Ordosgoitty** aesthetic:
   - Stone backgrounds, Navy text, and Blue primary accents.
   - Buttons should use the custom variants (e.g., `hero`, `outline-hero`).
 

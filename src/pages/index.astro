@@ -2,9 +2,10 @@
 // src/pages/index.astro — Home page (English – default locale, no /en/ prefix)
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { useTranslations } from '@/lib/i18n';
-import HeroIsland from '@/components/islands/HeroIsland';
+import HeroIsland from '@/components/islands/HeroIsland.tsx';
 import ServicesSection from '@/components/ServicesSection.astro';
-import PortfolioIsland from '@/components/islands/PortfolioIsland';
+import PortfolioIsland from '@/components/islands/PortfolioIsland.tsx';
+import ProjectList from '@/components/ProjectList.astro';
 import ContactSection from '@/components/ContactSection.astro';
 import en from '../../public/locales/en/common.json';
 
@@ -39,7 +40,7 @@ const contactStrings = {
 ---
 
 <BaseLayout
-  title="JODAZ DEV — Transform Your Digital Presence"
+  title="Jesus Ordosgoitty — Transform Your Digital Presence"
   description={t('hero.description')}
   lang={lang}
 >
@@ -50,5 +51,6 @@ const contactStrings = {
     strings={portfolioStrings}
     client:visible
   />
-  <ContactSection strings={contactStrings} />
+  <ProjectList lang={lang} />
+  <ContactSection strings={contactStrings} lang={lang} />
 </BaseLayout>

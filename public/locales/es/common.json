@@ -26,7 +26,7 @@
     "quickLinks": "Enlaces Rápidos",
     "home": "Inicio",
     "contactLinks": "Social",
-    "companyName": "JODAZ DEV",
+    "companyName": "Jesús Ordosgoitty",
     "description": "Trabajo con empresas para crear productos digitales innovadores, sitios web personalizados y aplicaciones. Mi objetivo es elevar tu marca y asegurar tu éxito en el mundo digital a través de estrategia, tecnología y soluciones personalizadas.",
     "allRights": "Todos los derechos reservados.",
     "links": {
@@ -109,6 +109,15 @@
         "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
         "image": "fruga.png",
         "website": "https://dev.fruga.co.uk"
+      },
+      {
+        "id": "santarosa10k",
+        "title": "Santa Rosa 10K",
+        "description": "Landing page de alto rendimiento para evento deportivo con inscripción en tiempo real vía integración con Google Spreadsheet.",
+        "category": "Landing de Evento",
+        "technologies": ["Next.js", "GSAP", "Tailwind", "Google Sheets"],
+        "image": "santarosa.png",
+        "website": "https://santarosa10k.com"
       }
     ]
   },
@@ -118,14 +127,14 @@
     "description": "Desarrollador Frontend, Ingeniero Full Stack y apasionado por la ingeniería de software.",
     "ctaPrimary": "Comenzar tu Proyecto",
     "ctaSecondary": "Saber Más",
-    "intro": "Hola, soy Jodaz. Diseño y desarrollo productos digitales rápidos, accesibles y escalables. Esta página estará disponible pronto."
+    "intro": "Hola, soy Jesús Ordosgoitty. Diseño y desarrollo productos digitales rápidos, accesibles y escalables. Esta página estará disponible pronto."
   },
   "experience": {
     "title": "Experiencia Laboral",
     "description": "Todas mis experiencias profesionales como ingeniero de software",
     "items": [
       {
-        "company": "Jodaz Developments",
+        "company": "Jesús Ordosgoitty (Freelance)",
         "roles": [
           {
             "title": "Desarrollador Web Freelance",
