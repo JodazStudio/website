@@ -3,21 +3,23 @@
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import type { Lang } from '@/lib/i18n';
 import '@/index.css';
 
 interface Props {
   title: string;
   description: string;
-  lang?: string;
+  lang?: Lang;
+  alternateUrl?: string; // URL of the equivalent page in the other language
 }
 
-const { title, description, lang = 'en' } = Astro.props;
+const { title, description, lang = 'en', alternateUrl } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
-    <BaseHead title={title} description={description} lang={lang} />
+    <BaseHead title={title} description={description} lang={lang} alternateUrl={alternateUrl} />
   </head>
   <body class="min-h-screen bg-background flex flex-col">
     <Header lang={lang} />
