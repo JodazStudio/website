@@ -5,10 +5,17 @@ interface Props {
   description: string;
   image?: string;
   lang?: string;
+  alternateUrl?: string; // URL of the same page in the other language
 }
 
-const { title, description, image = '/og-image.png', lang = 'en' } = Astro.props;
+const { title, description, image = '/og-image.png', lang = 'en', alternateUrl } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Compute hreflang URLs
+// lang='en' → this page is English, alternate is Spanish (alternateUrl)
+// lang='es' → this page is Spanish, alternate is English (alternateUrl)
+const enURL = lang === 'en' ? canonicalURL.href : (alternateUrl ?? new URL('/', Astro.site).href);
+const esURL = lang === 'es' ? canonicalURL.href : (alternateUrl ?? new URL('/es/', Astro.site).href);
 ---
 
 <!-- Global Metadata -->
@@ -19,6 +26,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+
+<!-- hreflang – tells Google these pages are language alternates, not duplicates -->
+<link rel="alternate" hreflang="en" href={enURL} />
+<link rel="alternate" hreflang="es" href={esURL} />
+<link rel="alternate" hreflang="x-default" href={enURL} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
