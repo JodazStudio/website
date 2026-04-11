@@ -37,14 +37,14 @@ const t = lang === 'es' ? labels.es : labels.en;
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 border-t-2 border-l-2 border-border">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-1">
       {sortedProjects.map((project, index) => {
         const baseSlug = project.slug.split('/').pop();
         const href = lang === 'es' ? `/es/projects/${baseSlug}` : `/projects/${baseSlug}`;
         return (
           <a 
             href={href}
-            class="group block p-10 bg-white border-r-2 border-b-2 border-border transition-all duration-500 hover:shadow-glow hover:z-20 animate-slide-up relative overflow-hidden"
+            class="group block p-10 bg-white border-border border-2 transition-all duration-500 hover:shadow-glow hover:z-20 animate-slide-up relative overflow-hidden"
             style={`animation-delay: ${index * 0.1}s`}
           >
             <div class="relative z-10 flex flex-col h-full justify-between gap-8">
