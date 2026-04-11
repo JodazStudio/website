@@ -1,7 +1,7 @@
 // src/components/islands/HeroIsland.tsx
 // React Island — scroll button interactivity + animations
-import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ScrollButton from '@/components/ui/ScrollButton';
 import ColorBends from '@/components/ColorBends';
 
 interface Props {
@@ -9,10 +9,9 @@ interface Props {
   line2: string;
   description: string;
   ctaPrimary: string;
-  ctaSecondary: string;
 }
 
-const HeroIsland = ({ line1, line2, description, ctaPrimary, ctaSecondary }: Props) => {
+const HeroIsland = ({ line1, line2, description, ctaPrimary }: Props) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -32,7 +31,7 @@ const HeroIsland = ({ line1, line2, description, ctaPrimary, ctaSecondary }: Pro
               className="flex flex-col justify-center text-white space-y-8 animate-fade-in h-full"
               id="scroll"
             >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
                 {line1}
                 <span className="block">{line2}</span>
               </h1>
@@ -51,22 +50,12 @@ const HeroIsland = ({ line1, line2, description, ctaPrimary, ctaSecondary }: Pro
                   {ctaPrimary}
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Button>
-
-                <Button variant="outline-hero" size="xl" onClick={() => scrollToSection('services')}>
-                  {ctaSecondary}
-                </Button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-1 w-full flex justify-center z-[3] h-20">
-        <div className="animate-float z-10">
-          <Button variant="scroll" size="icon-lg" onClick={() => scrollToSection('services')} aria-label="Scroll down">
-            <ChevronDown className="w-6 h-6" />
-          </Button>
-        </div>
-      </div>
+      <ScrollButton targetId="services" />
     </section>
   );
 };
