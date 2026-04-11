@@ -30,7 +30,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 100%;
 
     --muted: 228 57% 91%; /* #d6dff8 very light blue */
-    --muted-foreground: 0 0% 55%;
+    --muted-foreground: 0 0% 35%;
 
     --accent: 217 57% 13%; /* #161B24 dark navy */
     --accent-foreground: 0 0% 100%;
@@ -202,5 +202,11 @@ All colors MUST be HSL.
 
   .prose-project ul > li::marker {
     @apply text-primary;
+  }
+
+  .blueprint-grid {
+    background-image: linear-gradient(hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 60px 60px;
   }
 }

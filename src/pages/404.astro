@@ -1,6 +1,9 @@
 ---
 // src/pages/404.astro
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import BottomGridWrapper from '@/components/BottomGridWrapper.astro';
+
+const lang = 'en';
 ---
 
 <BaseLayout
@@ -24,4 +27,5 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
       </a>
     </div>
   </div>
+  <BottomGridWrapper lang={lang} />
 </BaseLayout>

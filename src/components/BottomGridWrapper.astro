@@ -1,0 +1,23 @@
+---
+import ArticlesList from './ArticlesList.astro';
+import ContactSection from './ContactSection.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  lang?: 'en' | 'es';
+  showContact?: boolean;
+  contactStrings?: any;
+}
+
+const { lang = 'en', showContact = false, contactStrings } = Astro.props;
+---
+
+<div class="blueprint-grid bg-gray-100 border-t-2 border-border/50 relative overflow-hidden">
+  <ArticlesList lang={lang} />
+  
+  {showContact && contactStrings && (
+    <ContactSection strings={contactStrings} lang={lang} />
+  )}
+  
+  <Footer lang={lang} />
+</div>

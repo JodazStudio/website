@@ -5,8 +5,7 @@ import { useTranslations } from '@/lib/i18n';
 import HeroIsland from '@/components/islands/HeroIsland.tsx';
 import ServicesSection from '@/components/ServicesSection.astro';
 import PortfolioIsland from '@/components/islands/PortfolioIsland.tsx';
-import ProjectList from '@/components/ProjectList.astro';
-import ContactSection from '@/components/ContactSection.astro';
+import BottomGridWrapper from '@/components/BottomGridWrapper.astro';
 import en from '../../public/locales/en/common.json';
 
 const lang = 'en' as const;
@@ -52,6 +51,9 @@ const contactStrings = {
     strings={portfolioStrings}
     client:visible
   />
-  <ProjectList lang={lang} />
-  <ContactSection strings={contactStrings} lang={lang} />
+  <BottomGridWrapper 
+    lang={lang} 
+    showContact={true} 
+    contactStrings={contactStrings} 
+  />
 </BaseLayout>

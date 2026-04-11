@@ -5,6 +5,7 @@ import { useTranslations } from '@/lib/i18n';
 import AboutView from '@/components/views/About';
 import ExperienceView from '@/components/views/Experience';
 import es from '../../../public/locales/es/common.json';
+import BottomGridWrapper from '@/components/BottomGridWrapper.astro';
 
 const lang = 'es' as const;
 const t = useTranslations(lang);
@@ -32,4 +33,5 @@ const experienceStrings = {
 >
   <AboutView strings={aboutStrings} client:load />
   <ExperienceView strings={experienceStrings} client:visible />
+  <BottomGridWrapper lang={lang} />
 </BaseLayout>

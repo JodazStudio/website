@@ -35,7 +35,7 @@ const ExperienceView = ({ strings }: Props) => {
   const { title, description, items, skills, studies } = strings;
 
   return (
-    <section className="py-20 bg-background" id="experience">
+    <section className="py-20 bg-gray-100" id="experience">
       <div className="container mx-auto px-4" id="scroll">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
           {title}
