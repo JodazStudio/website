@@ -60,6 +60,9 @@ export default {
           ring: 'hsl(var(--sidebar-ring))',
         },
         'brand-green': 'hsl(var(--brand-green))',
+        'brand-dark': 'hsl(var(--brand-dark))',
+        'brand-medium': 'hsl(var(--brand-medium))',
+        'brand-bright': 'hsl(var(--brand-bright))',
       },
       fontFamily: {
         sans: ['Fira Code', 'monospace', 'sans-serif'],

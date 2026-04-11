@@ -15,9 +15,10 @@ interface Props {
   logoSrc: string;
   lang: string;
   altLangHref: string;
+  isOpaque?: boolean;
 }
 
-const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
+const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref, isOpaque = false }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -56,10 +57,12 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isMenuOpen
-          ? 'bg-background shadow-lg'
-          : isScrolled
-            ? 'bg-background/80 backdrop-blur-md shadow-elegant py-1'
-            : 'bg-transparent py-2'
+          ? 'bg-brand-dark shadow-lg'
+          : isOpaque
+            ? 'bg-brand-dark shadow-elegant py-1'
+            : isScrolled
+              ? 'bg-brand-dark/90 backdrop-blur-md shadow-elegant py-1'
+              : 'bg-transparent py-2'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -69,7 +72,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
             <img
               src={logoSrc}
               alt="Jesus Ordosgoitty"
-              className={`h-8 lg:h-9 w-auto transition-all duration-300 ${isScrolled || isMenuOpen ? 'brightness-0' : ''}`}
+              className="h-8 lg:h-9 w-auto transition-all duration-100"
             />
           </a>
 
@@ -81,7 +84,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
                   key={item.key}
                   onClick={() => handleNavClick(item)}
                   className={`text-base lg:text-lg transition-colors font-semibold ${
-                    isScrolled || isMenuOpen ? 'text-foreground hover:text-primary' : 'text-blue-50 hover:text-primary'
+                    isScrolled || isMenuOpen || isOpaque ? 'text-white hover:text-brand-bright' : 'text-blue-50 hover:text-brand-bright'
                   }`}
                 >
                   {item.label}
@@ -91,7 +94,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
                   key={item.key}
                   href={item.href}
                   className={`text-base lg:text-lg transition-colors font-semibold ${
-                    isScrolled || isMenuOpen ? 'text-foreground hover:text-primary' : 'text-blue-50 hover:text-primary'
+                    isScrolled || isMenuOpen || isOpaque ? 'text-white hover:text-brand-bright' : 'text-blue-50 hover:text-brand-bright'
                   }`}
                 >
                   {item.label}
@@ -103,8 +106,8 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
               href={altLangHref}
               onClick={handleLangSwitch}
               className={`text-sm px-3 py-1 rounded-full border transition-all duration-300 font-bold ${
-                isScrolled || isMenuOpen
-                  ? 'text-foreground border-foreground/20 hover:border-primary hover:text-primary'
+                isScrolled || isMenuOpen || isOpaque
+                  ? 'text-white border-white/20 hover:border-brand-bright hover:text-brand-bright'
                   : 'text-blue-50 border-blue-50/30 hover:border-white hover:text-white'
               }`}
               aria-label={`Switch to ${altLang}`}
@@ -115,7 +118,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 transition-colors ${isScrolled || isMenuOpen ? 'text-foreground' : 'text-blue-50'}`}
+            className={`md:hidden p-2 transition-colors ${isScrolled || isMenuOpen || isOpaque ? 'text-white' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -126,7 +129,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
         {/* Mobile Navigation */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-            isMenuOpen ? 'max-h-[80vh] opacity-100 pb-8' : 'max-h-0 opacity-0'
+            isMenuOpen ? 'max-h-[80vh] opacity-100 pb-8 bg-brand-dark' : 'max-h-0 opacity-0'
           }`}
         >
           <nav className="flex flex-col space-y-6 pt-6">
@@ -135,7 +138,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
                 <button
                   key={item.key}
                   onClick={() => handleNavClick(item)}
-                  className="text-2xl text-foreground hover:text-primary transition-colors font-bold text-left"
+                  className="text-2xl text-white hover:text-brand-bright transition-colors font-bold text-left"
                 >
                   {item.label}
                 </button>
@@ -143,22 +146,22 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
                 <a
                   key={item.key}
                   href={item.href}
-                  className="text-2xl text-foreground hover:text-primary transition-colors font-bold"
+                  className="text-2xl text-white hover:text-brand-bright transition-colors font-bold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               )
             ))}
-            <div className="pt-6 border-t border-foreground/10">
+            <div className="pt-6 border-t border-white/10">
               <a
                 href={altLangHref}
                 onClick={handleLangSwitch}
-                className="inline-flex items-center text-lg font-bold text-foreground hover:text-primary transition-colors"
+                className="inline-flex items-center text-lg font-bold text-white hover:text-brand-bright transition-colors"
                 aria-label={`Switch to ${altLang}`}
               >
                 <span className="mr-2">Language:</span>
-                <span className="px-3 py-1 bg-muted rounded-full text-primary">{altLang}</span>
+                <span className="px-3 py-1 bg-brand-dark/50 rounded-full text-brand-bright">{altLang}</span>
               </a>
             </div>
           </nav>
