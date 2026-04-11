@@ -43,44 +43,44 @@
     "ctaSecondary": "Learn More"
   },
   "services": {
-    "title": "How I Can",
-    "titleAccent": "Support You?",
-    "description": "From websites and apps to SEO and automation, I offer end‑to‑end digital solutions designed to ship fast, scale smoothly, and drive measurable results for you.",
+    "title": "What I can do ",
+    "titleAccent": "for you",
+    "description": "From websites and mobile apps to custom systems and automations, I offer end‑to‑end digital solutions designed to ship fast, scale smoothly, and drive measurable results for you.",
     "items": {
       "0": {
-        "title": "Website Development",
-        "description": "I build fast, accessible websites optimized for your brand—they're SEO‑ready, easy for you to update, and designed to convert visitors on every device.",
+        "title": "Ecommerce and Websites",
+        "description": "I build fast, accessible websites and optimized online stores for your brand—they're ready to sell, easy for you to update, and designed to convert visitors on every device.",
         "features": {
-          "0": "Responsive Design",
-          "1": "Custom Development",
-          "2": "CMS Integration"
+          "0": "Online Stores",
+          "1": "Sales Optimization",
+          "2": "Responsive Design"
         }
       },
       "1": {
-        "title": "SEO Optimization",
-        "description": "I help you increase organic traffic with data‑backed SEO: I handle the research, technical fixes, and content strategy so your business ranks and attracts qualified leads.",
+        "title": "Custom Software",
+        "description": "Software tailored for your business: inventory control, appointments, calculators, dashboards. Without paying for eternal licenses.",
         "features": {
-          "0": "Keyword Research",
-          "1": "On-page SEO",
-          "2": "Technical SEO"
+          "0": "Inventory Control",
+          "1": "Bookings & Appointments",
+          "2": "Dashboards & Reports"
         }
       },
       "2": {
-        "title": "Web Applications",
-        "description": "I develop custom web applications that scale with your business—with clean APIs, secure authentication, and intuitive UX to simplify complex workflows.",
+        "title": "Mobile Apps",
+        "description": "I develop custom mobile applications that scale with your business—with fluid interfaces, high performance, and intuitive UX to engage your users.",
         "features": {
-          "0": "Custom Apps",
-          "1": "API Integration",
-          "2": "User Experience"
+          "0": "Mobile-First Design",
+          "1": "High Performance",
+          "2": "App Store Publishing"
         }
       },
       "3": {
-        "title": "Automation",
+        "title": "Automations",
         "description": "I automate repetitive tasks across your stack to save you hours—connecting tools, orchestrating data, and ensuring your systems stay in sync.",
         "features": {
           "0": "Workflow Automation",
-          "1": "Process Optimization",
-          "2": "Integration"
+          "1": "System Integration",
+          "2": "Time Saving"
         }
       }
     }

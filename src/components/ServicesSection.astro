@@ -15,68 +15,53 @@ const services = [
     icon: '🌐',
     titleKey: 'services.items.0.title',
     descKey: 'services.items.0.description',
-    featureKeys: ['services.items.0.features.0', 'services.items.0.features.1', 'services.items.0.features.2'],
   },
   {
-    icon: '🔍',
+    icon: '💻',
     titleKey: 'services.items.1.title',
     descKey: 'services.items.1.description',
-    featureKeys: ['services.items.1.features.0', 'services.items.1.features.1', 'services.items.1.features.2'],
   },
   {
     icon: '📱',
     titleKey: 'services.items.2.title',
     descKey: 'services.items.2.description',
-    featureKeys: ['services.items.2.features.0', 'services.items.2.features.1', 'services.items.2.features.2'],
   },
   {
-    icon: '⚡',
+    icon: '✨',
     titleKey: 'services.items.3.title',
     descKey: 'services.items.3.description',
-    featureKeys: ['services.items.3.features.0', 'services.items.3.features.1', 'services.items.3.features.2'],
   },
 ];
 ---
 
-<section id="services" class="py-20 bg-background">
+<section id="services" class="py-24 bg-gray-100 border-t-2 border-border/50 blueprint-grid">
   <div class="container mx-auto px-4">
-    <div class="text-center mb-16 animate-fade-in">
+    <div class="mb-20 animate-fade-in text-left">
       <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
         {t('services.title')}{' '}
         <span class="text-primary">{t('services.titleAccent')}</span>
       </h2>
-      <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+      <p class="text-xl text-muted-foreground max-w-3xl leading-relaxed">
         {t('services.description')}
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 border-t-2 border-l-2 border-border">
       {services.map((service, index) => (
         <div
-          class="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-gradient-card border border-border/50 animate-slide-up rounded-xl"
+          class="group relative bg-white border-r-2 border-b-2 border-border p-12 transition-all duration-500 hover:shadow-glow hover:z-20 animate-slide-up"
           style={`animation-delay: ${index * 0.1}s`}
         >
-          <div class="p-8">
-            <div class="mb-6">
-              <div class="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 text-2xl">
-                {service.icon}
-              </div>
-              <h3 class="text-2xl font-bold text-foreground mb-3">
-                {t(service.titleKey)}
-              </h3>
-              <p class="text-muted-foreground leading-relaxed mb-4">
-                {t(service.descKey)}
-              </p>
+          <div class="relative z-10">
+            <div class="w-14 h-14 flex items-center justify-start mb-8 text-4xl group-hover:scale-110 transition-transform duration-300">
+              {service.icon}
             </div>
-
-            <div class="space-y-2">
-              {service.featureKeys.map((featureKey) => (
-                <div class="flex items-center text-sm text-foreground">
-                  <div class="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  {t(featureKey)}
-                </div>
-              ))}
-            </div>
+            <h3 class="text-2xl font-bold text-foreground mb-4">
+              {t(service.titleKey)}
+            </h3>
+            <p class="text-muted-foreground leading-relaxed text-lg">
+              {t(service.descKey)}
+            </p>
           </div>
         </div>
       ))}

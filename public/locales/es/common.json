@@ -43,44 +43,44 @@
     "ctaSecondary": "Saber Más"
   },
   "services": {
-    "title": "Cómo Puedo",
-    "titleAccent": "Apoyarte",
-    "description": "Desde sitios web y aplicaciones hasta SEO y automatización, ofrezco soluciones digitales integrales diseñadas para ser lanzadas rápido, escalar sin problemas e impulsar resultados medibles para ti.",
+    "title": "Lo que puedo hacer ",
+    "titleAccent": "por ti",
+    "description": "Desde sitios web y apps móviles hasta sistemas a la medida y automatizaciones, ofrezco soluciones digitales integrales diseñadas para ser lanzadas rápido, escalar sin problemas e impulsar resultados medibles para ti.",
     "items": {
       "0": {
-        "title": "Desarrollo de Sitios Web",
-        "description": "Construyo sitios web rápidos y accesibles optimizados para tu marca; están listos para SEO, son fáciles de actualizar y están diseñados para convertir visitantes en cada dispositivo.",
+        "title": "Ecommerce y sitios web",
+        "description": "Construyo sitios web rápidos y tiendas virtuales optimizadas para tu marca; están listos para vender, son fáciles de actualizar y están diseñados para convertir visitantes en cada dispositivo.",
         "features": {
-          "0": "Diseño Responsivo",
-          "1": "Desarrollo a Medida",
-          "2": "Integración de CMS"
+          "0": "Tiendas Virtuales",
+          "1": "Optimización de Ventas",
+          "2": "Diseño Responsivo"
         }
       },
       "1": {
-        "title": "Optimización SEO",
-        "description": "Te ayudo a aumentar el tráfico orgánico con SEO basado en datos: yo manejo la investigación, las correcciones técnicas y la estrategia de contenido para que tu negocio se posicione y atraiga clientes potenciales cualificados.",
+        "title": "Sistemas a la medida",
+        "description": "Software hecho para tu negocio: control de inventario, citas, cotizadores, dashboards. Sin pagar licencias eternas.",
         "features": {
-          "0": "Investigación de Palabras Clave",
-          "1": "SEO On-page",
-          "2": "SEO Técnico"
+          "0": "Control de Inventario",
+          "1": "Citas y Reservas",
+          "2": "Dashboards y Reportes"
         }
       },
       "2": {
-        "title": "Aplicaciones Web",
-        "description": "Desarrollo aplicaciones web personalizadas que escalan con tu negocio, con APIs limpias, autenticación segura y UX intuitiva para simplificar flujos de trabajo complejos.",
+        "title": "Apps móviles",
+        "description": "Desarrollo aplicaciones móviles personalizadas que escalan con tu negocio, con interfaces fluidas, alto rendimiento y UX intuitiva para atraer a tus usuarios.",
         "features": {
-          "0": "Aplicaciones Personalizadas",
-          "1": "Integración de API",
-          "2": "Experiencia de Usuario"
+          "0": "Diseño Mobile-First",
+          "1": "Alto Rendimiento",
+          "2": "Publicación en Tiendas"
         }
       },
       "3": {
-        "title": "Automatización",
+        "title": "Automatizaciones",
         "description": "Automatizo tareas repetitivas en tu stack para ahorrarte horas: conectando herramientas, orquestando datos y asegurando que tus sistemas se mantengan sincronizados.",
         "features": {
-          "0": "Automatización de Flujos de Trabajo",
-          "1": "Optimización de Procesos",
-          "2": "Integración"
+          "0": "Flujos de Trabajo",
+          "1": "Integración de Sistemas",
+          "2": "Ahorro de Tiempo"
         }
       }
     }
