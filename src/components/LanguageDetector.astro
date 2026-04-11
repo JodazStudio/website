@@ -1,0 +1,55 @@
+---
+// src/components/LanguageDetector.astro
+// Client-side browser language detection with SEO-safe redirection.
+// Only performs automatic detection on the home page to avoid breaking
+// deep-linked / indexed pages. Manual preference (via header toggle)
+// is respected on ALL pages.
+import type { Lang } from '@/lib/i18n';
+
+interface Props {
+  lang: Lang;
+  alternateUrl?: string;
+}
+
+const { lang, alternateUrl } = Astro.props;
+---
+
+<script
+  define:vars={{ pageLang: lang, alternateUrl: alternateUrl ?? null }}
+>
+  (function detectLanguage() {
+    const PREFERRED_LANG_KEY = 'preferred_lang';
+    const REDIRECTED_KEY = 'lang_redirected';
+
+    // Never redirect if we already redirected this session (prevents loops)
+    if (sessionStorage.getItem(REDIRECTED_KEY)) return;
+
+    const storedPref = localStorage.getItem(PREFERRED_LANG_KEY);
+    const isHomePage =
+      window.location.pathname === '/' ||
+      window.location.pathname === '/es/' ||
+      window.location.pathname === '/es';
+
+    /** @type {'en' | 'es' | null} */
+    let targetLang = null;
+
+    if (storedPref === 'en' || storedPref === 'es') {
+      // User has explicitly chosen a language before — respect it everywhere
+      targetLang = storedPref;
+    } else if (isHomePage) {
+      // First visit, no preference saved — detect from browser, but ONLY on
+      // the home page to preserve SEO for deep-linked pages.
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      targetLang = browserLang.startsWith('es') ? 'es' : 'en';
+
+      // Persist the detected preference so subsequent pages are consistent
+      localStorage.setItem(PREFERRED_LANG_KEY, targetLang);
+    }
+
+    // If we have a target and it differs from the current page, redirect
+    if (targetLang && targetLang !== pageLang && alternateUrl) {
+      sessionStorage.setItem(REDIRECTED_KEY, '1');
+      window.location.replace(alternateUrl);
+    }
+  })();
+</script>

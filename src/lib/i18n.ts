@@ -5,6 +5,9 @@ const translations = { en, es } as const;
 
 export type Lang = 'en' | 'es';
 
+/** localStorage key for the user's explicitly chosen language */
+export const PREFERRED_LANG_KEY = 'preferred_lang' as const;
+
 export function getLang(url: URL): Lang {
   const [, lang] = url.pathname.split('/');
   if (lang === 'es') return 'es';

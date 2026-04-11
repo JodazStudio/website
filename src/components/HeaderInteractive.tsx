@@ -46,6 +46,12 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
 
   const altLang = lang === 'es' ? 'EN' : 'ES';
 
+  const handleLangSwitch = () => {
+    const targetLang = lang === 'es' ? 'en' : 'es';
+    localStorage.setItem('preferred_lang', targetLang);
+    sessionStorage.removeItem('lang_redirected');
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -95,6 +101,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
             {/* Language switcher */}
             <a
               href={altLangHref}
+              onClick={handleLangSwitch}
               className={`text-sm px-3 py-1 rounded-full border transition-all duration-300 font-bold ${
                 isScrolled || isMenuOpen
                   ? 'text-foreground border-foreground/20 hover:border-primary hover:text-primary'
@@ -146,6 +153,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref }: Props) => {
             <div className="pt-6 border-t border-foreground/10">
               <a
                 href={altLangHref}
+                onClick={handleLangSwitch}
                 className="inline-flex items-center text-lg font-bold text-foreground hover:text-primary transition-colors"
                 aria-label={`Switch to ${altLang}`}
               >
