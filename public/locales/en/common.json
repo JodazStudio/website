@@ -39,8 +39,7 @@
     "line1": "Transform Your",
     "line2": "Digital Presence",
     "description": "I create innovative and cutting-edge digital products, developing personalized solutions, websites, and extraordinary applications that offer unique experiences and maximize success in the market.",
-    "ctaPrimary": "Start Your Project",
-    "ctaSecondary": "Learn More"
+    "ctaPrimary": "Start Your Project"
   },
   "services": {
     "title": "What I can do ",
@@ -126,7 +125,6 @@
     "line2": "Ordosgoitty",
     "description": "Frontend Developer, Full Stack Engineer, and passionate about software engineering.",
     "ctaPrimary": "Start Your Project",
-    "ctaSecondary": "Learn More",
     "intro": "Hi, I'm Jesus Ordosgoitty. I design and build fast, accessible, and scalable digital products. This page is coming soon."
   },
   "experience": {

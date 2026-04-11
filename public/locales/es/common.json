@@ -39,8 +39,7 @@
     "line1": "Transforma tu",
     "line2": "presencia Digital",
     "description": "Creo productos digitales innovadores y de vanguardia, desarrollando soluciones personalizadas, sitios web y aplicaciones extraordinarias que ofrecen experiencias únicas y maximizan el éxito en el mercado.",
-    "ctaPrimary": "Comenzar tu Proyecto",
-    "ctaSecondary": "Saber Más"
+    "ctaPrimary": "Comenzar tu Proyecto"
   },
   "services": {
     "title": "Lo que puedo hacer ",
@@ -126,7 +125,6 @@
     "line2": "Ordosgoitty",
     "description": "Desarrollador Frontend, Ingeniero Full Stack y apasionado por la ingeniería de software.",
     "ctaPrimary": "Comenzar tu Proyecto",
-    "ctaSecondary": "Saber Más",
     "intro": "Hola, soy Jesús Ordosgoitty. Diseño y desarrollo productos digitales rápidos, accesibles y escalables. Esta página estará disponible pronto."
   },
   "experience": {

@@ -1,6 +1,6 @@
 // src/components/views/About.tsx
 // React Island — accepts string props from Astro parent (no react-i18next)
-import { ChevronDown } from 'lucide-react';
+import ScrollButton from '@/components/ui/ScrollButton';
 import founderImg from '@/assets/images/pic.jpg';
 import heroImg from '@/assets/hero.jpeg';
 
@@ -51,15 +51,7 @@ const AboutView = ({ strings }: Props) => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-1 w-full flex justify-center z-[3] h-20">
-        <button
-          onClick={() => scrollToSection('experience')}
-          className="animate-float z-10 w-12 h-12 rounded-full border-2 border-white/30 bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
-          aria-label="Scroll down"
-        >
-          <ChevronDown className="w-6 h-6 text-white" />
-        </button>
-      </div>
+      <ScrollButton targetId="experience" />
     </section>
   );
 };

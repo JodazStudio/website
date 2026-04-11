@@ -105,10 +105,10 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref, isOpaque = fa
             <a
               href={altLangHref}
               onClick={handleLangSwitch}
-              className={`text-sm px-3 py-1 rounded-full border transition-all duration-300 font-bold ${
+              className={`text-sm px-3 py-1 rounded-none border-2 transition-all duration-300 font-bold ${
                 isScrolled || isMenuOpen || isOpaque
-                  ? 'text-white border-white/20 hover:border-brand-bright hover:text-brand-bright'
-                  : 'text-blue-50 border-blue-50/30 hover:border-white hover:text-white'
+                  ? 'text-white border-white/20 hover:border-brand-bright hover:bg-white hover:text-brand-dark'
+                  : 'text-blue-50 border-blue-50/30 hover:border-white hover:bg-white hover:text-brand-dark'
               }`}
               aria-label={`Switch to ${altLang}`}
             >
@@ -161,7 +161,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref, isOpaque = fa
                 aria-label={`Switch to ${altLang}`}
               >
                 <span className="mr-2">Language:</span>
-                <span className="px-3 py-1 bg-brand-dark/50 rounded-full text-brand-bright">{altLang}</span>
+                <span className="px-3 py-1 border-2 border-brand-bright rounded-none text-brand-bright">{altLang}</span>
               </a>
             </div>
           </nav>
