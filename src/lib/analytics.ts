@@ -1,7 +1,7 @@
 // src/lib/analytics.ts
 // Utility for Google Analytics event tracking
 
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 
 export function trackEvent({
   action,
@@ -20,6 +20,8 @@ export function trackEvent({
       event_label: label,
       value: value,
     });
+  } else if (import.meta.env.DEV) {
+    console.log('[Analytics]', { action, category, label, value });
   }
 }
 
