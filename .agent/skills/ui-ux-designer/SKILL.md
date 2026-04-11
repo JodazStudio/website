@@ -65,17 +65,20 @@ The brand uses a sophisticated "Stone & Blue" palette. Strictly use the followin
 ### 5. Spacing & Shapes
 - **Container**: Always use `container mx-auto px-4`.
 - **Global Border Radius**: `var(--radius)` (default `0.5rem`).
-- **Cards**: Use `rounded-xl border bg-card text-card-foreground shadow-elegant`.
+- **Structural Grids**: Always use **square corners** (`rounded-none`) and **2px borders** (`border-2 border-border`).
+- **Cards (Floating)**: Use `rounded-xl border bg-card text-card-foreground shadow-elegant`.
+- **Cards (Grid-based)**: Use `bg-white border-2 border-border rounded-none hover:shadow-glow hover:z-20`.
 
 ### 6. Button Variants (shadcn/ui)
 - `variant="hero"`: The primary CTA. Always include a hover arrow animation.
 - `variant="outline-hero"`: Used for secondary actions on dark backgrounds.
 
 ### 7. General Rules
+- **Modern Blueprint Aesthetic**: Use `.blueprint-grid` background patterns for technical sections. Combine with 2px borders and square shapes to create an architectural, precise feel.
 - **Contrast**: Black/Navy text on Stone background is the brand signature.
 - **Visual Balance**: Use whitespace generously. "White space is premium".
-- **Dynamic Elements**: Use `framer-motion` for reveal-on-scroll effects.
-- **Consistency**: All brand-new components must align with the Jesus Ordosgoitty color tokens.
+- **Dynamic Elements**: Use entrance animations like `animate-fade-in` or `animate-slide-up` with staggered delays.
+- **Consistency**: All brand-new components must align with the Jesus Ordosgoitty color tokens and the technical blueprint aesthetic.
 
 ## Output (exact format)
 Provide design specifications, component code (Astro or React), or structural layout. Include explicit references to Tailwind classes used. Ensure all text is wrapped in translation helpers. Include the necessary SEO props.

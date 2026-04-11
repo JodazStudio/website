@@ -2,7 +2,6 @@
 // src/layouts/BaseLayout.astro
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
 import LanguageDetector from '@/components/LanguageDetector.astro';
 import type { Lang } from '@/lib/i18n';
 import '@/index.css';
@@ -28,6 +27,5 @@ const { title, description, lang = 'en', alternateUrl } = Astro.props;
     <main class="flex-1">
       <slot />
     </main>
-    <Footer lang={lang} />
   </body>
 </html>

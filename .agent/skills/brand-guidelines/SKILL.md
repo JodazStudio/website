@@ -66,8 +66,14 @@ The brand uses smooth linear gradients to create depth and focus.
 ### Shadows and Depth
 
 - **Elegant Shadow:** `0 10px 30px -10px hsl(var(--brand-medium) / 0.3)`
-- **Glow Shadow:** `0 0 40px hsl(var(--brand-bright) / 0.4)`
+- **Glow Shadow:** `0 0 40px hsl(var(--brand-bright) / 0.4)` (`shadow-glow`)
 - **Card Shadow:** `0 4px 20px -2px hsl(var(--brand-dark) / 0.1)`
+
+### Blueprint Grid
+
+Technical sections should use the "Blueprint" aesthetic:
+- **Background Pattern:** `.blueprint-grid` (60px grid lines using `var(--border)`).
+- **Fade Effect:** `.blueprint-grid-fade` for smooth transitions.
 
 ### Transitions
 
@@ -90,10 +96,11 @@ Core animations used to make the UI feel "alive":
 2. **Readability:** Ensure high contrast between text and background, especially in Dark Mode.
 3. **Subtle Motion:** Use floating and sliding animations to create a dynamic but professional feel.
 4. **Theme Fidelity:** Always respect the HSL variable system for light/dark mode compatibility.
-5. **Clean Layouts:** Leverage the `--shadow-elegant` to create separation without heavy borders.
+5. **Blueprint Logic:** Use structured grids and consistent 2px borders to emphasize a professional, architectural developer feel.
 
 ## Best Practices
 
 - **Tailwind Integration:** Use semantic classes (e.g., `bg-primary`, `text-foreground`, `shadow-elegant`).
 - **Gradient Usage:** Apply gradients mainly to hero sections, primary buttons, and decorative cards.
-- **Radius:** Standard border radius is `0.5rem` (`--radius`).
+- **Borders:** Main structural grids use `border-2` (2px thickness) with `border-border`.
+- **Radius:** Standard border radius is `0.5rem` (`--radius`). However, **structural grid elements and Blueprint-themed sections MUST use square corners (`rounded-none`).**

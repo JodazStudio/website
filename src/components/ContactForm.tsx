@@ -64,7 +64,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ lang = 'en' }) => {
             type="text"
             name="name"
             placeholder="John Doe"
-            class="w-full px-4 py-3 bg-card border border-border rounded-xl focus:ring-2 focus:ring-primary outline-none transition-all"
+            class="w-full px-4 py-3 bg-white border-2 border-border rounded-none focus:ring-0 focus:border-primary outline-none transition-all placeholder:text-muted-foreground/50"
           />
         </div>
         <div class="space-y-2">
@@ -74,7 +74,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ lang = 'en' }) => {
             type="email"
             name="email"
             placeholder="john@example.com"
-            class="w-full px-4 py-3 bg-card border border-border rounded-xl focus:ring-2 focus:ring-primary outline-none transition-all"
+            class="w-full px-4 py-3 bg-white border-2 border-border rounded-none focus:ring-0 focus:border-primary outline-none transition-all placeholder:text-muted-foreground/50"
           />
         </div>
       </div>
@@ -86,16 +86,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ lang = 'en' }) => {
           name="message"
           rows={4}
           placeholder="..."
-          class="w-full px-4 py-3 bg-card border border-border rounded-xl focus:ring-2 focus:ring-primary outline-none transition-all resize-none"
+          class="w-full px-4 py-3 bg-white border-2 border-border rounded-none focus:ring-0 focus:border-primary outline-none transition-all resize-none placeholder:text-muted-foreground/50"
         ></textarea>
       </div>
 
       <button
         disabled={status === 'sending'}
         type="submit"
-        class={`w-full py-4 rounded-xl font-bold transition-all shadow-glow ${
-          status === 'sending' ? 'bg-primary/50' : 'bg-primary hover:scale-[1.01] active:scale-[0.99]'
-        } text-white`}
+        class={`w-full py-4 rounded-none font-bold transition-all shadow-glow ${
+          status === 'sending' ? 'bg-primary/50' : 'bg-primary hover:bg-primary/90'
+        } text-white uppercase tracking-widest`}
       >
         {status === 'sending' ? t.sending : t.submit}
       </button>

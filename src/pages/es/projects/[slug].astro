@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import BottomGridWrapper from '@/components/BottomGridWrapper.astro';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => data.lang === 'es');
@@ -19,14 +20,15 @@ const { Content } = await project.render();
 ---
 
 <BaseLayout title={project.data.title} description={project.data.description} lang="es">
-  <article class="max-w-4xl mx-auto px-6 py-20">
+<section class="bg-gray-100 border-t-2 border-border/50 blueprint-grid py-20 min-h-screen">
+  <article class="max-w-4xl mx-auto px-6 py-16 bg-white border-2 border-border shadow-elegant animate-fade-in">
     <header class="mb-12">
       <h1 class="text-4xl md:text-6xl font-mono font-bold text-primary mb-6 underline decoration-primary/40 decoration-4 underline-offset-8 uppercase tracking-tighter italic">
         {project.data.title}
       </h1>
       <div class="flex flex-wrap gap-2 mb-6">
         {project.data.tags.map(tag => (
-          <span class="px-3 py-1 bg-muted text-muted-foreground rounded-full text-sm">
+          <span class="px-3 py-1 bg-muted text-muted-foreground rounded-none border border-border text-sm">
             {tag}
           </span>
         ))}
@@ -38,4 +40,6 @@ const { Content } = await project.render();
       <Content />
     </div>
   </article>
+</section>
+  <BottomGridWrapper lang="es" />
 </BaseLayout>
