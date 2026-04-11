@@ -59,9 +59,9 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref, isOpaque = fa
         isMenuOpen
           ? 'bg-brand-dark shadow-lg'
           : isOpaque
-            ? 'bg-brand-dark shadow-elegant py-1'
+            ? 'bg-brand-dark py-1'
             : isScrolled
-              ? 'bg-brand-dark/90 backdrop-blur-md shadow-elegant py-1'
+              ? 'bg-brand-dark py-1'
               : 'bg-transparent py-2'
       }`}
     >
@@ -72,7 +72,7 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref, isOpaque = fa
             <img
               src={logoSrc}
               alt="Jesus Ordosgoitty"
-              className="h-8 lg:h-9 w-auto transition-all duration-100"
+              className={`h-8 lg:h-9 w-auto transition-all duration-300 ${isScrolled || isMenuOpen || isOpaque ? 'brightness-0 invert' : ''}`}
             />
           </a>
 
