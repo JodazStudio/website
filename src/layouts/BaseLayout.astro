@@ -3,6 +3,7 @@
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import LanguageDetector from '@/components/LanguageDetector.astro';
 import type { Lang } from '@/lib/i18n';
 import '@/index.css';
 
@@ -20,6 +21,7 @@ const { title, description, lang = 'en', alternateUrl } = Astro.props;
 <html lang={lang}>
   <head>
     <BaseHead title={title} description={description} lang={lang} alternateUrl={alternateUrl} />
+    <LanguageDetector lang={lang} alternateUrl={alternateUrl} />
   </head>
   <body class="min-h-screen bg-background flex flex-col">
     <Header lang={lang} />

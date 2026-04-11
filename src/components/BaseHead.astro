@@ -55,7 +55,23 @@ const esURL = lang === 'es' ? canonicalURL.href : (alternateUrl ?? new URL('/es/
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-  rel="stylesheet"
-/>
+
+{
+  import.meta.env.PUBLIC_GA_MEASUREMENT_ID && (
+    <>
+      <script
+        is:inline
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_MEASUREMENT_ID}`}
+      />
+      <script is:inline define:vars={{ id: import.meta.env.PUBLIC_GA_MEASUREMENT_ID }}>
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () {
+          window.dataLayer.push(arguments);
+        };
+        gtag('js', new Date());
+        gtag('config', id);
+      </script>
+    </>
+  )
+}
