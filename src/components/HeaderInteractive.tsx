@@ -21,6 +21,8 @@ interface Props {
 const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref, isOpaque = false }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isIntroing, setIsIntroing] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +30,17 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref, isOpaque = fa
     };
     window.addEventListener('scroll', handleScroll);
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // Intro animation: show name for 3 seconds on mount
+    const timer = setTimeout(() => setIsIntroing(false), 1500);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
   }, []);
+
+  const showName = isHovered || isIntroing || isMenuOpen;
 
   const handleNavClick = (item: NavItem) => {
     if (item.isSection) {
@@ -68,12 +79,27 @@ const HeaderInteractive = ({ navItems, logoSrc, lang, altLangHref, isOpaque = fa
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-12 lg:h-14">
           {/* Logo */}
-          <a href={lang === 'es' ? '/es/' : '/'} className="flex items-center space-x-3 transition-transform hover:scale-105">
+          <a
+            href={lang === 'es' ? '/es/' : '/'}
+            className="flex items-center transition-transform hover:scale-105 group px-2"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <img
               src={logoSrc}
-              alt="Jesus Ordosgoitty"
+              alt="Jesus Ordosgoitty Logo"
               className={`h-8 lg:h-9 w-auto transition-all duration-300 ${isScrolled || isMenuOpen || isOpaque ? 'brightness-0 invert' : ''}`}
             />
+            <div
+              className={`flex items-center transition-all duration-700 ease-in-out overflow-hidden whitespace-nowrap ${
+                showName ? 'max-w-[300px] opacity-100' : 'max-w-0 opacity-0'
+              } ${isScrolled || isMenuOpen || isOpaque ? 'text-white' : 'text-blue-50'}`}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full opacity-60 mr-4 ml-4 ${isScrolled || isMenuOpen || isOpaque ? 'bg-white' : 'bg-brand-bright'}`} />
+              <span className="text-lg lg:text-xl font-bold tracking-tight">
+                Jesus Ordosgoitty
+              </span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}
