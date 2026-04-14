@@ -45,7 +45,7 @@ const AboutView = ({ strings }: Props) => {
 
             <div className="flex justify-center items-center animate-fade-in">
               <div className="w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden">
-                <img src={typeof founderImg === 'string' ? founderImg : founderImg.src} alt="Profile" className="w-full h-full object-cover" />
+                <img src={typeof founderImg === 'string' ? founderImg : founderImg.src} alt="Jesus Ordosgoitty — Full Stack Web Developer" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

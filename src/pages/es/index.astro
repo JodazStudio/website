@@ -6,6 +6,7 @@ import HeroIsland from '@/components/islands/HeroIsland';
 import ServicesSection from '@/components/ServicesSection.astro';
 import PortfolioIsland from '@/components/islands/PortfolioIsland';
 import BottomGridWrapper from '@/components/BottomGridWrapper.astro';
+import StructuredData from '@/components/StructuredData.astro';
 import es from '../../../public/locales/es/common.json';
 
 const lang = 'es' as const;
@@ -33,7 +34,7 @@ const contactStrings = {
   subhead: t('contact.subhead'),
   email: t('contact.email'),
   phone: t('contact.phone'),
-  portraitAlt: 'Retrato',
+  portraitAlt: 'Jesús Ordosgoitty — Desarrollador Web Full Stack',
 };
 ---
 
@@ -43,6 +44,7 @@ const contactStrings = {
   lang={lang}
   alternateUrl="https://jodaz.xyz/"
 >
+  <StructuredData schemas={[{ type: 'person', lang: 'es' }, { type: 'professionalService', lang: 'es' }]} />
   <HeroIsland {...heroProps} client:load />
   <ServicesSection lang={lang} />
   <PortfolioIsland

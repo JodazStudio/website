@@ -8,7 +8,8 @@ interface Props {
   alternateUrl?: string; // URL of the same page in the other language
 }
 
-const { title, description, image = '/og-image.png', lang = 'en', alternateUrl } = Astro.props;
+const { title, description, image, lang = 'en', alternateUrl } = Astro.props;
+const ogImage = image ?? (lang === 'es' ? '/og-image-es.png' : '/og-image.png');
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Compute hreflang URLs
@@ -22,7 +23,9 @@ const esURL = lang === 'es' ? canonicalURL.href : (alternateUrl ?? new URL('/es/
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <meta name="generator" content={Astro.generator} />
+<meta name="theme-color" content="#0b5ef3" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -43,14 +46,14 @@ const esURL = lang === 'es' ? canonicalURL.href : (alternateUrl ?? new URL('/es/
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.site)} />
+<meta property="og:image" content={new URL(ogImage, Astro.site)} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={canonicalURL} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.site)} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />

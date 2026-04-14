@@ -1,0 +1,155 @@
+---
+// src/components/StructuredData.astro
+// Injects JSON-LD structured data into the <head> for SEO rich results.
+
+interface PersonSchema {
+  type: 'person';
+  lang?: string;
+}
+
+interface ProfessionalServiceSchema {
+  type: 'professionalService';
+  lang?: string;
+}
+
+interface ArticleSchema {
+  type: 'article';
+  headline: string;
+  description: string;
+  datePublished: string;
+  tags?: string[];
+  url?: string;
+  lang?: string;
+}
+
+type SchemaInput = PersonSchema | ProfessionalServiceSchema | ArticleSchema;
+
+interface Props {
+  schemas: SchemaInput[];
+}
+
+const { schemas } = Astro.props;
+
+const SITE_URL = 'https://jodaz.xyz';
+
+const SOCIAL_PROFILES = [
+  'https://www.linkedin.com/in/jodaz/',
+  'https://www.instagram.com/jodaz.dev',
+  'https://github.com/jodaz-dev',
+  'https://upwork.com/freelancers/jesusordosgoitty4',
+];
+
+const SKILLS = [
+  'React', 'JavaScript', 'TypeScript', 'Node.js', 'MongoDB',
+  'PostgreSQL', 'AWS', 'CSS', 'Linux', 'System Administration',
+  'Next.js', 'Astro', 'Tailwind CSS',
+];
+
+function buildPerson(lang: string = 'en') {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Jesus Ordosgoitty',
+    url: SITE_URL,
+    jobTitle: lang === 'es' ? 'Desarrollador Full Stack' : 'Full Stack Developer',
+    description: lang === 'es'
+      ? 'Desarrollador Frontend, Ingeniero Full Stack, apasionado por la ingeniería de software.'
+      : 'Frontend Developer, Full Stack Engineer, and passionate about software engineering.',
+    sameAs: SOCIAL_PROFILES,
+    knowsAbout: SKILLS,
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Universidad de Oriente',
+    },
+    image: `${SITE_URL}/og-image.png`,
+  };
+}
+
+function buildProfessionalService(lang: string = 'en') {
+  const services = lang === 'es'
+    ? [
+        { name: 'Ecommerce y Sitios Web', description: 'Tiendas en línea y sitios web rápidos, accesibles y optimizados para convertir visitantes.' },
+        { name: 'Software a Medida', description: 'Software adaptado a tu negocio: inventario, citas, calculadoras, dashboards.' },
+        { name: 'Aplicaciones Móviles', description: 'Aplicaciones móviles personalizadas con interfaces fluidas y alto rendimiento.' },
+        { name: 'Automatizaciones', description: 'Automatización de tareas repetitivas conectando herramientas y orquestando datos.' },
+      ]
+    : [
+        { name: 'Ecommerce and Websites', description: 'Fast, accessible websites and optimized online stores ready to sell and convert visitors.' },
+        { name: 'Custom Software', description: 'Software tailored for your business: inventory control, appointments, dashboards.' },
+        { name: 'Mobile Apps', description: 'Custom mobile applications with fluid interfaces and high performance.' },
+        { name: 'Automations', description: 'Automate repetitive tasks across your stack, connecting tools and orchestrating data.' },
+      ];
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: lang === 'es' ? 'Jesús Ordosgoitty — Desarrollo Web' : 'Jesus Ordosgoitty — Web Development',
+    url: SITE_URL,
+    description: lang === 'es'
+      ? 'Soluciones digitales de extremo a extremo: sitios web, apps móviles, software a medida y automatizaciones.'
+      : 'End-to-end digital solutions: websites, mobile apps, custom software, and automations.',
+    areaServed: 'Worldwide',
+    provider: {
+      '@type': 'Person',
+      name: 'Jesus Ordosgoitty',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: lang === 'es' ? 'Servicios de Desarrollo' : 'Development Services',
+      itemListElement: services.map((service, index) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: service.name,
+          description: service.description,
+        },
+        position: index + 1,
+      })),
+    },
+  };
+}
+
+function buildArticle(input: ArticleSchema) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: input.headline,
+    description: input.description,
+    datePublished: input.datePublished,
+    author: {
+      '@type': 'Person',
+      name: 'Jesus Ordosgoitty',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Jesus Ordosgoitty',
+      url: SITE_URL,
+    },
+    ...(input.url && { mainEntityOfPage: input.url }),
+    ...(input.tags?.length && { keywords: input.tags.join(', ') }),
+    inLanguage: input.lang === 'es' ? 'es' : 'en',
+  };
+}
+
+function buildSchema(input: SchemaInput) {
+  switch (input.type) {
+    case 'person':
+      return buildPerson(input.lang);
+    case 'professionalService':
+      return buildProfessionalService(input.lang);
+    case 'article':
+      return buildArticle(input);
+    default:
+      return null;
+  }
+}
+
+const jsonLdBlocks = schemas
+  .map(buildSchema)
+  .filter(Boolean);
+---
+
+{jsonLdBlocks.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}

@@ -6,6 +6,7 @@ import AboutView from '@/components/views/About';
 import ExperienceView from '@/components/views/Experience';
 import en from '../../public/locales/en/common.json';
 import BottomGridWrapper from '@/components/BottomGridWrapper.astro';
+import StructuredData from '@/components/StructuredData.astro';
 
 const lang = 'en' as const;
 const t = useTranslations(lang);
@@ -26,11 +27,12 @@ const experienceStrings = {
 ---
 
 <BaseLayout
-  title={`${t('about.line1')} ${t('about.line2')} — Jesus Ordosgoitty`}
-  description={t('about.description')}
+  title="About — Jesus Ordosgoitty | Full Stack Developer"
+  description="Full Stack Developer with 5+ years of experience building fast, accessible, and scalable digital products. Specializing in React, Node.js, and modern web technologies."
   lang={lang}
   alternateUrl="https://jodaz.xyz/es/about"
 >
+  <StructuredData schemas={[{ type: 'person', lang: 'en' }]} />
   <AboutView strings={aboutStrings} client:load />
   <ExperienceView strings={experienceStrings} client:visible />
   <BottomGridWrapper lang={lang} />
