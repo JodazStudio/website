@@ -4,7 +4,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { useTranslations } from '@/lib/i18n';
 import HeroIsland from '@/components/islands/HeroIsland';
 import ServicesSection from '@/components/ServicesSection.astro';
-import PortfolioIsland from '@/components/islands/PortfolioIsland';
+import PortfolioSection from '@/components/PortfolioSection.astro';
 import BottomGridWrapper from '@/components/BottomGridWrapper.astro';
 import StructuredData from '@/components/StructuredData.astro';
 import es from '../../../public/locales/es/common.json';
@@ -47,10 +47,9 @@ const contactStrings = {
   <StructuredData schemas={[{ type: 'person', lang: 'es' }, { type: 'professionalService', lang: 'es' }]} />
   <HeroIsland {...heroProps} client:load />
   <ServicesSection lang={lang} />
-  <PortfolioIsland
+  <PortfolioSection
     projects={projects}
-    strings={portfolioStrings}
-    client:visible
+    lang={lang}
   />
   <BottomGridWrapper 
     lang={lang} 

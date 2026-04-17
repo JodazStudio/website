@@ -3,6 +3,7 @@
 import founder from '@/assets/images/founder.png';
 import AvailabilityBadge from './AvailabilityBadge.astro';
 import ContactActions from './ContactActions.astro';
+import AnimatedContent from '@/component/AnimatedContent';
 
 interface ContactStrings {
   title: string;
@@ -24,16 +25,16 @@ const { strings, lang = 'en' } = Astro.props;
 
 <section id="contact" class="py-24 relative overflow-hidden">
   <div class="container mx-auto px-4 relative z-10">
-    <div class="text-left mb-20 animate-fade-in">
+    <AnimatedContent client:visible className="text-left mb-20">
       <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
         {strings.title}{' '}
         <span class="text-primary">{strings.titleAccent}</span>
       </h2>
-    </div>
+    </AnimatedContent>
 
     <div class="grid lg:grid-cols-2 gap-16">
       <!-- Contact Actions -->
-      <div class="space-y-10 animate-slide-up order-2 lg:order-1">
+      <AnimatedContent client:visible className="space-y-10 order-2 lg:order-1">
         <div class="space-y-6 text-left">
           <h3 class="text-3xl font-bold text-foreground">
             {strings.headline}
@@ -44,21 +45,27 @@ const { strings, lang = 'en' } = Astro.props;
         </div>
 
         <ContactActions lang={lang} />
-      </div>
+      </AnimatedContent>
 
       <!-- Portrait & Status -->
       <div class="flex flex-col items-center justify-center space-y-8 order-1 lg:order-2">
         <!-- Mobile/Desktop Image -->
-        <div class="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-white relative rounded-none overflow-hidden transition-all duration-500 hover:shadow-glow hover:z-20 border-2 border-border animate-slide-up-delayed group">
+        <AnimatedContent 
+          client:visible 
+          delay={0.2}
+          className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 bg-white relative rounded-none overflow-hidden transition-all duration-500 hover:shadow-glow hover:z-20 border-2 border-border group"
+        >
           <img
             src={founder.src}
             alt={strings.portraitAlt}
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        </div>
+        </AnimatedContent>
         
-        <AvailabilityBadge lang={lang} />
+        <AnimatedContent client:visible delay={0.4}>
+          <AvailabilityBadge lang={lang} />
+        </AnimatedContent>
       </div>
     </div>
   </div>

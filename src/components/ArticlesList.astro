@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import AnimatedContent from '@/component/AnimatedContent';
 
 const { lang = 'en' } = Astro.props;
 
@@ -26,7 +27,7 @@ const t = lang === 'es' ? labels.es : labels.en;
 
 <section class="py-24 overflow-hidden">
   <div class="container mx-auto px-4">
-    <div class="mb-20 animate-fade-in text-left">
+    <AnimatedContent client:visible className="mb-20 text-left">
       <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
         {t.featuredProjects}
       </h2>
@@ -35,40 +36,45 @@ const t = lang === 'es' ? labels.es : labels.en;
           ? 'Explora una selección de mis trabajos más recientes y destacados en desarrollo web y diseño.' 
           : 'Explore a selection of my most recent and impactful work in web development and design.'}
       </p>
-    </div>
+    </AnimatedContent>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-1">
       {sortedProjects.map((project, index) => {
         const baseSlug = project.slug.split('/').pop();
         const href = lang === 'es' ? `/es/projects/${baseSlug}` : `/projects/${baseSlug}`;
         return (
-          <a 
-            href={href}
-            class="group block p-10 bg-white border-border border-2 transition-all duration-500 hover:shadow-glow hover:z-20 animate-slide-up relative overflow-hidden"
-            style={`animation-delay: ${index * 0.1}s`}
+          <AnimatedContent 
+            client:visible 
+            delay={index * 0.1}
+            className="group block"
           >
-            <div class="relative z-10 flex flex-col h-full justify-between gap-8">
-              <div class="space-y-4">
-                <div class="flex flex-wrap gap-2">
-                  {project.data.tags.map(tag => (
-                    <span class="text-[10px] uppercase tracking-widest font-bold text-primary px-0 py-0 border-b border-primary/30">
-                      {tag}
-                    </span>
-                  ))}
+            <a 
+              href={href}
+              class="block p-10 bg-white border-border border-2 transition-all duration-500 hover:shadow-glow hover:z-20 relative overflow-hidden h-full"
+            >
+              <div class="relative z-10 flex flex-col h-full justify-between gap-8">
+                <div class="space-y-4">
+                  <div class="flex flex-wrap gap-2">
+                    {project.data.tags.map(tag => (
+                      <span class="text-[10px] uppercase tracking-widest font-bold text-primary px-0 py-0 border-b border-primary/30">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 class="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    {project.data.title}
+                  </h3>
+                  <p class="text-muted-foreground line-clamp-2 max-w-2xl leading-relaxed">
+                    {project.data.description}
+                  </p>
                 </div>
-                <h3 class="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                  {project.data.title}
-                </h3>
-                <p class="text-muted-foreground line-clamp-2 max-w-2xl leading-relaxed">
-                  {project.data.description}
-                </p>
+                
+                <div class="text-primary font-bold text-sm flex items-center gap-2 group-hover:translate-x-2 transition-all">
+                  {t.viewCaseStudy}
+                </div>
               </div>
-              
-              <div class="text-primary font-bold text-sm flex items-center gap-2 group-hover:translate-x-2 transition-all">
-                {t.viewCaseStudy}
-              </div>
-            </div>
-          </a>
+            </a>
+          </AnimatedContent>
         );
       })}
     </div>

@@ -7,7 +7,7 @@ import StructuredData from '@/components/StructuredData.astro';
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => data.lang === 'en');
   return projects.map(project => {
-    // If the slug is 'en/santa-rosa', the param slug should be 'santa-rosa'
+    // If the slug is 'en/horsy', the param slug should be 'horsy'
     const slug = project.slug.startsWith('en/') ? project.slug.slice(3) : project.slug;
     return {
       params: { slug },

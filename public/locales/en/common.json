@@ -92,11 +92,11 @@
     "code": "Code",
     "projects": [
       {
-        "id": "corporate",
+        "id": "horsy",
         "title": "Horsy.AI",
-        "description": "Modern corporate site featuring a headless CMS, blazing performance, and SEO best practices—easy for the client to manage and perfectly tailored for brand storytelling.",
-        "category": "Website",
-        "technologies": ["Next.js", "TypeScript", "Tailwind", "S3 Storage"],
+        "description": "Podcast search engine developed with TypeScript, Next.js, and MUI. Features episode quotes, AI-powered summaries, related questions, and advanced filtering.",
+        "category": "SAAS",
+        "technologies": ["TypeScript", "Next.js", "MUI", "AI"],
         "image": "horsy.png",
         "website": "https://horsy.ai"
       },
@@ -108,15 +108,6 @@
         "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
         "image": "fruga.png",
         "website": "https://dev.fruga.co.uk"
-      },
-      {
-        "id": "santarosa10k",
-        "title": "Santa Rosa 10K",
-        "description": "High-performance landing page for a sports event with real-time registration via Google Spreadsheet integration.",
-        "category": "Event Landing",
-        "technologies": ["Next.js", "GSAP", "Tailwind", "Google Sheets"],
-        "image": "santarosa.png",
-        "website": "https://santarosa10k.com"
       }
     ]
   },
