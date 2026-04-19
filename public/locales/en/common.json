@@ -12,11 +12,11 @@
     "viewAll": "View All Projects"
   },
   "contact": {
-    "title": "Ready to elevate your ",
-    "titleAccent": "digital presence?",
-    "description": "I partner with you to craft clear, high‑impact digital experiences—fast, secure, and accessible. Let's start building your digital future.",
-    "headline": "Let's Start a Conversation",
-    "subhead": "Tell me about your vision and any challenges you face—I’ll provide a clear plan, timeline, and budget. Just pragmatic steps to launch and grow your business.",
+    "title": "Let's ",
+    "titleAccent": "talk.",
+    "description": "Have a question or a project in mind? Feel free to reach out.",
+    "headline": "",
+    "subhead": "Have a question or a project in mind? Feel free to reach out.",
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
@@ -36,8 +36,8 @@
     }
   },
   "hero": {
-    "line1": "Transform Your",
-    "line2": "Digital Presence",
+    "line1": "Hi, I am Jesus Ordosgoitty",
+    "line2": "Software Developer",
     "description": "I create innovative and cutting-edge digital products, developing personalized solutions, websites, and extraordinary applications that offer unique experiences and maximize success in the market.",
     "ctaPrimary": "Start Your Project"
   },

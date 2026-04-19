@@ -2,6 +2,7 @@
 // React Island — accepts string props from Astro parent (no react-i18next)
 import ExperienceItem from './experience/ExperienceItem';
 import type { IExperienceItem } from '@/models';
+import FadeContent from '@/components/ui/FadeContent';
 
 interface Study {
   period: string;
@@ -37,12 +38,16 @@ const ExperienceView = ({ strings }: Props) => {
   return (
     <section className="py-20 bg-gray-100" id="experience">
       <div className="container mx-auto px-4" id="scroll">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-          {title}
-        </h2>
-        <p className="text-lg text-muted-foreground mb-8">
-          {description}
-        </p>
+        <FadeContent blur={true} duration={800} threshold={0.1}>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+            {title}
+          </h2>
+        </FadeContent>
+        <FadeContent blur={true} duration={800} threshold={0.1} delay={100}>
+          <p className="text-lg text-muted-foreground mb-8">
+            {description}
+          </p>
+        </FadeContent>
 
         {/* 3-column layout: Experience | Skills | Studies */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

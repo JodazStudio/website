@@ -2,7 +2,8 @@
 // src/components/ServicesSection.astro
 import { useTranslations } from '@/lib/i18n';
 import type { Lang } from '@/lib/i18n';
-import AnimatedContent from '@/component/AnimatedContent';
+import AnimatedContent from '@/components/ui/AnimatedContent';
+import ClickSpark from '@/components/ui/ClickSpark';
 
 interface Props {
   lang?: Lang;
@@ -36,37 +37,39 @@ const services = [
 ---
 
 <section id="services" class="py-24 bg-gray-100 border-t-2 border-border/50 blueprint-grid">
-  <div class="container mx-auto px-4">
-    <AnimatedContent client:visible className="mb-20 text-left">
-      <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
-        {t('services.title')}{' '}
-        <span class="text-primary">{t('services.titleAccent')}</span>
-      </h2>
-      <p class="text-xl text-muted-foreground max-w-3xl leading-relaxed">
-        {t('services.description')}
-      </p>
-    </AnimatedContent>
+  <ClickSpark client:load sparkColor="hsl(var(--primary))" sparkSize={10} sparkRadius={20} sparkCount={10} duration={400}>
+    <div class="container mx-auto px-4">
+      <AnimatedContent client:visible className="mb-20 text-left">
+        <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          {t('services.title')}{' '}
+          <span class="text-primary">{t('services.titleAccent')}</span>
+        </h2>
+        <p class="text-xl text-muted-foreground max-w-3xl leading-relaxed">
+          {t('services.description')}
+        </p>
+      </AnimatedContent>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 border-t-2 border-l-2 border-border">
-      {services.map((service, index) => (
-        <AnimatedContent 
-          client:visible 
-          delay={index * 0.1}
-          className="group relative bg-white border-r-2 border-b-2 border-border p-12 transition-all duration-500 hover:shadow-glow hover:z-20"
-        >
-          <div class="relative z-10">
-            <div class="w-14 h-14 flex items-center justify-start mb-8 text-4xl group-hover:scale-110 transition-transform duration-300">
-              {service.icon}
-            </div>
-            <h3 class="text-2xl font-bold text-foreground mb-4">
-              {t(service.titleKey)}
-            </h3>
-            <p class="text-muted-foreground leading-relaxed text-lg">
-              {t(service.descKey)}
-            </p>
-          </div>
-        </AnimatedContent>
-      ))}
+      <div class="grid grid-cols-1 md:grid-cols-2 border-t-2 border-l-2 border-border">
+        {services.map((service, index) => (
+            <AnimatedContent 
+              client:visible 
+              delay={index * 0.1}
+              className="group relative bg-white border-r-2 border-b-2 border-border p-12 transition-all duration-500 hover:shadow-glow hover:z-20 h-full"
+            >
+              <div class="relative z-10">
+                <div class="w-14 h-14 flex items-center justify-start mb-8 text-4xl group-hover:scale-110 transition-transform duration-300">
+                  {service.icon}
+                </div>
+                <h3 class="text-2xl font-bold text-foreground mb-4">
+                  {t(service.titleKey)}
+                </h3>
+                <p class="text-muted-foreground leading-relaxed text-lg">
+                  {t(service.descKey)}
+                </p>
+              </div>
+            </AnimatedContent>
+        ))}
+      </div>
     </div>
-  </div>
+  </ClickSpark>
 </section>

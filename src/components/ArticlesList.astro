@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import AnimatedContent from '@/component/AnimatedContent';
+import AnimatedContent from '@/components/ui/AnimatedContent';
+import FadeContent from '@/components/ui/FadeContent';
 
 const { lang = 'en' } = Astro.props;
 
@@ -27,25 +28,31 @@ const t = lang === 'es' ? labels.es : labels.en;
 
 <section class="py-24 overflow-hidden">
   <div class="container mx-auto px-4">
-    <AnimatedContent client:visible className="mb-20 text-left">
-      <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
-        {t.featuredProjects}
-      </h2>
-      <p class="text-xl text-muted-foreground max-w-3xl leading-relaxed">
-        {lang === 'es' 
-          ? 'Explora una selección de mis trabajos más recientes y destacados en desarrollo web y diseño.' 
-          : 'Explore a selection of my most recent and impactful work in web development and design.'}
-      </p>
-    </AnimatedContent>
+    <div class="mb-20 text-left">
+      <FadeContent client:visible blur={true} duration={800} threshold={0.1}>
+        <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          {t.featuredProjects}
+        </h2>
+      </FadeContent>
+      <FadeContent client:visible blur={true} duration={800} threshold={0.1} delay={100}>
+        <p class="text-xl text-muted-foreground max-w-3xl leading-relaxed">
+          {lang === 'es' 
+            ? 'Explora una selección de mis trabajos más recientes y destacados en desarrollo web y diseño.' 
+            : 'Explore a selection of my most recent and impactful work in web development and design.'}
+        </p>
+      </FadeContent>
+    </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-1">
       {sortedProjects.map((project, index) => {
         const baseSlug = project.slug.split('/').pop();
         const href = lang === 'es' ? `/es/articles/${baseSlug}` : `/articles/${baseSlug}`;
         return (
-          <AnimatedContent 
+          <FadeContent 
             client:visible 
-            delay={index * 0.1}
+            delay={index * 100}
+            blur={true}
+            threshold={0.1}
             className="group block"
           >
             <a 
@@ -74,7 +81,7 @@ const t = lang === 'es' ? labels.es : labels.en;
                 </div>
               </div>
             </a>
-          </AnimatedContent>
+          </FadeContent>
         );
       })}
     </div>

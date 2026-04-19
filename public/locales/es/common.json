@@ -12,11 +12,11 @@
     "viewAll": "Ver Todos los Proyectos"
   },
   "contact": {
-    "title": "¿Listo para elevar tu ",
-    "titleAccent": "presencia digital?",
-    "description": "Me asocio contigo para crear experiencias digitales claras y de alto impacto: rápidas, seguras y accesibles. Comencemos a construir tu futuro digital.",
-    "headline": "Comencemos una Conversación",
-    "subhead": "Háblame de tu visión y de cualquier desafío que enfrentes; te proporcionaré un plan, cronograma y presupuesto claros. Pasos pragmáticos para lanzar y hacer crecer tu negocio.",
+    "title": "Hablemos",
+    "titleAccent": ".",
+    "description": "¿Tienes alguna pregunta o un proyecto en mente? No dudes en contactarme.",
+    "headline": "",
+    "subhead": "¿Tienes alguna pregunta o un proyecto en mente? No dudes en contactarme.",
     "email": "Correo Electrónico",
     "phone": "Teléfono",
     "location": "Ubicación",
@@ -36,8 +36,8 @@
     }
   },
   "hero": {
-    "line1": "Transforma tu",
-    "line2": "presencia Digital",
+    "line1": "Hola, soy Jesús Ordosgoitty",
+    "line2": "Desarrollador de Software",
     "description": "Creo productos digitales innovadores y de vanguardia, desarrollando soluciones personalizadas, sitios web y aplicaciones extraordinarias que ofrecen experiencias únicas y maximizan el éxito en el mercado.",
     "ctaPrimary": "Comenzar tu Proyecto"
   },

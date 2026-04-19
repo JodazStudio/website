@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import ScrollButton from '@/components/ui/ScrollButton';
 import ColorBends from '@/components/ColorBends';
-import AnimatedContent from '@/component/AnimatedContent';
+import AnimatedContent from '@/components/ui/AnimatedContent';
 
 interface Props {
   line1: string;
@@ -34,9 +34,9 @@ const HeroIsland = ({ line1, line2, description, ctaPrimary }: Props) => {
               distance={50}
               duration={1}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
-                {line1}
-                <span className="block">{line2}</span>
+              <h1 className="font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
+                <span className="text-xl md:text-2xl block mb-2">{line1}</span>
+                <span className="text-5xl md:text-7xl lg:text-8xl block">{line2}</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
