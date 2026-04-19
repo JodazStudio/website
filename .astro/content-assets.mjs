@@ -1,5 +1,9 @@
 
 import __ASTRO_IMAGE_IMPORT_11kDa from "../../../assets/horsy.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fen%2Fhorsy.md";
 import __ASTRO_IMAGE_IMPORT_LCNhT from "../../../assets/horsy.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fes%2Fhorsy.md";
-export default new Map([["../../../assets/horsy.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fen%2Fhorsy.md", __ASTRO_IMAGE_IMPORT_11kDa], ["../../../assets/horsy.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fes%2Fhorsy.md", __ASTRO_IMAGE_IMPORT_LCNhT]]);
+import __ASTRO_IMAGE_IMPORT_Z2uhJVC from "../../../assets/Simpleshop.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fen%2Fsimpleshop.md";
+import __ASTRO_IMAGE_IMPORT_qdb2M from "../../../assets/Simpleshop.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fes%2Fsimpleshop.md";
+import __ASTRO_IMAGE_IMPORT_ZNoYWG from "../../../assets/zonacrono.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fen%2Fzonacrono.md";
+import __ASTRO_IMAGE_IMPORT_1fpWpy from "../../../assets/zonacrono.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fes%2Fzonacrono.md";
+export default new Map([["../../../assets/horsy.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fen%2Fhorsy.md", __ASTRO_IMAGE_IMPORT_11kDa], ["../../../assets/horsy.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fes%2Fhorsy.md", __ASTRO_IMAGE_IMPORT_LCNhT], ["../../../assets/Simpleshop.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fen%2Fsimpleshop.md", __ASTRO_IMAGE_IMPORT_Z2uhJVC], ["../../../assets/Simpleshop.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fes%2Fsimpleshop.md", __ASTRO_IMAGE_IMPORT_qdb2M], ["../../../assets/zonacrono.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fen%2Fzonacrono.md", __ASTRO_IMAGE_IMPORT_ZNoYWG], ["../../../assets/zonacrono.png?astroContentImageFlag=&importer=src%2Fcontent%2Fprojects%2Fes%2Fzonacrono.md", __ASTRO_IMAGE_IMPORT_1fpWpy]]);
 		

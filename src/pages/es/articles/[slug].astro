@@ -25,7 +25,7 @@ const slug = project.slug.startsWith('es/') ? project.slug.slice(3) : project.sl
   title={`${project.data.title} — Jesús Ordosgoitty`}
   description={project.data.description}
   lang="es"
-  alternateUrl={`https://jodaz.xyz/projects/${slug}/`}
+  alternateUrl={`https://jodaz.xyz/articles/${slug}/`}
 >
 <StructuredData schemas={[{
   type: 'article',
@@ -33,7 +33,7 @@ const slug = project.slug.startsWith('es/') ? project.slug.slice(3) : project.sl
   description: project.data.description,
   datePublished: project.data.publishDate.toISOString().split('T')[0],
   tags: project.data.tags,
-  url: `https://jodaz.xyz/es/projects/${slug}/`,
+  url: `https://jodaz.xyz/es/articles/${slug}/`,
   lang: 'es',
 }]} />
 <section class="bg-gray-100 border-t-2 border-border/50 blueprint-grid py-20 min-h-screen">

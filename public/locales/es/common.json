@@ -92,6 +92,24 @@
     "code": "Código",
     "projects": [
       {
+        "id": "zonacrono",
+        "title": "ZonaCrono",
+        "description": "SaaS profesional para la gestión, logística y cronometraje de maratones y eventos deportivos.",
+        "category": "SAAS",
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "SaaS"],
+        "image": "zonacrono.png",
+        "website": "https://zonacrono.com"
+      },
+      {
+        "id": "simpleshop",
+        "title": "SimpleShop",
+        "description": "SaaS ERP para Venezuela: gestión de inventario, catálogo y pagos multimoneda en tiempo real.",
+        "category": "SAAS",
+        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "SaaS"],
+        "image": "Simpleshop.png",
+        "website": "https://simpleshop.xyz"
+      },
+      {
         "id": "horsy",
         "title": "Horsy.AI",
         "description": "Motor de búsqueda de podcasts desarrollado con TypeScript, Next.js y MUI. Ofrece citas de episodios, resúmenes generados por IA, preguntas relacionadas y filtrado avanzado.",

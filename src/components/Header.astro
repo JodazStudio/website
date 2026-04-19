@@ -22,7 +22,7 @@ const navItems = [
 ];
 
 const altLangHref = lang === 'es' ? Astro.url.pathname.replace('/es', '') || '/' : `/es${Astro.url.pathname}`;
-const isArticlePage = Astro.url.pathname.includes('/projects/');
+const isArticlePage = Astro.url.pathname.includes('/articles/');
 ---
 
 <HeaderInteractive

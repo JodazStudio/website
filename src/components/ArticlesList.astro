@@ -41,7 +41,7 @@ const t = lang === 'es' ? labels.es : labels.en;
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-1">
       {sortedProjects.map((project, index) => {
         const baseSlug = project.slug.split('/').pop();
-        const href = lang === 'es' ? `/es/projects/${baseSlug}` : `/projects/${baseSlug}`;
+        const href = lang === 'es' ? `/es/articles/${baseSlug}` : `/articles/${baseSlug}`;
         return (
           <AnimatedContent 
             client:visible 
