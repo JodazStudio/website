@@ -96,7 +96,12 @@
         "title": "ZonaCrono",
         "description": "Professional SaaS for the management, logistics, and timing of marathons and sporting events.",
         "category": "SAAS",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "SaaS"],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "SaaS"
+        ],
         "image": "zonacrono.png",
         "website": "https://zonacrono.com"
       },
@@ -105,7 +110,12 @@
         "title": "SimpleShop",
         "description": "SaaS ERP for Venezuela: real-time inventory management, catalog, and multi-currency payments.",
         "category": "SAAS",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "SaaS"],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "SaaS"
+        ],
         "image": "Simpleshop.png",
         "website": "https://simpleshop.xyz"
       },
@@ -114,7 +124,12 @@
         "title": "Horsy.AI",
         "description": "Podcast search engine developed with TypeScript, Next.js, and MUI. Features episode quotes, AI-powered summaries, related questions, and advanced filtering.",
         "category": "SAAS",
-        "technologies": ["TypeScript", "Next.js", "MUI", "AI"],
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "MUI",
+          "AI"
+        ],
         "image": "horsy.png",
         "website": "https://horsy.ai"
       },
@@ -123,7 +138,12 @@
         "title": "Fruga",
         "description": "Comprehensive cashback platform integrating affiliate retail APIs to reward users with rebates, offsetting insurance premiums.",
         "category": "B2C",
-        "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
+        "technologies": [
+          "Vite",
+          "MUI",
+          "AWS Cognito",
+          "Express.js"
+        ],
         "image": "fruga.png",
         "website": "https://dev.fruga.co.uk"
       }
@@ -223,5 +243,16 @@
         }
       ]
     }
+  },
+  "profile": {
+    "name": "Jesus Ordosgoitty",
+    "role": "Full-stack developer",
+    "bio": "I'm a full-stack developer with eight years of experience building digital products — MVPs, SaaS platforms and ecommerce — with a focus on fintech and insurtech, working remotely for clients in the UK, the USA and LATAM. My approach: launch fast, validate with real users, iterate.",
+    "photoLabel": "Jesus Ordosgoitty, full-stack developer",
+    "socialGithub": "GitHub",
+    "socialLinkedin": "LinkedIn",
+    "socialInstagram": "Instagram",
+    "metaTitle": "Jesus Ordosgoitty — Full-Stack Developer",
+    "metaDescription": "Jesus Ordosgoitty, full-stack developer with eight years building digital products — MVPs, SaaS platforms and ecommerce — for clients in the UK, USA and LATAM."
   }
 }

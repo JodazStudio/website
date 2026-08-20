@@ -1,6 +1,7 @@
 ---
 // src/components/StructuredData.astro
 // Injects JSON-LD structured data into the <head> for SEO rich results.
+import { useTranslations } from '@/lib/i18n';
 
 interface PersonSchema {
   type: 'person';
@@ -30,12 +31,12 @@ interface Props {
 
 const { schemas } = Astro.props;
 
-const SITE_URL = 'https://jodaz.xyz';
+const SITE_URL = 'https://jesus.vanguarddevs.com';
 
 const SOCIAL_PROFILES = [
   'https://www.linkedin.com/in/jodaz/',
   'https://www.instagram.com/jodaz.dev',
-  'https://github.com/jodaz-dev',
+  'https://github.com/jodaz',
   'https://upwork.com/freelancers/jesusordosgoitty4',
 ];
 
@@ -46,16 +47,21 @@ const SKILLS = [
 ];
 
 function buildPerson(lang: string = 'en') {
+  const t = useTranslations(lang === 'es' ? 'es' : 'en');
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Jesus Ordosgoitty',
     url: SITE_URL,
-    jobTitle: lang === 'es' ? 'Desarrollador Full Stack' : 'Full Stack Developer',
-    description: lang === 'es'
-      ? 'Desarrollador Frontend, Ingeniero Full Stack, apasionado por la ingeniería de software.'
-      : 'Frontend Developer, Full Stack Engineer, and passionate about software engineering.',
+    jobTitle: t('profile.role'),
+    description: t('profile.bio'),
     sameAs: SOCIAL_PROFILES,
+    worksFor: {
+      '@type': 'Organization',
+      '@id': 'https://vanguarddevs.com/#organization',
+      name: 'VanguardDevs',
+      url: 'https://vanguarddevs.com',
+    },
     knowsAbout: SKILLS,
     alumniOf: {
       '@type': 'CollegeOrUniversity',

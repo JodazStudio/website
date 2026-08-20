@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jodaz.xyz',
+  site: 'https://jesus.vanguarddevs.com',
   integrations: [
     react(),
     tailwind({ applyBaseStyles: false }),
@@ -25,6 +25,13 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false,
     },
+  },
+  // One-pager: old pages are hidden, not 404'd (static meta-refresh stubs)
+  redirects: {
+    '/about': '/',
+    '/es/about': '/es',
+    '/articles/santa-rosa': '/',
+    '/es/articles/santa-rosa': '/es',
   },
   output: 'static',
 });

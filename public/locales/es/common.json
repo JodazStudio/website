@@ -96,7 +96,12 @@
         "title": "ZonaCrono",
         "description": "SaaS profesional para la gestión, logística y cronometraje de maratones y eventos deportivos.",
         "category": "SAAS",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "SaaS"],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "SaaS"
+        ],
         "image": "zonacrono.png",
         "website": "https://zonacrono.com"
       },
@@ -105,7 +110,12 @@
         "title": "SimpleShop",
         "description": "SaaS ERP para Venezuela: gestión de inventario, catálogo y pagos multimoneda en tiempo real.",
         "category": "SAAS",
-        "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "SaaS"],
+        "technologies": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "SaaS"
+        ],
         "image": "Simpleshop.png",
         "website": "https://simpleshop.xyz"
       },
@@ -114,7 +124,12 @@
         "title": "Horsy.AI",
         "description": "Motor de búsqueda de podcasts desarrollado con TypeScript, Next.js y MUI. Ofrece citas de episodios, resúmenes generados por IA, preguntas relacionadas y filtrado avanzado.",
         "category": "SAAS",
-        "technologies": ["TypeScript", "Next.js", "MUI", "IA"],
+        "technologies": [
+          "TypeScript",
+          "Next.js",
+          "MUI",
+          "IA"
+        ],
         "image": "horsy.png",
         "website": "https://horsy.ai"
       },
@@ -123,7 +138,12 @@
         "title": "Fruga",
         "description": "Plataforma integral de reembolso que integra APIs de comercio afiliado para recompensar a los usuarios con reembolsos, compensando las primas de seguro.",
         "category": "B2C",
-        "technologies": ["Vite", "MUI", "AWS Cognito", "Express.js"],
+        "technologies": [
+          "Vite",
+          "MUI",
+          "AWS Cognito",
+          "Express.js"
+        ],
         "image": "fruga.png",
         "website": "https://dev.fruga.co.uk"
       }
@@ -223,5 +243,16 @@
         }
       ]
     }
+  },
+  "profile": {
+    "name": "Jesus Ordosgoitty",
+    "role": "Desarrollador full-stack",
+    "bio": "Soy desarrollador full-stack con ocho años de experiencia construyendo productos digitales — MVPs, plataformas SaaS y ecommerce — con foco en fintech e insurtech, trabajando en remoto para clientes del Reino Unido, Estados Unidos y LATAM. Mi enfoque: lanzar rápido, validar con usuarios reales, iterar.",
+    "photoLabel": "Jesus Ordosgoitty, desarrollador full-stack",
+    "socialGithub": "GitHub",
+    "socialLinkedin": "LinkedIn",
+    "socialInstagram": "Instagram",
+    "metaTitle": "Jesús Ordosgoitty — Desarrollador Full-Stack",
+    "metaDescription": "Jesús Ordosgoitty, desarrollador full-stack con ocho años construyendo productos digitales — MVPs, SaaS y ecommerce — para clientes de Reino Unido, EE. UU. y LATAM."
   }
 }

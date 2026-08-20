@@ -1,6 +1,5 @@
 ---
 // src/components/Header.astro
-import { useTranslations } from '@/lib/i18n';
 import type { Lang } from '@/lib/i18n';
 import brandLogo from '@/assets/jodaz.png';
 import HeaderInteractive from '@/components/HeaderInteractive.tsx';
@@ -10,26 +9,13 @@ interface Props {
 }
 
 const { lang = 'en' } = Astro.props;
-const t = useTranslations(lang);
-
-const base = lang === 'es' ? '/es' : '';
-const navItems = [
-  { key: 'home', label: t('footer.home'), href: lang === 'es' ? '/es/' : '/', isSection: false },
-  { key: 'services', label: t('nav.services'), href: `${base}/#services`, isSection: true },
-  { key: 'portfolio', label: t('nav.portfolio'), href: `${base}/#portfolio`, isSection: true },
-  { key: 'contact', label: t('nav.contact'), href: `${base}/#contact`, isSection: true },
-  { key: 'about', label: t('nav.about'), href: lang === 'es' ? '/es/about' : '/about', isSection: false },
-];
 
 const altLangHref = lang === 'es' ? Astro.url.pathname.replace('/es', '') || '/' : `/es${Astro.url.pathname}`;
-const isArticlePage = Astro.url.pathname.includes('/articles/');
 ---
 
 <HeaderInteractive
-  navItems={navItems}
   logoSrc={brandLogo.src}
   lang={lang}
   altLangHref={altLangHref}
-  isOpaque={isArticlePage}
   client:load
 />

@@ -1,66 +1,58 @@
 // src/components/islands/HeroIsland.tsx
-// React Island — scroll button interactivity + animations
-import { Button } from '@/components/ui/button';
-import ScrollButton from '@/components/ui/ScrollButton';
+// React Island — the whole landing: founder profile rendered over the
+// ColorBends animation, sized to fit a single viewport.
 import ColorBends from '@/components/ColorBends';
-import AnimatedContent from '@/components/ui/AnimatedContent';
 
-interface Props {
-  line1: string;
-  line2: string;
-  description: string;
-  ctaPrimary: string;
+interface Social {
+  href: string;
+  label: string;
+  path: string;
 }
 
-const HeroIsland = ({ line1, line2, description, ctaPrimary }: Props) => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+interface Props {
+  name: string;
+  role: string;
+  bio: string;
+  photoSrc: string;
+  photoAlt: string;
+  socials: Social[];
+}
 
-  return (
-    <section className="min-h-[600px] h-[100vh] bg-slate-900 overflow-hidden relative">
-      <div className="absolute inset-0 bg-black opacity-50 w-full h-full z-0">
-        <ColorBends colors={['#4833e6']} noise={0.15} />
-      </div>
-      <div className="container mx-auto px-4 h-full">
-        <div className="flex z-10 py-24 lg:py-48 w-full h-full relative">
-          <div className="flex items-start w-full">
-            <AnimatedContent
-              className="flex flex-col justify-center text-white space-y-8 h-full"
-              id="scroll"
-              distance={50}
-              duration={1}
-            >
-              <h1 className="font-bold leading-tight bg-gradient-to-r from-blue-50 to-blue-400 bg-clip-text text-transparent">
-                <span className="text-xl md:text-2xl block mb-2">{line1}</span>
-                <span className="text-5xl md:text-7xl lg:text-8xl block">{line2}</span>
-              </h1>
-
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl">
-                {description}
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button
-                  variant="hero"
-                  size="xl"
-                  onClick={() => scrollToSection('contact')}
-                  className="group"
-                >
-                  {ctaPrimary}
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </Button>
-              </div>
-            </AnimatedContent>
+const HeroIsland = ({ name, role, bio, photoSrc, photoAlt, socials }: Props) => (
+  <section className="min-h-[100dvh] bg-slate-900 overflow-hidden relative">
+    <div className="absolute inset-0 bg-black opacity-50 w-full h-full z-0">
+      <ColorBends colors={['#4833e6']} noise={0.15} />
+    </div>
+    <div className="profile on-hero relative z-10" data-theme="dark">
+      <div className="profile-main">
+        <div className="profile-intro animate-slide-up-delayed">
+          <h1 className="display">{name}</h1>
+          <p className="mono profile-role">{role}</p>
+          <p className="profile-bio">{bio}</p>
+          <div className="profile-social">
+            {socials.map(({ href, label, path }) => (
+              <a
+                key={href}
+                className="btn"
+                href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'me noopener noreferrer' : undefined}
+                aria-label={label}
+                title={label}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true">
+                  <path fill="currentColor" d={path} />
+                </svg>
+              </a>
+            ))}
           </div>
         </div>
+        <div className="profile-photo animate-slide-up-delayed" style={{ animationDelay: '0.2s' }}>
+          <img src={photoSrc} alt={photoAlt} />
+        </div>
       </div>
-      <ScrollButton targetId="services" />
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default HeroIsland;

@@ -3,57 +3,29 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { useTranslations } from '@/lib/i18n';
 import HeroIsland from '@/components/islands/HeroIsland.tsx';
-import ServicesSection from '@/components/ServicesSection.astro';
-import PortfolioSection from '@/components/PortfolioSection.astro';
-import BottomGridWrapper from '@/components/BottomGridWrapper.astro';
 import StructuredData from '@/components/StructuredData.astro';
-import en from '../../public/locales/en/common.json';
+import { PROFILE_SOCIALS } from '@/lib/links';
+import founder from '@/assets/images/founder.jpeg';
 
 const lang = 'en' as const;
 const t = useTranslations(lang);
 
 const heroProps = {
-  line1: t('hero.line1'),
-  line2: t('hero.line2'),
-  description: t('hero.description'),
-  ctaPrimary: t('hero.ctaPrimary'),
-};
-
-const projects = en.portfolio.projects;
-const portfolioStrings = {
-  title: t('portfolio.title'),
-  titleAccent: t('portfolio.titleAccent'),
-  description: t('portfolio.description'),
-  websiteLabel: t('portfolio.website'),
-};
-
-const contactStrings = {
-  title: t('contact.title'),
-  titleAccent: t('contact.titleAccent'),
-  headline: t('contact.headline'),
-  subhead: t('contact.subhead'),
-  email: t('contact.email'),
-  phone: t('contact.phone'),
-  portraitAlt: 'Jesus Ordosgoitty — Full Stack Web Developer',
+  name: t('profile.name'),
+  role: t('profile.role'),
+  bio: t('profile.bio'),
+  photoSrc: founder.src,
+  photoAlt: t('profile.photoLabel'),
+  socials: PROFILE_SOCIALS,
 };
 ---
 
 <BaseLayout
-  title="Jesus Ordosgoitty — Transform Your Digital Presence"
-  description={t('hero.description')}
+  title={t('profile.metaTitle')}
+  description={t('profile.metaDescription')}
   lang={lang}
-  alternateUrl="https://jodaz.xyz/es/"
+  alternateUrl="https://jesus.vanguarddevs.com/es/"
 >
-  <StructuredData schemas={[{ type: 'person', lang: 'en' }, { type: 'professionalService', lang: 'en' }]} />
+  <StructuredData schemas={[{ type: 'person', lang: 'en' }]} />
   <HeroIsland {...heroProps} client:load />
-  <ServicesSection lang={lang} />
-  <PortfolioSection
-    projects={projects}
-    lang={lang}
-  />
-  <BottomGridWrapper 
-    lang={lang} 
-    showContact={true} 
-    contactStrings={contactStrings} 
-  />
 </BaseLayout>
