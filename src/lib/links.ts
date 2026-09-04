@@ -1,4 +1,4 @@
-import { Globe, Mail, Github, Instagram, Linkedin, Briefcase } from 'lucide-react';
+import { Globe, Github, Instagram, Linkedin, Briefcase } from 'lucide-react';
 
 export const FOOTER_LINKS = [
   {

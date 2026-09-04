@@ -16,12 +16,11 @@ pnpm preview
 pnpm usage          # regenerate src/data/ai-usage.json from local AI tool logs (see docs/ai-usage-widget.md)
 ```
 
-Known broken / not set up (verified):
-- `pnpm lint` fails: ESLint 9 is installed but there is no `eslint.config.*`.
+Known not set up (verified):
 - `pnpm check` prompts to install `@astrojs/check` (not in devDependencies). Run `pnpm add -D @astrojs/check` first if you need type checking.
 - There is no test suite.
 
-There is no CI and no Dockerfile; `pnpm build` passing locally is the only gate.
+CI (`.github/workflows/ci.yml`) runs `pnpm lint` then `pnpm build` on PRs to `main` and pushes to `main`. Both must pass locally before opening a PR. Lint config is `eslint.config.js` (flat config): TS/TSX everywhere, React hooks/refresh rules only under `src/components/`, so build-time helpers like `useTranslations` in `src/lib` are not treated as hooks. Warnings do not fail CI; errors do.
 
 ## Architecture
 

@@ -1,7 +1,7 @@
 // src/lib/analytics.ts
 // Utility for Google Analytics event tracking
 
-const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+type GtagWindow = Window & { gtag?: (...args: unknown[]) => void };
 
 export function trackEvent({
   action,
@@ -14,8 +14,9 @@ export function trackEvent({
   label?: string;
   value?: number;
 }) {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', action, {
+  const gtag = typeof window !== 'undefined' ? (window as GtagWindow).gtag : undefined;
+  if (gtag) {
+    gtag('event', action, {
       event_category: category,
       event_label: label,
       value: value,

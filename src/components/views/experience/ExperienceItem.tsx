@@ -1,7 +1,7 @@
 import { Briefcase } from 'lucide-react';
 import type { IExperienceItem } from '@/models';
 
-interface ExperienceItemProps extends IExperienceItem {}
+type ExperienceItemProps = IExperienceItem;
 
 const ExperienceItem = ({ company, roles }: ExperienceItemProps) => {
   return (

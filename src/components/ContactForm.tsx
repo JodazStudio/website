@@ -35,11 +35,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ lang = 'en' }) => {
     e.preventDefault();
     setStatus('sending');
     
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-
     try {
       // Example endpoint - user should update this with their Formspree/Resend URL
+      // const data = Object.fromEntries(new FormData(e.currentTarget).entries());
       // const response = await fetch('https://formspree.io/f/your-id', {
       //   method: 'POST',
       //   body: JSON.stringify(data),
@@ -50,7 +48,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ lang = 'en' }) => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setStatus('success');
       (e.target as HTMLFormElement).reset();
-    } catch (err) {
+    } catch {
       setStatus('error');
     }
   };
