@@ -1,18 +1,18 @@
 {
   "$schema": "https://jesus.vanguarddevs.com/schemas/ai-usage.json",
-  "generatedAt": "2026-09-04T20:59:43.602Z",
+  "generatedAt": "2026-09-04T21:29:19.066Z",
   "window": {
     "days": null,
     "from": "2026-09-02",
     "to": "2026-09-04"
   },
   "totals": {
-    "input": 230696,
-    "output": 579428,
-    "cacheRead": 138975104,
-    "cacheWrite": 8654424,
+    "input": 235495,
+    "output": 611585,
+    "cacheRead": 141487131,
+    "cacheWrite": 8708321,
     "reasoning": 5796,
-    "total": 148439652,
+    "total": 151042532,
     "sessions": 18,
     "activeDays": 3
   },
@@ -21,12 +21,12 @@
       "id": "claude-code",
       "label": "Claude Code",
       "approximate": false,
-      "input": 31626,
-      "output": 564537,
-      "cacheRead": 138361088,
-      "cacheWrite": 8654424,
+      "input": 36425,
+      "output": 596694,
+      "cacheRead": 140873115,
+      "cacheWrite": 8708321,
       "reasoning": 0,
-      "total": 147611675,
+      "total": 150214555,
       "models": 3,
       "sessions": 17
     },
@@ -74,12 +74,12 @@
       "label": "Claude Fable 5.1",
       "harness": "claude-code",
       "vendor": "Anthropic",
-      "input": 27765,
-      "output": 387117,
-      "cacheRead": 33582968,
-      "cacheWrite": 3555089,
+      "input": 32564,
+      "output": 419274,
+      "cacheRead": 36094995,
+      "cacheWrite": 3608986,
       "reasoning": 0,
-      "total": 37552939
+      "total": 40155819
     },
     {
       "id": "grok-4.6",
@@ -111,9 +111,9 @@
     },
     {
       "date": "2026-09-04",
-      "total": 8563639,
+      "total": 11166519,
       "byHarness": {
-        "claude-code": 7735662,
+        "claude-code": 10338542,
         "grok": 827977
       }
     }

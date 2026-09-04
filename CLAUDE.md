@@ -21,7 +21,7 @@ Known broken / not set up (verified):
 - `pnpm check` prompts to install `@astrojs/check` (not in devDependencies). Run `pnpm add -D @astrojs/check` first if you need type checking.
 - There is no test suite.
 
-CI (`.github/workflows/docker-build.yml`) only builds the Dockerfile on PRs to `main` and non-main pushes. The Dockerfile runs `pnpm install --frozen-lockfile && pnpm build`, so `pnpm build` passing locally is the real gate.
+There is no CI and no Dockerfile; `pnpm build` passing locally is the only gate.
 
 ## Architecture
 
