@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "usage": "node scripts/collect-ai-usage.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "lint": "eslint ."

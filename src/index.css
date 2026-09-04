@@ -231,7 +231,8 @@ All colors MUST be HSL.
   --on-signal: #eceaf1;
   --steel: #645e77;
   --tint: rgba(22, 18, 31, 0.05);
-  --rule: 1px solid rgba(22, 18, 31, 0.14);
+  --rule-color: rgba(22, 18, 31, 0.14);
+  --rule: 1px solid var(--rule-color);
   --rule-strong: 1px solid rgba(22, 18, 31, 0.24);
   --pad: clamp(24px, 5vw, 88px);
 
@@ -252,7 +253,8 @@ All colors MUST be HSL.
   --signal-text: #9b7bff;
   --steel: #948da3;
   --tint: rgba(236, 234, 241, 0.06);
-  --rule: 1px solid rgba(236, 234, 241, 0.16);
+  --rule-color: rgba(236, 234, 241, 0.16);
+  --rule: 1px solid var(--rule-color);
   --rule-strong: 1px solid rgba(236, 234, 241, 0.28);
   color-scheme: dark;
 }
@@ -305,16 +307,17 @@ All colors MUST be HSL.
   background: transparent;
 }
 
-/* Keep the whole page in one viewport: cap the photo by height and derive
-   its width from the original 4:5 ratio. */
-.profile.on-hero .profile-photo {
-  max-height: 60dvh;
-  width: min(100%, calc(60dvh * 4 / 5));
+/* Keep the whole page in one viewport: cap the panel (tabs + bar + box) by the
+   photo's height and derive its width from the original 4:5 ratio. */
+.profile.on-hero .profile-panel {
+  width: min(100%, calc(56dvh * 4 / 5));
   justify-self: end;
 }
 
-/* Single-viewport fit: clear the fixed header, then scale the ported type
-   down just enough that name + role + bio + socials never overflow 100dvh. */
+.profile.on-hero .profile-photo {
+  max-height: 56dvh;
+}
+
 .profile.on-hero .profile-main {
   padding-block: 84px 20px;
 }
@@ -381,8 +384,88 @@ All colors MUST be HSL.
   height: 24px;
 }
 
+/* Photo column: a borderless tab strip ("Me" / "AI usage"), then a thin
+   progress bar, then the box. Slides auto-advance every 30s; the bar fills
+   left to right over the interval and each incoming slide drops in from above. */
+.profile-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-tabs {
+  display: flex;
+  gap: 18px;
+}
+
+.profile-tab {
+  padding: 4px 0;
+  background: none;
+  border: 0;
+  color: var(--steel);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.profile-tab:hover,
+.profile-tab:focus-visible {
+  color: var(--ink);
+  outline: none;
+}
+
+.profile-tab[aria-selected="true"] {
+  color: var(--ink);
+}
+
+.profile-slide {
+  position: absolute;
+  inset: 0;
+  animation: profile-slide-down 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes profile-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-progress {
+  height: 2px;
+  margin-top: -6px;
+  background: var(--rule-color);
+}
+
+.profile-progress-fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--signal-text);
+  animation: profile-progress-fill linear forwards;
+}
+
+@keyframes profile-progress-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-slide {
+    animation: none;
+  }
+}
+
 .profile-photo {
   position: relative;
+  width: 100%;
   aspect-ratio: 4 / 5;
   border: var(--rule-strong);
   overflow: hidden;
@@ -401,9 +484,19 @@ All colors MUST be HSL.
     grid-template-columns: 1fr;
     align-content: start;
   }
-  /* photo below the text on mobile, and never taller than it is wide */
-  .profile-photo {
+  /* panel below the text on mobile, box never taller than it is wide; the
+     usage card grows to its content instead of clipping */
+  .profile-panel {
     order: 2;
+  }
+  .profile-photo {
     aspect-ratio: 1 / 1;
+  }
+  .profile-photo--usage {
+    aspect-ratio: auto;
+  }
+  .profile-photo--usage .profile-slide {
+    position: relative;
+    inset: auto;
   }
 }

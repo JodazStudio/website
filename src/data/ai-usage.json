@@ -1,0 +1,125 @@
+{
+  "$schema": "https://jesus.vanguarddevs.com/schemas/ai-usage.json",
+  "generatedAt": "2026-09-04T20:59:43.602Z",
+  "window": {
+    "days": null,
+    "from": "2026-09-02",
+    "to": "2026-09-04"
+  },
+  "totals": {
+    "input": 230696,
+    "output": 579428,
+    "cacheRead": 138975104,
+    "cacheWrite": 8654424,
+    "reasoning": 5796,
+    "total": 148439652,
+    "sessions": 18,
+    "activeDays": 3
+  },
+  "harnesses": [
+    {
+      "id": "claude-code",
+      "label": "Claude Code",
+      "approximate": false,
+      "input": 31626,
+      "output": 564537,
+      "cacheRead": 138361088,
+      "cacheWrite": 8654424,
+      "reasoning": 0,
+      "total": 147611675,
+      "models": 3,
+      "sessions": 17
+    },
+    {
+      "id": "grok",
+      "label": "Grok CLI",
+      "approximate": false,
+      "input": 199070,
+      "output": 14891,
+      "cacheRead": 614016,
+      "cacheWrite": 0,
+      "reasoning": 5796,
+      "total": 827977,
+      "models": 1,
+      "sessions": 1
+    }
+  ],
+  "models": [
+    {
+      "id": "claude-sonnet-5",
+      "label": "Claude Sonnet 5",
+      "harness": "claude-code",
+      "vendor": "Anthropic",
+      "input": 2316,
+      "output": 99072,
+      "cacheRead": 67079270,
+      "cacheWrite": 2467895,
+      "reasoning": 0,
+      "total": 69648553
+    },
+    {
+      "id": "claude-opus-5",
+      "label": "Claude Opus 5",
+      "harness": "claude-code",
+      "vendor": "Anthropic",
+      "input": 1545,
+      "output": 78348,
+      "cacheRead": 37698850,
+      "cacheWrite": 2631440,
+      "reasoning": 0,
+      "total": 40410183
+    },
+    {
+      "id": "claude-fable-5-1",
+      "label": "Claude Fable 5.1",
+      "harness": "claude-code",
+      "vendor": "Anthropic",
+      "input": 27765,
+      "output": 387117,
+      "cacheRead": 33582968,
+      "cacheWrite": 3555089,
+      "reasoning": 0,
+      "total": 37552939
+    },
+    {
+      "id": "grok-4.6",
+      "label": "Grok 4.6",
+      "harness": "grok",
+      "vendor": "xAI",
+      "input": 199070,
+      "output": 14891,
+      "cacheRead": 614016,
+      "cacheWrite": 0,
+      "reasoning": 5796,
+      "total": 827977
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-09-02",
+      "total": 130266462,
+      "byHarness": {
+        "claude-code": 130266462
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "total": 9609551,
+      "byHarness": {
+        "claude-code": 9609551
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "total": 8563639,
+      "byHarness": {
+        "claude-code": 7735662,
+        "grok": 827977
+      }
+    }
+  ],
+  "sources": [
+    "claude-code",
+    "grok"
+  ]
+}

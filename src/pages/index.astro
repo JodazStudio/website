@@ -4,6 +4,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { useTranslations } from '@/lib/i18n';
 import HeroIsland from '@/components/islands/HeroIsland.tsx';
 import StructuredData from '@/components/StructuredData.astro';
+import { getAiUsageProps } from '@/lib/ai-usage-props';
 import { PROFILE_SOCIALS } from '@/lib/links';
 import founder from '@/assets/images/founder.jpeg';
 
@@ -17,6 +18,9 @@ const heroProps = {
   photoSrc: founder.src,
   photoAlt: t('profile.photoLabel'),
   socials: PROFILE_SOCIALS,
+  lang,
+  tabs: { me: t('profile.tabMe'), ai: t('profile.tabAi') },
+  usage: getAiUsageProps(lang),
 };
 ---
 
