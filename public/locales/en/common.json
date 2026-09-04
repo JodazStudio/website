@@ -253,6 +253,18 @@
     "socialLinkedin": "LinkedIn",
     "socialInstagram": "Instagram",
     "metaTitle": "Jesus Ordosgoitty — Full-Stack Developer",
-    "metaDescription": "Jesus Ordosgoitty, full-stack developer with eight years building digital products — MVPs, SaaS platforms and ecommerce — for clients in the UK, USA and LATAM."
+    "metaDescription": "Jesus Ordosgoitty, full-stack developer with eight years building digital products — MVPs, SaaS platforms and ecommerce — for clients in the UK, USA and LATAM.",
+    "tabMe": "Me",
+    "tabAi": "AI usage"
+  },
+  "aiUsage": {
+    "allTime": "Tokens, all time",
+    "last7": "Last 7 days",
+    "last30": "Last 30 days",
+    "input": "Input",
+    "output": "Output",
+    "models": "Models",
+    "tokens": "tokens",
+    "updated": "Updated"
   }
 }

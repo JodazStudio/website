@@ -16,13 +16,6 @@ interface Props {
 }
 
 const AboutView = ({ strings }: Props) => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section
       className="relative min-h-[800px] h-screen overflow-hidden bg-slate-900 bg-cover bg-center"
