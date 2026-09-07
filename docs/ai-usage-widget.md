@@ -44,12 +44,17 @@ somewhere non-standard.
 
 ### Keeping it current automatically
 
-A weekly cron entry is enough, since the site rebuilds on push:
+A weekly cron entry is enough, since the site rebuilds on push. Cron does not
+support backslash line continuation, so keep the command on one line, and use
+the absolute path to `node` (`which node`) because cron does not load nvm:
 
 ```cron
-0 9 * * 1 cd ~/projects/website && /usr/bin/node scripts/collect-ai-usage.mjs \
-  && git commit -am "chore: refresh AI usage" && git push
+NODE=/home/jesus/.nvm/versions/node/v24.20.0/bin/node
+0 9 * * 1 cd ~/projects/website && $NODE scripts/collect-ai-usage.mjs && git commit -am "chore: refresh AI usage" && git push
 ```
+
+The push needs non-interactive git auth (an SSH key without a passphrase or a
+credential helper), and the job commits to whatever branch is checked out.
 
 ## What is and isn't in the JSON
 
