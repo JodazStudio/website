@@ -1,34 +1,34 @@
 {
   "$schema": "https://jesus.vanguarddevs.com/schemas/ai-usage.json",
-  "generatedAt": "2026-09-04T21:29:19.066Z",
+  "generatedAt": "2026-09-07T02:54:36.383Z",
   "window": {
     "days": null,
     "from": "2026-09-02",
-    "to": "2026-09-04"
+    "to": "2026-09-07"
   },
   "totals": {
-    "input": 235495,
-    "output": 611585,
-    "cacheRead": 141487131,
-    "cacheWrite": 8708321,
+    "input": 243255,
+    "output": 835082,
+    "cacheRead": 181215252,
+    "cacheWrite": 10996003,
     "reasoning": 5796,
-    "total": 151042532,
-    "sessions": 18,
-    "activeDays": 3
+    "total": 193289592,
+    "sessions": 26,
+    "activeDays": 6
   },
   "harnesses": [
     {
       "id": "claude-code",
       "label": "Claude Code",
       "approximate": false,
-      "input": 36425,
-      "output": 596694,
-      "cacheRead": 140873115,
-      "cacheWrite": 8708321,
+      "input": 44185,
+      "output": 820191,
+      "cacheRead": 180601236,
+      "cacheWrite": 10996003,
       "reasoning": 0,
-      "total": 150214555,
-      "models": 3,
-      "sessions": 17
+      "total": 192461615,
+      "models": 4,
+      "sessions": 25
     },
     {
       "id": "grok",
@@ -50,36 +50,48 @@
       "label": "Claude Sonnet 5",
       "harness": "claude-code",
       "vendor": "Anthropic",
-      "input": 2316,
-      "output": 99072,
-      "cacheRead": 67079270,
-      "cacheWrite": 2467895,
+      "input": 2644,
+      "output": 104829,
+      "cacheRead": 72910148,
+      "cacheWrite": 3230033,
       "reasoning": 0,
-      "total": 69648553
-    },
-    {
-      "id": "claude-opus-5",
-      "label": "Claude Opus 5",
-      "harness": "claude-code",
-      "vendor": "Anthropic",
-      "input": 1545,
-      "output": 78348,
-      "cacheRead": 37698850,
-      "cacheWrite": 2631440,
-      "reasoning": 0,
-      "total": 40410183
+      "total": 76247654
     },
     {
       "id": "claude-fable-5-1",
       "label": "Claude Fable 5.1",
       "harness": "claude-code",
       "vendor": "Anthropic",
-      "input": 32564,
-      "output": 419274,
-      "cacheRead": 36094995,
-      "cacheWrite": 3608986,
+      "input": 39184,
+      "output": 608731,
+      "cacheRead": 62879588,
+      "cacheWrite": 4353938,
       "reasoning": 0,
-      "total": 40155819
+      "total": 67881441
+    },
+    {
+      "id": "claude-opus-5",
+      "label": "Claude Opus 5",
+      "harness": "claude-code",
+      "vendor": "Anthropic",
+      "input": 1725,
+      "output": 106496,
+      "cacheRead": 42507203,
+      "cacheWrite": 3162609,
+      "reasoning": 0,
+      "total": 45778033
+    },
+    {
+      "id": "claude-haiku-4-5-20251001",
+      "label": "Claude Haiku 4.5",
+      "harness": "claude-code",
+      "vendor": "Anthropic",
+      "input": 632,
+      "output": 135,
+      "cacheRead": 2304297,
+      "cacheWrite": 249423,
+      "reasoning": 0,
+      "total": 2554487
     },
     {
       "id": "grok-4.6",
@@ -111,10 +123,31 @@
     },
     {
       "date": "2026-09-04",
-      "total": 11166519,
+      "total": 21184712,
       "byHarness": {
-        "claude-code": 10338542,
+        "claude-code": 20356735,
         "grok": 827977
+      }
+    },
+    {
+      "date": "2026-09-05",
+      "total": 17487344,
+      "byHarness": {
+        "claude-code": 17487344
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "total": 1575385,
+      "byHarness": {
+        "claude-code": 1575385
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "total": 13166138,
+      "byHarness": {
+        "claude-code": 13166138
       }
     }
   ],
